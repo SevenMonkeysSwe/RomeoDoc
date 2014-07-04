@@ -1,0 +1,25 @@
+\thispagestyle{empty}
+\setlength{\textfloatsep}{5pt}
+
+\begin{figure}[!t]
+	\centering		
+	\includegraphics[width=4cm,height=1.8cm]{../img/romeopdf}
+\end{figure}	
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=8cm]{../img/monkeypdf}
+\end{figure}
+\begin{center}
+ 		\email
+\end{center}
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor](-20,0.2) rectangle(1\paperwidth,-1.5);
+  
+\end{tikzpicture}
+\begin{center}	
+		\textcolor{white}{\textbf{\Huge\documentName}}
+		\vspace{1cm}
+		\input{doc_to_modify/document_information}
+\end{center}

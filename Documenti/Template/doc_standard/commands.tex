@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: commands	.tex
+% Created: 2013/11/25
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Modifier Date		Change													Author
+% 1.0.3			2013-12-09			Add commands for the documents files.
+% 1.0.2			2013/11/29			Correct command proposerName for misspelling				Magnabosco Nicola
+% 1.0.1			2013/11/27			Correct command "analist" for misspelling				Magnabosco Nicola
+% 1.0.0			2013/11/25			Add all Custom Commands									Magnabosco Nicola
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%*******REMEMBER TO MODIFY THIS PART FOR ANY NEW DOCUMENT******
+%%INSERIRE IL NOME DEL DOCUMENTO
+\newcommand{\documentName}{NOME DEL DOCUMENTO}
+
+%%INSERT THE CURRENT VERSION
+\newcommand{\currentVersion}{VERSION}
+
+%%INSERT HERE DOCUMENT DATE
+\newcommand{\redactionDate}{\today}
+
+%%INSERT HERE THE NAME OF THE EDITORS
+\newcommand{\editors}{
+	\begin{itemize}
+		\item Tizio Caio
+		\item Mario Rossi
+	\end{itemize}}
+
+%%INSERT THE NAME OF THE DOCUMENT VERIFIERS
+\newcommand{\verifiers}{\emph{Verificatore}}
+
+%%INSERT WHO APPROVE THE DOCUMENT
+\newcommand{\approved}{\emph{..}}
+
+\newcommand{\usage}{\emph{Interno/Esterno}}
+
+%%DOCUMENT DISTRIBUTION LIST
+\newcommand{\distributionList}{\begin{itemize}
+\item \authorName
+\item \commitName
+\item \commitNameC
+\item \proposerName
+\end{itemize}}
+
+%%INSERIRE IL SOMMARIO
+\newcommand{\sommario}{Descrizione dello scopo del documento}
+
+%%DEFINIZIONE GLOSSARIO UGUALE PER TUTTI NON MODIFICARE
+\newcommand{\glossario}{\small\ped{\textbf{G}}}
+\newcommand{\g}{\small{\ped{\textbf{G}}}}
+
+% BASE COMMANDS - || DO NOT MODIFY ||
+\newcommand{\project}{Romeo}
+\newcommand{\email}{\textit{\href{mailto:seven.monkeys.swe@gmail.com}{seven.monkeys.swe@gmail.com}}}
+\newcommand{\authorName}{\emph{Seven Monkeys}}
+\newcommand{\projectManager}{\emph{Responsabile di Progetto}}
+\newcommand{\administrator}{\emph{Amministratore di Progetto}}
+\newcommand{\analyst}{\emph{Analista}}
+\newcommand{\programmer}{\emph{Programmatore}}
+\newcommand{\designer}{\emph{Progettista}}
+\newcommand{\verifier}{\emph{Verificatore}}
+\newcommand{\proposerName}{\emph{Dott.ssa Gaia Rizzo} - DEI}
+\newcommand{\commitName}{\emph{Prof. Tullio Vardanega}}
+\newcommand{\commitNameC}{\emph{Prof. Riccardo Cardin}}
+\newcommand{\logo}{\includegraphics[width=4cm,height=4cm]{../img/big_logo}}
+\newcommand{\data}{\today}
+\newcommand{\glossDoc}{\emph{Glossario v3.0.0}}
+\newcommand{\studio}{\emph{Studio di Fattibilità \currentVersion}}
+\newcommand{\analisi}{\emph{Analisi dei Requisiti \currentVersion}}
+\newcommand{\PdP}{\emph{Piano di Progetto \currentVersion}}
+\newcommand{\PdQ}{\emph{Piano di Qualifica \currentVersion}}
+\newcommand{\NdP}{\emph{Norme di Progetto \currentVersion}}
+\newcommand{\scopoProd}
+{Il prodotto che si intende realizzare, denominato \project{}, si propone di fornire un sistema software per applicare la cluster analysis\glossario{} ad immagini biomediche. Lo scopo principale è quello di offrire alla comunità scientifica internazionale uno strumento semplice, ma allo stesso tempo completo e flessibile per applicare gli algoritmi della cluster analysis\glossario{}.}
+\newcommand{\glossIntro}
+{Al fine di evitare ogni ambiguità e per permettere al lettore una migliore comprensione dei termini e acronimi utilizzati nei vari documenti formali, essi sono riportati nel \glossDoc{} che
+ contiene una descrizione approfondita di tali termini e acronimi.
+\\Ogni volta
+ che compare un termine presente nel \emph{Glossario}, esso è marcato
+ con una \lq\lq\textbf{G}\rq\rq{} in pedice.}
+\newcommand{\subject}{Subject\g{}}
+\newcommand{\protocol}{Protocol\g{}}
+\newcommand{\dataset}{Dataset\g{}}
+\newcommand{\scopoDocumentoSpecifica}{Il presente documento ha lo scopo di definire la progettazione ad alto livello dell'applicativo \project{}.
+Verrà presentata l'architettura generale secondo la quale saranno organizzate le componenti software e saranno descritti i design pattern\glossario{} utilizzati.}

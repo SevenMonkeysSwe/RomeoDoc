@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: firstpage.tex
+% Created: 2013/11/25
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Modifier Date		Change													Author
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{titlepage}
+\thispagestyle{empty}
+\setlength{\textfloatsep}{5pt}
+		%\renewcommand{\headrulewidth}{10pt}
+		%\setlength{\pdfpageheight}{1cm}
+
+\begin{figure}[!t]
+	\centering		
+	\includegraphics[width=4cm,height=1.8cm]{../img/romeopdf}
+\end{figure}	
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=8cm]{../img/monkeypdf}
+\end{figure}
+\begin{center}
+ 		\email
+\end{center}
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor](-20,0.2) rectangle(1\paperwidth,-1.5);
+ %(-0.5\paperwidth,6) rectangle (1\paperwidth,10);  
+\end{tikzpicture}
+\begin{center}	
+		\textcolor{white}{\textbf{\Huge\documentName}}
+		\vspace{1cm}
+		\input{../Template/doc_standard/document_information}
+\end{center}
+%\end{titlepage}

@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: styles.tex
+% Created: 2013/11/25
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Modifier Date		Change													Author
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%ROMAN STYLE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\skip\footins}{1cm} %inserisce le footnote dopo un centimetro dal testo
+
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %aggiunge i punti nella tableofcontents
+\fancypagestyle{romanPages}{	
+	\pagestyle{empty}
+	%HEADER
+	\fancyhead{} %reset fields
+	\setlength{\topmargin}{-60pt} %toglie altezza prima che cominci l'header
+	\setlength{\headsep}{60pt} % aumenta distanza tra l'head e la pagina
+	\fancyhead[L]{\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor](-20,2) rectangle(1\paperwidth,-0.4);
+ %(-0.5\paperwidth,6) rectangle (1\paperwidth,10);  
+\end{tikzpicture}
+	\includegraphics[width=3cm]{../img/7monkeys_small}}
+	\fancyhead[R]{\textcolor{white}{{\Large\nouppercase{\leftmark}}}}
+	%FOOTER
+	\fancyhead[R]{\bfseries\leftmark}
+	\fancyfoot[L]{\bfseries\documentName}
+	\fancyfoot[R]{\leftmark}
+	\fancyfoot[C]{\thepage}
+	%\setcounter{page}{0}
+	\pagenumbering{Roman}
+	\renewcommand{\footrulewidth}{0.5pt}
+	\renewcommand{\headrulewidth}{0.0pt}
+}
+%%%%%%%%%%%%%%%%%%%%HISTORY%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{historyPages}{
+	\pagestyle{fancy}
+	\fancyhead{}
+	\setlength{\topmargin}{-60pt} %toglie altezza prima che cominci l'header
+	\setlength{\headsep}{60pt} % aumenta distanza tra l'head e la pagina
+	\fancyhead[L]{\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor](-20,2) rectangle(1\paperwidth,-0.4);
+ %(-0.5\paperwidth,6) rectangle (1\paperwidth,10);  
+\end{tikzpicture}
+	\includegraphics[width=3cm]{../img/7monkeys_small}}
+
+	\fancyhead[R]{\textcolor{white}{\Large\nouppercase{Diario delle Modifiche}}}
+	\fancyfoot{}
+	\fancyfoot[L]{\documentName~\currentVersion}
+	\fancyfoot[R]{\thepage}
+	\setcounter{page}{0}
+	\pagenumbering{Roman}
+	\renewcommand{\headrulewidth}{0.0pt}
+  	\renewcommand{\footrulewidth}{0.5pt}
+  }
+%%%%%%%%%%%%%%%%%%%%INDICE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{plain}{
+
+	\thispagestyle{plain}
+	\pagestyle{fancy}
+	\fancyhead{}
+	\setlength{\topmargin}{-60pt} %toglie altezza prima che cominci l'header
+	\setlength{\headsep}{60pt} % aumenta distanza tra l'head e la pagina
+	\fancyhead[L]{\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor](-20,2) rectangle(1\paperwidth,-0.4);
+ %(-0.5\paperwidth,6) rectangle (1\paperwidth,10);  
+\end{tikzpicture}
+	\includegraphics[width=3cm]{../img/7monkeys_small}}
+
+	\fancyhead[R]{\textcolor{white}{\Large\nouppercase{\leftmark}}}
+	\fancyfoot{}
+	\fancyfoot[L]{\documentName~\currentVersion}
+	\fancyfoot[R]{\thepage}
+	
+	\renewcommand{\headrulewidth}{0.0pt}
+  	\renewcommand{\footrulewidth}{0.5pt}
+}
+%%%%%%%%%%%%%%%%%%%%%DOCUMENTI%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{documentPages}{
+	\thispagestyle{empty}
+	\thispagestyle{fancy}
+	\pagestyle{fancy}
+	\fancyhead{}
+	\setlength{\topmargin}{-60pt} %toglie altezza prima che cominci l'header
+	\setlength{\headsep}{60pt} % aumenta distanza tra l'head e la pagina
+	\fancyhead[L]{\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor](-20,2) rectangle(1\paperwidth,-0.4);
+ %(-0.5\paperwidth,6) rectangle (1\paperwidth,10);  
+\end{tikzpicture}
+	\includegraphics[width=3cm]{../img/7monkeys_small}}
+
+	\fancyhead[R]{\textcolor{white}{\Large\nouppercase{\leftmark}}}
+	\fancyfoot{}
+	\fancyfoot[L]{\documentName~\currentVersion}
+	\fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
+	\setcounter{page}{0}
+	\pagenumbering{arabic}
+	\renewcommand{\headrulewidth}{0.0pt}
+  	\renewcommand{\footrulewidth}{0.5pt}
+}

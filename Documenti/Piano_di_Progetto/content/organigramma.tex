@@ -1,0 +1,112 @@
+\newcommand{\tableHeader}{
+		\begin{center}
+		\begin{tabularx}{0.8\textwidth}{|X|X|X|}
+			\hline
+			\textbf{Nome} &
+			\textbf{Data} &
+			\textbf{Firma}\\ \hline
+		}
+
+\section{Organigramma}
+\label{Organigramma}
+\subsection{Redazione}
+\begin{table} [!h]
+	\tableHeader 
+	Feltre Beatrice & 2013-12-09 & \includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/bf.png}\\ \hline
+	\end{tabularx}\end{center}
+	\caption{Redazione}
+\end{table}	
+
+\subsection{Approvazione}
+\begin{table} [!h]
+	\tableHeader 
+	Adami Alberto & 2013-12-09 & \includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/aa.png}\\ \hline
+	\end{tabularx}\end{center}
+	\caption{Approvazione}
+\end{table}	
+\subsection{Accettazione componenti}
+\begin{table}[!h]
+	\tableHeader
+	Adami Alberto & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/aa.png}\\
+	Bissacco Nicolò & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/nb.png}\\
+	Feltre Beatrice & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/bf.png}\\
+	Luisetto Luca & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/ll.png}\\
+	Magnabosco Nicola & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/nm.png}\\
+	Martignago Jimmy & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/jm.png}\\
+	Scapin Davide & 2013-12-03 & 
+		\includegraphics[height=0.5cm,width=3cm]{./content/Immagini/firme/ds.png}\\ \hline
+	\end{tabularx} \end{center}
+	\caption{Accettazione Componenti}
+\end{table}
+\pagebreak
+\subsection{Componenti}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{|l|c|l|}
+	\hline
+	Cognome Nome & Matricola & Email\\ \hline
+	Adami Alberto &1031350  & alberto.adami.7@gmail.com \\
+	Bissacco Nicolò &572194&nickbissa@gmail.com  \\
+	Feltre Beatrice &1001644 &beatrice.feltre@gmail.com \\
+	Luisetto Luca &1006878&lucaluisetto91@gmail.com \\
+	Magnabosco Nicola &1008149  &nick.magnabosco@gmail.com \\
+	Martignago Jimmy &1002303&jimmy.martignago@gmail.com \\
+	Scapin Davide &615296&davideskap@gmail.com\\ \hline
+	\end{tabular}
+	\caption{Componenti}
+\end{table}
+\subsection{Definizione dei ruoli}
+\label{defRuoli}
+Durante lo sviluppo di \project{} vi saranno diversi ruoli che i componenti del gruppo dovranno ricoprire. Ogni membro del gruppo, dovrà ricoprire almeno una volta ogni ruolo. È fatto divieto che una risorsa sia verificatrice di se stessa.
+I ruoli individuati sono:
+\begin{itemize}
+\item \textbf{\projectManager:} rappresenta il gruppo, in quanto presenta al committente i risultati del progetto inoltre, accentra su di sé le responsabilità delle scelte e approvazioni, dunque:
+	\begin{itemize}
+	\item Pianifica, controlla e coordina le attività;
+	\item Gestisce e controlla le risorse;
+	\item Analizza i rischi che si possono avere e identifica contromisure per mitigarli;
+	\item Approva i documenti, ad esclusione del \emph{Piano di Progetto};	
+	\item Redige il \emph{Piano di Progetto}.	
+	\end{itemize}
+\item \textbf{\administrator:} è responsabile del funzionamento dell'ambiente di lavoro messo a disposizione, della sua efficienza e ne detiene il controllo.
+I compiti rilevanti che gli competono sono:
+	\begin{itemize}
+	\item Ricerca di strumenti che possono automatizzare il più possibile le operazioni in modo tale da toglierle alla componente umana che potrebbe inserire errori;
+	\item Risoluzione di problemi legati alla gestione e controllo di processi adottando strumenti adatti;
+	\item Gestione e controllo del versionamento della documentazione riguardante il progetto;
+	\item Fornire procedure strumenti e tutto il necessario per monitorare e segnalare il controllo qualità;
+	\item Redazione delle \emph{Norme di Progetto} nel quale viene spiegato l'utilizzo degli strumenti adottati;
+	\item Aiuto nella redazione del \emph{Piano di Qualifica}.
+	\end{itemize}			
+\item \textbf{\analyst:} è responsabile per le attività di analisi, in particolare:
+	\begin{itemize}
+	\item Comprendere la natura e la complessità del problema;
+	\item Redigere lo \emph{Studio di Fattibilità} e l'\emph{Analisi dei Requisiti}.
+	\end{itemize}
+\item \textbf{\verifier:} è responsabile delle attività di verifica in particolare deve:
+	\begin{itemize}
+	\item Assicurare che lo svolgimento delle attività sia conforme alle norme stabilite nel documento \emph{Norme di Progetto};
+	\item Controllare la conformità di ogni documento alle norme stabilite;
+	\item Redigere il \emph{Piano di Qualifica} assieme all'\administrator.
+	\end{itemize}
+\item \textbf{\designer:} è responsabile per le attività che riguardano la progettazione in particolare deve:
+	\begin{itemize}
+	\item Presentare una soluzione comprensibile e attuabile motivandone le scelte fatte;
+	\item Attuare scelte su aspetti progettuali che attribuiscano al prodotto soluzioni note e ottimizzate;
+	\item Attuare scelte su aspetti tecnologici che rendono il prodotto manutenibile in modo semplice;
+	\item Redigere la \emph{Specifica Tecnica} e la \emph{Definizione di Prodotto} oltre alle sezioni riguardanti le metriche di verifica della programmazione presente nel \emph{Piano di Qualifica}.
+	\end{itemize}
+\item \textbf{\programmer:} è responsabile delle attività riguardanti la codifica oltre che delle componenti necessarie per eseguire le prove di verifica e validazione del codice. Inoltre deve:
+	\begin{itemize}
+	\item Implementare come naturale conseguenza, le soluzioni descritte dal \designer{} che porteranno poi alla realizzazione del prodotto;
+	\item Scrivere il codice che dovrà essere necessariamente: documentato, versionato, manutenibile e che rispetti le norme stabilite per la scrittura del codice presenti nelle \emph{Norme di Progetto};
+	\item Implementare i test sul codice scritto utili per eseguire prove di verifica e validazione di quanto fatto;
+	\item Redigere il \emph{Manuale Utente} e produrre documentazione del codice.
+	\end{itemize}
+\end{itemize}

@@ -1,0 +1,23 @@
+\section{Glossary}
+\label{glossary}
+
+\paragraph{\underline{Cluster algorithm}\\}
+Function that applies a clustering technique to the data (possibly both original image and extracted features\g{}).
+
+\paragraph{\underline{Data}\\}
+An image that have to be analyzed.
+
+\paragraph{\underline{Dataset}\\}
+Logic abstraction of an analysis. Consists of a group of Subjects\g{} and a Protocol\g{} that performs on it. Each Subject\g{} of the group will may be processed by the Protocol\g{} during an analysis.
+
+\paragraph{\underline{Feature}\\}
+Information extracted from the image, not present originally. A feature could visually underline, for example, a particular type of tissue.
+
+\paragraph{\underline{Feature extractor}\\}
+Function that calculates a feature\g{} of interest from the data\g{}
+
+\paragraph{\underline{Mask}\\}
+A binary image which is used to delimit the region of interest of a data\g{} that have to be analyzed. The data\g{} elements whose corresponding mask\g{} values are zero, are discarded from the analysis.
+
+\paragraph{\underline{Protocol}\\}
+Combination of a set of feature extractors\g{} (from 0 to N) and one clustering algorithm\g{} (from 0 to 1). A Protocol is associated to one or more Datasets\g{}.

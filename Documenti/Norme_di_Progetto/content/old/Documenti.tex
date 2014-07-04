@@ -1,0 +1,214 @@
+\section{Documenti}
+\label{documenti}
+In questa sezione verranno presentati i vari standard adottati dal gruppo \authorName{} nella stesura dei documenti durante lo sviluppo del software.
+
+\subsection{Versionamento}
+\label{versionamento}
+Ogni documento deve specificare la propria versione, la quale sarà della seguente forma:
+\begin{displaymath}
+X.Y.Z
+\end{displaymath}
+dove:
+\begin{itemize}
+\item\textbf{X:} numero che identifica la versione di rilascio. Ogni incremento causa l'azzeramento dei valori Y e Z. In particolare, questo parametro verrà incrementato ogni qual volta si consegneranno i documenti per una revisione;
+\item\textbf{Y:} numero che indica l'avvenuta verifica del documento. Nel momento in cui il verificatore ha controllato il documento, sarà tenuto ad incrementare questo parametro. Ogni incremento inoltre, comporta l'azzeramento del parametro Z;
+\item \textbf{Z:} numero che identifica una semplice modifica del documento. Ogni aggiunta o correzione al documento, comporta un incremento del parametro Z.
+\end{itemize}
+
+\subsection{Template}
+\label{template}
+Per facilitare la stesura e la manutenzione dei vari documenti, i file di compilazione sono stati strutturati in maniera tale che la composizione generale sia gestita da template validi per ogni documento. In particolare sono stati creati template per il frontespizio, per il layout, per i comandi utilizzati nei file e per la tabella delle modifiche. Ogni documento avrà una cartella interna denominata \textit{Content}, in cui verranno collocati i file corrispondenti alle varie sezioni che lo compongono. La procedura che descrive come creare un nuovo documento è descritta in sez.\ref{creazione_doc}
+
+\subsection{Struttura dei documenti}
+\label{struttura}
+\subsubsection{Prima pagina}
+\label{primapag}
+Ogni documento deve avere una prima pagina contenete le seguenti informazioni:
+\begin{itemize}
+\item Nome del progetto;
+\item Logo del gruppo;
+\item Nome del gruppo;
+\item E-mail esterna del gruppo;
+\item Nome del documento;
+\item La versione del documento\footnote{Espressa come indicato in sezione \ref{versionamento}.};
+\item Data di redazione del documento;
+\item Cognome e nome dei redattori del documento;
+\item Cognome e nome dei verificatori del documento;
+\item Cognome e nome di chi ha approvato il documento;
+\item Tipo d'uso del documento\footnote{Potrà essere interno o esterno.};
+\item La lista di distribuzione del documento;
+\item Un sommario, contenente una breve descrizione del documento.
+\end{itemize}
+
+\subsubsection{Diario delle modifiche}
+\label{diariomod}
+Nella seconda pagina di ogni documento deve essere presente il diario delle modifiche.
+\\Ogni riga del diario delle modifiche deve contenere le seguenti informazioni:
+\begin{itemize}
+\item Una breve descrizione sulle modifiche effettuate;
+\item Il cognome e nome di chi ha effettuato la modifica;
+\item Il ruolo dell'autore della modifica;
+\item La data in cui è stato modificato il documento\footnote{La data deve essere espressa come riportato in sezione \ref{fricorrenti}.};
+\item La versione del documento dopo la modifica.
+\end{itemize}
+
+\subsubsection{Indici}
+\label{indici}
+In ogni documento, tranne che nel \emph{Glossario}, deve essere presente un indice delle sezioni.
+\\Nel caso in cui il documento contenga immagini e/o tabelle, devono essere presenti anche i relativi indici.
+
+\subsubsection{Formattazione di una pagina}
+\label{formattazionepag}
+L'intestazione di ogni pagina deve avere le seguenti informazioni:
+\begin{itemize}
+\item Il logo del gruppo;
+\item Nome del gruppo;
+\item La sezione corrente all'interno del documento.
+\end{itemize}
+ A piè di pagina deve invece esserci:
+ \begin{itemize}
+ \item Nome del documento;
+ \item La versione corrente del documento;
+ \item Numero di pagina nel formato \lq\lq{}\textbf{Pagina X di N}\rq\rq{}, dove \lq\lq{}X\rq\rq{} è il numero della pagina corrente e \lq\lq{}N\rq\rq{} è il numero di pagine totali del documento.
+ \end{itemize}
+
+\subsection{Classificazione dei documenti}
+\label{classificazione}
+
+\subsubsection{Documenti informali}
+\label{documentiinf}
+Si definiscono documenti informali tutti quei documenti che sono ancora in fase di stesura e devono ancora essere approvati dal \projectManager{}.
+\\Tali documenti sono ad \emph{esclusivo} uso interno e non potranno essere divulgati a terze parti, prima di essere stati verificati ed approvati.
+\\Una volta approvati, i documenti diventeranno formali e pronti per la distribuzione verso l'esterno.
+\\Tutti i documenti informali dovranno essere salvati nel repository\glossario{} nell'apposita cartella\footnote{Per maggiori dettagli vedere la sezione \ref{rdocumentazione}.}.
+\\Tali documenti devono essere rinominati osservando le seguenti regole: 
+\begin{itemize}
+\item La prima lettera di ogni parola, che non sia una preposizione, deve essere necessariamente maiuscola;
+\item Gli spazi devono essere sostituiti con il carattere \lq\lq{}\_{}\rq\rq{} (underscore);
+\item I caratteri accentati devono essere sostituiti con i medesimi caratteri, ma privi di accento.
+\end{itemize}
+Un esempio di nome è il seguente: \emph{Studio\_di\_Fattibilita.pdf}.
+
+\subsubsection{Documenti formali}
+\label{documentiformali}
+Si definiscono documenti formali tutti i documenti che sono stati approvati dal \projectManager{}\footnote{Fatta eccezion per il \emph{Piano di Progetto}, che viene approvato da un qualsiasi altro membro del gruppo.} e sono pronti per essere rilasciati.
+\\Quando un documento diventa formale potrà essere visionato da terze parti.
+\\Il file pronto per il rilascio dovrà seguire le stesse norme di nomenclatura del file in fase di stesura con l’aggiunta, alla fine del nome, della versione separata dal carattere \lq\lq{}-\rq\rq{} (trattino) e preceduta da una \lq\lq{}v\rq\rq{} (es. \emph{Studio\_di\_Fattibilita-v1.0.0.pdf}).
+
+\subsubsection{Verbali}
+\label{verbali}
+Per verbali si intendono tutti quei documenti redatti come promemoria in seguito ad un incontro.
+\\Tutti i verbali esterni saranno redatti dal \projectManager{}, mentre i verbali interni saranno redatti da un qualsiasi membro presente all'incontro.
+\\I verbali dovranno essere denominati secondo il seguente criterio:
+\begin{center}
+	\textbf{Verbale\{numero del verbale\}\_\{tipo di incontro\}\_\{data incontro\}}
+\end{center}
+dove:
+\begin{itemize}
+\item \textbf{Numero del verbale:} indica un numero progressivo che identifica il verbale\footnote{Tale numero dovrà partire da uno.};
+\item \textbf{Tipo di incontro:} indica il tipo di incontro avvenuto, che potrà essere:
+\begin{itemize}
+\item \textbf{Interno:} nel caso si tratti di un incontro interno;
+\item \textbf{Esterno:} nel caso si tratti di un incontro esterno.
+\end{itemize}
+\item \textbf{Data incontro:} indica la data in cui è avvenuto l'incontro\footnote{La data dovrà essere formattata come indicato in sezione \ref{fricorrenti}.}.
+\end{itemize}
+La prima pagina di ogni verbale deve contenere le seguenti informazioni:
+\begin{itemize}
+\item \textbf{Data}\footnote{Formato espresso come \ref{fricorrenti}};
+\item \textbf{Luogo ritrovo:} sintetica descrizione del luogo, correlata da indirizzo e città;
+\item \textbf{Ora inizio-fine:} espresso nel seguente formato ora inizio-fine: hh:mm-hh:mm;
+\item \textbf{Membri assenti:} i membri assenti alla riunione.
+%da sistemare
+\end{itemize}
+
+\subsection{Norme tipografiche}
+\label{norme tipografiche}
+Al fine di evitare incoerenza tra le diverse parti dei documenti, si rimanda a questa sottosezione per tutte le informazioni riguardanti l'ortografia, la tipografia e l'assunzione di uno stile uniforme in tutti i documenti.	
+
+\subsubsection{Stile di testo}
+\label{stile}
+\begin{itemize}
+\item \textbf{Grassetto:} il grassetto si deve utilizzare nei seguenti casi:
+\begin{itemize}
+\item \textbf{Elenchi puntati:} per evidenziare l'oggetto trattato nel paragrafo;
+\item \textbf{Altri casi:} è inoltre possibile utilizzare il grassetto per evidenziare termini particolarmente rilevanti. 
+\end{itemize}
+\item \textbf{Corsivo:} il corsivo deve essere utilizzato nei seguenti casi:
+\begin{itemize}
+\item \textbf{Ruoli:} ogni riferimento a un ruolo deve essere scritto in corsivo (esempio: \projectManager);
+\item \textbf{Citazioni:} ogni citazione ad una fonte esterna va fatta tramite l'uso del corsivo;
+\item \textbf{Documenti:} ogni riferimento a un documento deve essere scritto in corsivo (esempio: \emph{Glossario});
+\item\textbf{File e directory:} ogni trascrizione del nome di un file o di una directory, deve essere fatta usando il corsivo; 
+\item \textbf{Altri casi:} in altri casi può essere necessario usare il corsivo, come per evidenziare termini particolarmente significativi.
+\end{itemize}
+\item \textbf{Maiuscolo:} l'uso del maiuscolo è strettamente limitato alla trascrizione di acronimi;
+\item \textbf{\LaTeX{}:} ogni riferimento a \LaTeX{} va fatto tramite il comando \verb!\LaTeX!.
+\end{itemize}
+
+\subsubsection{Punteggiatura}
+\label{punteggiatura}
+\begin{itemize}
+\item \textbf{Punteggiatura:} qualsiasi segno di punteggiatura non può seguire un carattere di spazio;
+\item \textbf{Punti ellittici:} i punti di sospensione devono essere inseriti esclusivamente tramite il comando \LaTeX{} \verb!\dots!, immediatamente dopo l'ultimo carattere non di spaziatura;
+\item \textbf{Parentesi:} il periodo racchiuso tra le parentesi non deve mai iniziare con un carattere di spazio e non deve mai terminare con un carattere di spazio o punteggiatura;
+\item \textbf{Lettere maiuscole:} le lettere maiuscole vanno poste dopo il punto, il punto esclamativo, il punto interrogativo e all'inizio di ogni elemento di un elenco puntato. Inoltre viene utilizzata la lettera maiuscola per i ruoli di progetto, i nomi dei documenti, le fasi di progetto, le revisioni di progetto, oltre che dove imposto dalla lingua italiana.
+\end{itemize}
+
+\subsubsection{Composizione del testo}
+\label{composizione del testo}
+\begin{itemize}
+\item \textbf{Elenchi:} la prima parola che segue l'oggetto di indentazione deve avere la prima lettera minuscola. Ogni punto dell'elenco deve terminare con un carattere di punto e virgola, tranne l'ultimo che termina con un punto;
+\item \textbf{Note a piè di pagina:} ogni nota a piè di pagina deve iniziare con la prima lettera della prima parola maiuscola non preceduta da caratteri di spazio. Ogni nota a piè di pagina deve terminare con un punto;
+\item \textbf{Pedice \lq\lq{}G\rq\rq{}:} il pedice\glossario{} viene utilizzata in corrispondenza di termini tecnici e acronimi presenti nei documenti \emph{Glossario}\footnote{Le occorrenze dei termini presenti nei titoli, nelle note a piè di pagina e negli oggetti degli elenchi non andranno evidenziati.}. 
+\end{itemize}
+
+\subsubsection{Formati ricorrenti}
+\label{fricorrenti}
+\begin{itemize}
+\item \textbf{Nomi propri:} l'utilizzo dei nomi propri deve seguire la forma \lq\lq{}Cognome Nome\rq\rq{};
+\item \textbf{Path:} per inserire indirizzi web o indirizzi mail, deve essere utilizzato \emph{esclusivamente} il comando \LaTeX{} \verb!\url!;
+\item \textbf{Date:} ogni data deve essere espressa seguendo lo standard ISO 8601\footnote{\url{http://it.wikipedia.org/wiki/ISO_8601}}: 
+\begin{displaymath}
+	AAAA-MM-GG
+\end{displaymath}
+dove:
+\begin{itemize}
+\item \textbf{AAAA:} rappresenta il formato dell'anno scritto con tutte e quattro le cifre;
+\item \textbf{MM:} rappresenta il mese scritto con esattamente due cifre\footnote{Nel caso lo si possa scrivere utilizzando solo una cifra, si impone di anteporre uno zero al numero.};
+\item \textbf{GG:} rappresenta il giorno scritto con esattamente due cifre.\footnote{Vedi la nota precedente.}
+\end{itemize}
+\item \textbf{Riferimenti ai documenti:} ci si riferirà ai vari documenti scrivendoli in corsivo e mettendo una lettera maiuscola per ogni parola che non sia un articolo (ad esempio \emph{Norme di Progetto}). 
+\\Nel caso ci sia la necessità di riferirsi ad una versione specifica del documento, essa andrà indicata (esempio: \NdP{});
+\item \textbf{Nomi propri:} i nomi propri di persona devono essere scritti nel formato \lq\lq{}Cognome Nome\rq\rq{};
+\item \textbf{Nome del gruppo:} ci si riferirà al gruppo Seven Monkeys con la dicitura \lq\lq{}\authorName{}\rq\rq{}, con il nome del gruppo in corsivo. Per la corretta scrittura è stato creato un comando \LaTeX{} apposito \verb!\authorName!;
+\item \textbf{Nome del proponente:} ci si riferirà al proponente con \lq\lq{}Department of Information Engineering\rq\rq{}. Per la corretta scrittura è stato creato il comando \verb!\proposerName!;
+\item \textbf{Nome del progetto:} ci si riferirà al progetto solo con \lq\lq{}\project\rq\rq{}. Per la corretta scrittura è stato creato il comando \LaTeX{} apposito \verb!\project!;
+\item \textbf{Sigle:} le sigle andranno usate \emph{esclusivamente} all'interno di tabelle o diagrammi secondo il seguente formalismo:
+\begin{itemize}
+\item \verb!Re! per indicare il \projectManager{};
+\item \verb!Ad! per indicare il \administrator{};
+\item \verb!Ve! per indicare i \emph{Verificatori};
+\item \verb!Pr! per indicare i \emph{Programmatori};
+\item \verb!Pj! per indicare i \emph{Progettisti};
+\item \verb!An! per indicare gli \emph{Analisti}.
+\end{itemize} 
+\end{itemize}
+
+\subsection{Componenti grafiche}
+\label{componentigrafiche}
+
+\subsubsection{Immagini}
+\label{immagini}
+Tutte le immagini utilizzate all'interno dei documenti dovranno avere formato \verb!PDF!\glossario{} o \verb!PNG!\glossario{}; è consigliato utilizzare \verb!PDF!\glossario{} vettoriale in quanto la sua risoluzione non dipende dal ridimensionamento dell'immagine.
+\\La conversione di un immagine in formato \verb!PDF!\glossario{} è consentita grazie all'utilizzo del software Gimp\footnote{\url{http://www.gimp.org}}.
+\\Le immagini devono essere accompagnate da una didascalia che inizia con la parola \lq\lq{}Figura\rq\rq{} con la prima lettera maiuscola, seguita dal numero della figura, dal carattere \lq\lq{}due punti\rq\rq{} e da una breve descrizione della figura\footnote{Con breve si vuole intendere che la descrizione deve stare in una riga.}.
+
+\subsubsection{Tabelle}
+\label{tabelle}
+Ogni tabella deve essere utilizzata all'interno dei documenti con lo scopo di proporre informazioni in modo ordinato e coerente. Le tabelle dovranno essere accompagnate da una didascalia che inizia con la parola \lq\lq{}Tabella\rq\rq{} con la prima lettera maiuscola, seguita dal numero della tabella, dal carattere \lq\lq{}due punti\rq\rq{} e da una breve descrizione non banale della tabella\footnote{Vedi nota precedente.}.
+\\Nel caso in cui il valore di una cella sia zero e il dato non è significativo, esso verrà omesso.
+\subsection{Glossario}
+\label{glossario}
+Il \emph{Glossario} contiene, in ordine lessicografico, la descrizione dei vari termini utilizzati all'interno degli altri documenti, che necessitano di un approfondimento in quanto possono generare ambiguità. Ogni occorrenza di un termine presente nel \emph{Glossario}, è marcato nei documenti con una \lq\lq{}\textbf{G}\rq\rq{} in pedice.
+\\È preferibile inserire un termine privo di definizione, piuttosto che rimandare l’inserimento dello stesso nel glossario.

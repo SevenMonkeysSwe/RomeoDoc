@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Capitolato_2.tex
+% Current Version: 0.1.0
+% Created: 2013-12-09
+% Author: Martignago Jimmy
+% Email: jimmy.martignago@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.1.0			Martignago Jimmy	2013-12-14		Apportate modifiche a seguito verifica.
+% 0.0.2			Martignago Jimmy	2013-12-10		Stesura file.
+% 0.0.1			Martignago Jimmy	2013-12-09		Creazione file ed impostazione struttura.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Capitolato C2: RING}
+\label{capitolato2}
+Questo capitolato è stato proposto dal \textbf{BioComputing lab} facente parte del \textit{Dipartimento di Scienze Biomediche} dell'\textit{Università degli Studi di Padova}.
+
+\subsection{Descrizione del capitolato}
+\label{descrizionecap2}
+Il progetto consiste nella creazione di un software "stand alone", per la generazione di grafici RIN (\textit{Residue Interaction Network}) di proteine. \\ Si richiede di prendere in input una serie di coordinate atomiche nel formato standard \textit{PDB} (\textit{Protein Data Bank}) o PDBML/XML tramite file, oppure di recuperarle dal database online \url{http://www.rcsb.org/} tramite codice identificativo. In output si richiede di generare il grafo RIN come lista e/o matrice delle adiacenze e gli attributi dei nodi e degli archi, presentati in forma testuale, in formato \verb!CVS!\footnote{\url{http://en.wikipedia.org/wiki/Comma-separated_values}}, \verb!JSON!\footnote{\url{http://www.json.org/}} e matriciale. Inoltre, il software deve correggere gli eventuali errori delle coordinate strutturali e/o integrare le informazioni mancanti attraverso algoritmi forniti dal proponente. Deve essere possibile utilizzare le funzionalità core sopra esposte, oltre che da riga di comando, attraverso un \textit{web service} che implementi un sistema REST\footnote{\url{http://en.wikipedia.org/wiki/Representational_state_transfer}} e/o SOAP\footnote{\url{http://en.wikipedia.org/wiki/SOAP}} per la comunicazione con il server. Infine, si richiede di implementare un \textit{wrapper} che permetta di integrare il software come plug-in all'interno di \textit{Cytoscape}\footnote{\url{http://www.cytoscape.org/}} e/o \textit{Gephi}\footnote{\url{https://gephi.org/}}.
+
+\subsection{Studio del dominio}
+\label{dominiocap2}
+\subsubsection{Dominio applicativo}
+\label{dominioapp2}
+Il dominio applicativo di questo progetto risulta totalmente sconosciuto ai componenti del gruppo. A parte alcune nozioni base di biologia, eventualmente apprese singolarmente da alcuni componenti in passato, il contesto d'uso del prodotto deve essere approfondito successivamente con il proponente. Ad una prima analisi, questo problema è stato valutato come secondario, considerando che influirebbe marginalmente nello sviluppo del software.
+
+\subsubsection{Dominio tecnologico}
+\label{dominiotec2}
+Le tecnologie da utilizzare per sviluppare questo progetto, sembrano relativamente semplici e in maggioranza, già conosciute dal gruppo. Si consiglia infatti di utilizzare il linguaggio C/C++\glossario{} per lo sviluppo delle funzionalità core. Gli applicativi esterni (\textit{Cytoscape} e \textit{Gephi}) sono invece implementati in Java. 
+\\ Per quanto riguarda lo sviluppo del \textit{web service}, i protocolli SOAP e REST sono sconosciuti, mentre alcuni componenti posseggono già conoscenze individuali per la realizzazione di pagine web. Sarebbe necessario quindi, approfondire la conoscenza di tali protocolli e dei formati \verb!CVS! e \verb!JSON! per completare le competenze tecnologiche necessarie per questo capitolato.
+
+\subsection{Valutazione complessiva}
+\label{valutazione2}
+\subsubsection{Aspetti positivi}
+\label{aspettipos2}
+Di seguito, gli aspetti positivi riscontrati dal gruppo:
+\begin{itemize}
+\item\textbf{Conoscenza del dominio tecnologico:} come già espresso sopra, il gruppo possiede le conoscenze adeguate per sviluppare le funzionalità core. Inoltre, la presenza di una prima versione di \textbf{RING} già sviluppata in passato dai proponenti, porta ad avere una buona base da cui prendere spunto. Il gruppo conta infine di colmare le proprie mancanze in un tempo ragionevole;
+\item\textbf{Chiarezza requisiti:} i requisiti sommari sono ben esposti nel capitolato e sono stati successivamente approfonditi con colloqui informali con i proponenti. Il gruppo conta di portare a termine l'analisi dei requisiti, in maniera efficace;
+\item\textbf{Utilità del prodotto finito:} il possibile utilizzo futuro di questo prodotto da parte della comunità scientifica, risulta un valido motivo di interesse per il gruppo. Il prodotto verrà rilasciato con licenza \textit{Creative Commons} \textit{Attribution 3.0 Unported}\footnote{\url{http://creativecommons.org/licenses/by/3.0/deed.en_US}}.
+\end{itemize}
+
+\subsubsection{Aspetti negativi}
+\label{aspettineg2}
+\begin{itemize}
+\item\textbf{Scarsa documentazione:} sebbene esistano già una serie di classi, implementate in passato dai proponenti per l'attuale versione di \textbf{RING}, è stato appurato che la documentazione riguardante è scarna e poco comprensibile. Questo costituisce un rischio durante la progettazione, in quanto non è facile stimare a priori i tempi e le risorse necessarie a comprendere appieno il codice esistente. Tenuto conto che tali codici riguardano proprio le funzionalità core del prodotto, il gruppo ha valutato questo aspetto come un incognita troppo grossa.
+\item\textbf{Sviluppo del \textit{wrapper}:} costituisce requisito obbligatorio, l'interfacciamento delle classi implementate in C/C++\glossario{} con Java per la realizzazione dei plugin per \textit{Cytoscape} e/o \textit{Gephi}. Nessun componente del gruppo possiede le conoscenze necessarie per progettare tali interfacce. Data l'importanza di questa parte del capitolato, è stato valutato anche questo come aspetto molto rischioso.
+\end{itemize}
+
+\subsubsection{Conclusioni}
+\label{conclusioni2}
+Per concludere, questo capitolato è stato scartato in ultima analisi. I rischi esposti precedentemente sono stati valutati troppo alti dalla maggioranza del gruppo. Inoltre, l'interesse verso il dominio complessivo del progetto è stato considerato insufficiente per giustificare lo sforzo che ne sarebbe conseguito.

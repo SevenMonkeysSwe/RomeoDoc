@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Capitolato_3.tex
+% Current Version: 0.1.0
+% Created: 2013-12-09
+% Author: Martignago Jimmy
+% Email: jimmy.martignago@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.1.0			Martignago Jimmy	2013-12-14		Apportate modifiche a seguito verifica.
+% 0.0.3			Martignago Jimmy	2013-12-12		Correzione lessico.
+% 0.0.2			Martignago Jimmy	2013-12-11		Stesura file.
+% 0.0.1			Martignago Jimmy	2013-12-09		Creazione file ed impostazione struttura.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Capitolato C3: Romeo}
+\label{capitolato3}
+Questo capitolato è stato proposto dal gruppo di \textit{Bioingegneria} del \proposerName, in collaborazione con l'\textit{Institute of Psychiatry, King's College} di Londra. 
+\\Di seguito sono riportate le  considerazioni più  importanti che hanno portato il gruppo a scegliere tale progetto.
+
+\subsection{Descrizione del capitolato}
+\label{descrizionecap3}
+L'obiettivo di questo progetto è produrre un software che applichi algoritmi di cluster analysis\glossario{} ad immagini e video di esami biomedici. Alcuni dei formati da supportare sono: 
+\verb!BMP!\glossario{}, \verb!TIFF!\glossario{}, \verb!PNG!\glossario{}, \verb!JPEG!\glossario{}, \verb!NIfTI!\glossario{} e video \verb!AVI!\glossario{}. 
+Un software di questo tipo esiste già nel mercato (PMOD\glossario{}), ma gli algoritmi di clustering\glossario{} sono integrati, solo parzialmente, in uno strumento secondario e operano solo su immagini generate da PET\glossario{} o MR\glossario{}. Inoltre, a detta dei proponenti, tale software è costoso e la grafica non intuitiva ne rende difficoltoso l'utilizzo da parte di personale con scarse abilità informatiche. Viene quindi posta particolare attenzione alla GUI\glossario{} del software, che sarà una componente determinante per l'accettazione del prodotto da parte dei proponenti.
+\\ La proposta di competizione espressa nel capitolato non avrà un fine commerciale. Inoltre, è necessario dare la possibilità di poter estendere il codice per aggiungere nuovi algoritmi.
+\\ L'utilizzo del software consta di tre fasi fondamentali:
+\begin{itemize}
+\item\textbf{Creazione di gruppi di Subject:} creazione e salvataggio di gruppi di Subject\glossario;
+\item\textbf{Creazione di un Protocol:} creazione e salvataggio di Protocol\glossario;
+\item\textbf{Creazione di un Dataset:} creazione e salvataggio di Dataset\glossario{}, quest'ultimi composti da un gruppo di Subject\glossario{} e dal Protocol\glossario{} con cui si vogliono processare;
+\item\textbf{Esecuzione del Protocol sul Dataset:} selezione di un Dataset\glossario{} e applicazione del Protocol\glossario{}, dando la possibilità, a computazione terminata, di gestire visualizzazione e salvataggio dei risultati.
+\end{itemize}
+
+\subsection{Studio del dominio}
+\label{dominiocap3}
+\subsubsection{Dominio applicativo}
+\label{dominioapp3}
+Il dominio applicativo risulta completamente sconosciuto a tutto il gruppo. Sebbene sia di relativa importanza al fine dello sviluppo delle funzioni core, il contesto in cui opererà il software ha suscitato un interesse collettivo a riguardo. Il gruppo si propone di approfondirne gli aspetti con il proponente, anche in vista della progettazione della GUI\glossario{}, ritenuta molto importante. 
+
+\subsubsection{Dominio tecnologico}
+\label{dominiotec3}
+Le tecnologie richieste per svolgere tale progetto sembrano completamente alla portata dei componenti del gruppo. Si consiglia infatti nel capitolato, di sviluppare il software in C/C++\glossario{} dato che le librerie per manipolare foto e video dei formati richiesti, sono implementate in quel linguaggio. Inoltre anche gli algoritmi per estrarre le varie features\glossario{} e gli algoritmi di clustering\glossario{}, sono anch'essi scritti in C/C++\glossario{}. Dopo una prima analisi, è emerso che le librerie consigliate per la manipolazione di immagini (VTK\glossario{}), si integrano con il framework\glossario{} Qt\glossario{}, già utilizzato da tutto il gruppo.
+
+\subsection{Valutazione complessiva}
+\label{valutazione3}
+\subsubsection{Aspetti positivi}
+\label{aspettipos3}
+Di seguito gli aspetti positivi riscontrati per questo capitolato:
+\begin{itemize}
+\item\textbf{Conoscenza del dominio tecnologico:} alla luce delle precedenti considerazioni, è evidente che il dominio tecnologico non dovrebbe costituire un problema considerevole nello sviluppo finale del software. Si prevede che l'accento verrà posto nella progettazione del design pattern\glossario{} e nella GUI\glossario{} del prodotto;
+\item\textbf{Interesse individuale verso il dominio:} l'idea di costruire un prodotto utile alla comunità scientifica, rappresenta un grosso stimolo per la maggioranza dei componenti del gruppo;
+\item\textbf{Rapporto con il proponente:} è risultato evidente sin dalla presentazione del capitolato, che sarebbe stato possibile costruire un buon rapporto tra fornitore e proponente. Questa prima impressione è stata confermata nei successivi incontri informali. Tale aspetto è stato considerato molto importante dal gruppo, nella prospettiva di costruire una buona analisi dei requisiti su cui basare lo sviluppo.
+\end{itemize}
+\subsubsection{Aspetti negativi}
+\label{aspettineg3}
+\begin{itemize}
+\item\textbf{Documentazione in lingua inglese:} il capitolato ha tra i suoi requisiti obbligatori, la stesura del manuale utente in lingua inglese. In un primo momento, questo è stato visto come un punto negativo per questo progetto. Discutendone all'interno del gruppo, si è concordato che poteva essere considerato un problema marginale date le competenze individuali di alcuni componenti;
+\item\textbf{Sviluppo di una grafica accattivante:} la progettazione della GUI\glossario{} del software, sembrerebbe la sfida più grande presente nel capitolato. Se da un lato questo preoccupa, dato che la bontà di tale parte non è legata prettamente ad una conoscenza tecnologica, dall'altro rappresenta un ottimo stimolo;
+\item\textbf{Software multipiattaforma:} requisito fondamentale che impone lo sviluppo del software per i principali sistemi operativi (Windows\glossario{}, Mac OS\glossario{} e Linux\glossario{}). Data la scarsa conoscenza del gruppo in questo ambito, tale requisito potrebbe costituire un rischio di non rispettare completamente le richieste del capitolato.
+\end{itemize}
+
+\subsubsection{Conclusioni}
+\label{conclusioni3}
+In conclusione, il gruppo \authorName{} ha deciso con largo consenso, di prendere in consegna questo capitolato. Gli aspetti positivi superano di gran lunga quelli degli altri capitolati e i potenziali rischi individuati, si ritiene possano essere gestiti in maniera  efficiente.

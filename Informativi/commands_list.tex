@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: command_list.tex
+% Created: 2013 November 27
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt]{article}
+	\usepackage[italian]{babel}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{geometry}
+	\usepackage{graphicx}%package per la gestione delle immagini
+	\geometry{a4paper}
+\newcommand{\version}{v2.0.0}
+\title{LISTA DI COMANDI USATI NEI DOCUMENTI LaTeX \version}
+\author{Nicola Magnabosco}
+\begin{document}
+\maketitle
+	\paragraph{Comandi da Modificare all'interno del \textbf{template}}
+	\begin{itemize}
+			\item \textbf{documentName} stampa il nome del documento
+			\item \textbf{currentVersion }stampa la versione corrente del documento
+			\item \textbf{redactionDate} stampa il giorno di compilazione del documento (fa uso del comando "today")
+			\item \textbf{editors} stampa la lista dei redattori
+			\item \textbf{verifiers} stampa la lista dei verificatori
+			\item \textbf{approved} stampa il nome di chi ha approvato il documento
+			\item \textbf{usage} stampa il campo d'uso del documento, interno o esterno
+			\item \textbf{distributionList} stampa la lista di distribuzione del documento
+			\item \textbf{sommario} inserisce la descrizione dello scopo del documento
+			\item \textbf{glossario} inserisce una \textit{G} maiuscola in pedice
+	\end{itemize}
+	\paragraph{Comandi Standard all'interno del file commands.tex}
+	\begin{itemize}
+		\item \textbf{project} stampa "ROMEO"
+		\item \textbf{email} stampa l'url "7monkeys.swe@gmail.com"
+		\item \textbf{authorName} stampa "7Monkeys"
+		\item \textbf{administrator} stampa in \textit{emph} "Amministratore di Progetto"
+		\item \textbf{projectManager} stampa in \textit{emph} Responsabile di Progetto
+		\item \textbf{analyst} stampa in \textit{emph} Analista
+		\item \textbf{programmer} stampa in \textit{emph} Programmatore
+		\item \textbf{designer} stampa in \textit{emph} Progettista
+		\item \textbf{verifier} stampa in \textit{emph} Verificatore
+		\item \textbf{proposerName} stampa in \textit{emph} Departement of Information Engineering (DEI)
+		\item \textbf{commitName} stampa in \textit{emph} Prof. Tullio Vardanega
+		\item \textbf{logo}  include dell'immagine "big-logo"
+		
+	\end{itemize}
+\end{document}

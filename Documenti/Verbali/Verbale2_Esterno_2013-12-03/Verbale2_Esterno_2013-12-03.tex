@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Verbale1_Esterno_2013-12-03.tex
+% Current Version: 0.0.1
+% Created: 2013-12-03
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.0.1			Magnabosco Nicola	2013-12-03		Creazione file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{../../Template/doc_standard/packages}
+\input{../../Template/doc_standard/commands}
+\input{./doc_standard/styles}
+		\begin{document}
+			% COMMAND TO REDEFINE
+			\renewcommand{\documentName}{Verbale Esterno del 2013-12-03}
+			\renewcommand{\currentVersion}{v1.0.0}
+			\renewcommand{\redactionDate}{2013-12-03}
+			\renewcommand{\editors}{
+			\begin{itemize}
+			\item Magnabosco Nicola
+			\end{itemize}						
+			}
+			\renewcommand{\verifiers}{
+			\begin{itemize}
+			\item Luisetto Luca
+			\end{itemize}
+			}
+			\renewcommand{\approved}{
+			\begin{itemize}
+			\item Bissacco Nicolò
+			\end{itemize}}
+			\renewcommand{\usage}{Esterno}
+			\renewcommand{\sommario}{
+			Questo documento contiene il resoconto del primo incontro tra i proponenti
+			e il gruppo \authorName.
+			}
+			
+			% TITLE PAGE
+			\input{./doc_standard/firstpage}	\pagebreak		
+			\input{Doc_to_Modify/History} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{Doc_to_Modify/Content_Files}
+			
+		\end{document}

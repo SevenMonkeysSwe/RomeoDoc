@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Studio_di_Fattibilita.tex
+% Current Version: 0.1.0
+% Created: 2013-11-25
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.1.0			Martignago Jimmy	2013-12-14		Apportate modifiche a seguito verifica.
+% 0.0.5			Martignago Jimmy	2013-12-12		Modifica layout frontespizio.
+% 0.0.4			Martignago Jimmy	2013-12-11		Modifica informazione versione documento.
+% 0.0.3			Martignago Jimmy	2013-12-10		Modifica informazione versione documento.
+% 0.0.2			Martignago Jimmy	2013-12-09		Rinominato file da template.tex a StudioDiFattibilità.tex
+%													secondo esigenza. Compilazione campi obbligatori.
+% 0.0.1			Magnabosco Nicola	2013-11-25		Creazione file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{../Template/doc_standard/packages}
+\input{../Template/doc_standard/commands}
+\input{../Template/doc_standard/styles}
+		\begin{document}
+			% COMMANDS TO REDEFINE
+			\renewcommand{\documentName}{Studio di Fattibilità}
+			\renewcommand{\currentVersion}{v1.0.0}
+			\renewcommand{\redactionDate}{2013-12-09}
+			\renewcommand{\editors}{
+			\begin{itemize}
+			\item Martignago Jimmy
+			\end{itemize}
+			}
+			
+			\renewcommand{\verifiers}{
+			\begin{itemize}			
+			\item Scapin Davide
+			\end{itemize}			
+			}
+			
+			\renewcommand{\approved}{
+			\begin{itemize}
+			\item Feltre Beatrice
+			\end{itemize}
+			}
+			\renewcommand{\distributionList}{\begin{itemize}
+						\item \authorName
+						\item \commitName
+						\item \commitNameC
+						\end{itemize}}
+			\renewcommand{\usage}{Interno}
+			\renewcommand{\sommario}{
+			Resoconto dell'analisi di fattibilità dei capitolati proposti che
+			ha portato alla scelta del progetto \project
+			}
+			\renewcommand{\glossario}{\small\ped{\textbf{G}}}
+			
+			% TITLE PAGE
+			\input{../Template/doc_standard/firstpage}	\pagebreak
+			\pagestyle{historyPages}
+			\input{Doc_to_Modify/History} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{Doc_to_Modify/Content_Files}
+			
+		\end{document}

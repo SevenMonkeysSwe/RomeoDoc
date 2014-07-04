@@ -1,0 +1,45 @@
+\input{../Template/doc_standard/packages}
+\input{../Template/doc_standard/commands}
+\input{../Template/doc_standard/styles}
+		\begin{document}
+			% COMMAND TO REDEFINE
+			\renewcommand{\documentName}{Analisi dei Requisiti}
+			\renewcommand{\currentVersion}{v4.0.0}
+			\renewcommand{\redactionDate}{2013-12-12}
+			\renewcommand{\editors}{
+			\begin{itemize}
+			\item Magnabosco Nicola
+			\item Adami Alberto
+			\item Martignago Jimmy
+			\item Bissacco Nicolò
+			\end{itemize}}
+			
+			\renewcommand{\verifiers}{
+			\begin{itemize}
+			\item Scapin Davide
+			\end{itemize}}
+			
+			\renewcommand{\approved}{
+			\begin{itemize}
+			\item Feltre Beatrice
+			\end{itemize}
+			}
+			\renewcommand{\usage}{Esterno}
+			\renewcommand{\sommario}{Documento che descrive l'analisi dei requisiti e dei casi d'uso
+			}
+			
+			% TITLE PAGE
+			\input{../Template/doc_standard/firstpage}	\pagebreak		
+			\input{doc_to_modify/history} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\listoftables \pagebreak
+			\listoffigures \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{doc_to_modify/content_files}
+			
+		\end{document}

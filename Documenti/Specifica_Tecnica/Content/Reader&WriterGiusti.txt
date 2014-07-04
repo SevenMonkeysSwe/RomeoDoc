@@ -1,0 +1,142 @@
+\subsection{Romeo::Model::Util::ExporterModel}
+	\label{romeo::model::util::exportermodel}
+		\subsubsection{Informazioni sul package}
+		\label{info_expmod}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=\linewidth]{./Content/Immagini/ExporterModel.png}
+			\caption{Package \textsl{Romeo::Model::Util::ExporterModel}}
+			\label{comp_log}
+		\end{figure}
+
+		\subsubsection{Descrizione}
+		\label{descr_expmod}
+		Package\g{} contenente le classi che si occupano di trasformare le immagini dal formato interno usato per l'analisi, al formato desiderato dall'utente, tra quelli previsti dai requisiti.
+		\\Le classi di questo package\g{} sono implementate tramite il design pattern\g{} Adapter utilizzando le classi fornite dalla libreria esterna ITK\g{}.
+
+		\subsubsection{Interfacce contenute}
+		\label{interface_exporter}
+			\paragraph{\underline{Exporter}}
+			\label{expo}
+			 	\subparagraph{Descrizione:} interfaccia che fornisce un contratto per esportare i risultati delle analisi. Viene implementata dalle classi che specializzano l'esportazione per tipologia di file.
+			 	\\Rappresenta il componente Target del design pattern\g{} Adapter.
+			 	\subparagraph{Utilizzo:} viene implementata dalle classi Exporter2D ed Exporter3D che ne implementano i metodi.
+			 	\subparagraph{Implementata da:}
+					\begin{itemize}
+						\item \hyperref[expo_analyze]{Romeo::Model::Util::ExporterModel::Exporter2D};
+						\item \hyperref[expo_img]{Romeo::Model::Util::ExporterModel::Exporter3D}.	
+					\end{itemize}
+
+				\subparagraph{Relazioni con altre classi:}
+					\begin{itemize}
+						\item \hyperref[]{Romeo::Model::Core::Analysis:} relazione entrante, la classe Analysis utilizza l'interfaccia Exporter per esportare i risultati durante l'analisi.
+						\item \hyperref[]{Romeo::Model::Core::RGBImage} relazione uscente, l'interfaccia utilizza la classe RGBImage quando deve esportare un'immagine.
+					\end{itemize}
+
+		\subsubsection{Classi contenute}
+		\label{exporter_contenute}
+		\paragraph{\underline{Exporter2D}}
+				\label{expo_analyze}
+				 	\subparagraph{Descrizione:} classe che si occupa di esportare un immagine di tipo 2D, nel formato desiderato dall'utente tra quelli previsti dai requisiti e nel percorso indicato dall'utente o dal signal\glossario{} che la utilizza.
+				\subparagraph{Utilizzo:} la classe viene utilizzata in seguito alla ricezione di un signal\glossario{} da parte dei controller che necessita di esportare un'immagine di tipo 2D. 
+				\\Classe che viene utilizzata come adattatore della classe ImageFileWriter, fornita dalla libreria esterna ITK\g{}. Rappresenta il componente Adapter del design pattern\g{} Adapter.
+				 	\subparagraph{Eredita da:}
+							\begin{itemize}
+								\item \hyperref[expo]{Romeo::Model::Util::ExporterModel::Export}.				
+							\end{itemize}
+					\subparagraph{Relazioni con altre classi:}
+						\begin{itemize}
+							\item \hyperref[]{Romoe::Model::Core::Analysis:} relazione entrante, la classe Analysis utilizza la classe AnalyzeExporter per esportare i risultati dell'analisi in formato Analyze\g{}.
+							\item \hyperref[]{Romeo::Model::Core::RGBImage} relazione uscente, l'interfaccia utilizza la classe RGBImage quando deve esportare un'immagine.
+						\end{itemize}
+
+		\paragraph{\underline{Exporter3D}}
+			\label{expo_img} 
+				\subparagraph{Descrizione:} classe che si occupa di esportare un immagine di tipo Analyze\g{}, nel percorso indicato dall'utente o dal signal\glossario{} che la utilizza. 
+				\subparagraph{Utilizzo:} la classe viene utilizzata in seguito alla ricezione di un signal\glossario{} da parte dei controller che necessita di esportare un'immagine di tipo 3D.
+				 	\\Classe che viene utilizzata come adattatore della classe ImageFileWriter, fornita dalla libreria esterna ITK\g{}. Rappresenta il componente Adapter del design pattern\g{} Adapter.
+				\subparagraph{Eredita da:}
+					\begin{itemize}
+						\item \hyperref[expo]{Romeo::Model::Util::ExporterModel::Export}.				
+					\end{itemize}	
+				\subparagraph{Relazioni con altre classi:}
+					\begin{itemize}
+						\item \hyperref[]{Romoe::Model::Core::Analysis:} relazione entrante, la classe Analysis utilizza la classe ImageExporter per esportare i risultati dell'analisi in un formato immagine generico.
+							\item \hyperref[]{Romeo::Model::Core::RGBImage} relazione uscente, l'interfaccia utilizza la classe RGBImage quando deve esportare un'immagine.
+						\end{itemize}	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	READERMODEL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+	\pagebreak
+		\subsection{Romeo::Model::Util::ReaderModel}
+	\label{romeo::model::util::readermodel}
+		\subsubsection{Informazioni sul package}
+		\label{info_readmod}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width=0.9\linewidth]{./Content/Immagini/Romeo__Model__Util__ReaderModel.png}
+			\caption{Pacakge \textsl{Romeo::Model::Util::ReaderModel}}
+			\label{comp_read}
+		\end{figure}
+		\subsubsection{Descrizione:}
+		\label{descr_readmod}
+		Package\g{} contenente le classi che si occupano di leggere le immagini e trasformarle nel formato interno usato all'interno di \project{}.
+		\\Le classi di questo package\g{} sono implementate tramite il design pattern\g{} Adapter adattando le classi fornite dalla libreria esterna ITK\g{}.
+
+
+		\subsubsection{Interfacce contenute}
+		\label{interface_readere}
+			\paragraph{\underline{Reader}}
+			\label{reader}
+				\subparagraph{Descrizione:} interfaccia che fornisce un contratto per la lettura di immagini e la trasformazione di esse nel formato interno. Viene implementata dalle classi che specializzano la lettura per tipologia di file.
+				\\Rappresenta il componente Target del design pattern\g{} Adapter.
+				\subparagraph{Utilzzo:} viene implementata dalle classi ImageReader e VideoReader che ne implementano i metodi.				
+				\subparagraph{Implementata da:}
+					\begin{itemize}
+						\item \hyperref[rea_img]{Romeo::Model::Util::ReaderModel::ImageReader};	
+						\item \hyperref[rea_video]{Romeo::Model::Util::ReaderModel::VideoReader}.
+					\end{itemize}
+				\subparagraph{Relazioni con altre classi:}
+					\begin{itemize}
+						\item \hyperref[]{Romeo::Model::Core::RealSubject:} relazione entrante, la classe RealSubject necessità dell'interfaccia Reader per la sua implementazione.
+					\end{itemize}
+
+				\pagebreak
+
+		\paragraph{\underline{ImageReader}}
+		\label{rea_img}
+			\subparagraph{Descrizione:} classe che si occupa di caricare immagini di tipo 2D e 3D non time dipendent. Viene utilizzata come adattatore dalla classe \verb!ImageFileReader! fornita dalla libreria esterna ITK\g{}.
+			\\Rappresenta il componente Adapter del design pattern\g{} Adapter.
+			\subparagraph{Utilizzo:} viene utilizzata quando c'è necessità di operare sull'immagine, quindi durante l'analisi e durante la creazione dei subject.
+			\subparagraph{Eredita da:}
+				\begin{itemize}
+					\item \hyperref[reader]{Romeo::Model::Util::ReaderModel::Reader}.
+				\end{itemize}
+			\subparagraph{Relazioni con altre classi:}
+					\begin{itemize}
+						\item \hyperref[]{Romeo::Model::Core::RGBImage:} relazione entrante, la classe RGBImage necessità della classe ImageReader per la sua implementazione;
+						\item \hyperref[]{Romeo::Model::Core::RBGImage2D:} relazione entrante, la classe RGBImage2D necessità della classe ImageReader per la sua implementazione.					
+						\item \hyperref[]{Romeo::Model::Core::RGBImage3D:}	relazione entrante, la classe RGBImage3D necessità della classe ImageReader per la sua implementazione.					
+						\item \hyperref[]{Romeo::Model::Core::InternalData2D:}	relazione entrante, la classe InternalData2D necessità della classe ImageReader per la sua implementazione.
+						\item \hyperref[]{Romeo::Model::Core::InternalData3D:}	relazione entrante, la classe InternalData3D necessità della classe ImageReader per la sua implementazione.						
+					\end{itemize}
+
+		\paragraph{\underline{VideoReader}}
+		\label{rea_video}
+			\subparagraph{Descrizione:} classe che si occupa di caricare video di tipo 2D e 3D. Classe che viene utilizzata come adattatore della classe \verb!VideoFileReader! fornita dalla libreria
+			esterna ITK\g{}.
+			\\Rappresenta il componente Adapter del design pattern\g{} Adapter.
+			\subparagraph{Utilizzo:} viene utilizzata quando c'è necessità di operare sui video, quindi durante l'analisi e durante la creazione dei subject.
+			\subparagraph{Eredita da:}
+				\begin{itemize}
+					\item \hyperref[reader]{Romeo::Model::Util::ReaderModel::Reader}.
+				\end{itemize}
+			\subparagraph{Relazioni con altre classi:}
+				\begin{itemize}
+						\item \hyperref[]{Romeo::Model::Core::Video:} relazione entrante, la classe Video necessità della classe VideoReader per la sua implementazione;
+						\item \hyperref[]{Romeo::Model::Core::Video2D:} relazione entrante, la classe Video2D necessità della classe VideoReader per la sua implementazione.					
+						\item \hyperref[]{Romeo::Model::Core::Video3D:}	relazione entrante, la classe Video3D necessità della classe VideoReader per la sua implementazione.										
+				\end{itemize}
+				\pagebreak

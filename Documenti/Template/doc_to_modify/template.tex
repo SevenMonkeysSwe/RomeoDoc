@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: template.tex
+% Created: 2013/11/25
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Modifier Date		Change													Author
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% N.B.: remember to modify all the files in the folder "doc_to_modify" before compiling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{../doc_standard/packages}
+\input{../doc_standard/commands}
+\input{../doc_standard/styles}
+		\begin{document}
+			% COMMAND TO REDEFINE
+			\renewcommand{\documentName}{•}
+			\renewcommand{\currentVersion}{•}
+			\renewcommand{\redactionDate}{•}
+			\renewcommand{\editors}{•}
+			\renewcommand{\verifiers}{•}
+			\renewcommand{\approved}{•}
+			\renewcommand{\usage}{•}
+			\renewcommand{\sommario}{•}
+			\renewcommand{\glossario}{•}
+			\newcommand{\documentPath}{NormeDiProgetto}
+			
+			% TITLE PAGE
+			\input{../doc_standard/firstpage}	\pagebreak		
+			\input{doc_to_modify/history} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{doc_to_modify/content_files}
+			
+		\end{document}

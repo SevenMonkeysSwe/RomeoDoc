@@ -1,0 +1,403 @@
+\section{Processi}
+\label{processi}
+
+\subsection{Gestione di progetto}
+\label{gestione_progetto}
+Sarà il \projectManager{} ad avere l'onere di gestire il progetto durante tutto il suo ciclo di vita.
+\\Il \projectManager{} avrà il compito di:
+\begin{itemize}
+	\item Pianificare le varie attività;
+	\item Gestire le risorse;
+	\item Analizzare e prevenire i rischi.
+\end{itemize}
+
+\subsubsection{Pianificare attività}
+\label{pianificare_attività}
+Per pianificare le varie attività da svolgere il \projectManager{} dovrà utilizzare GanttProject\glossario{} per realizzare i vari diagrammi di Gantt\glossario{}.
+
+\subsubsection{Gestione delle risorse}
+\label{gestione_risorse}
+Per gestire le varie risorse disponibili durante lo svolgimento del progetto, il \projectManager{} dovrà creare dei diagrammi delle risorse, per pianificare la quantità di ore che ogni risorsa dovrà dedicare a ciascuna attività. ogni risorsa disponibile quante ore di ciascuna attività.\\ 
+Per disegnare i diagrammi di attività, verrà impiegato GanttProject\glossario{}, un applicativo open source multipiattaforma. Inoltre, per assegnare i compiti alle risorse disponibili, il \projectManager{} utilizzerà il sistema di ticketing offerto da GitHub\glossario{}\footnote{Per maggiori informazioni consultare la sezione \ref{protocollo}.}.
+
+\subsubsection{Analisi e prevenzione dei rischi}
+\label{analsi_prev_rischi}
+Durante l'intero periodo di svolgimento del progetto, il \projectManager{} dovrà analizzare i rischi che possono incombere. Inoltre dovrà cercare di prevenirli e trovare delle contromisure ad essi. 
+
+\subsection{Analisi dei Requisiti}
+\label{analisi}
+
+\subsubsection{Studio di Fattibilità}
+\label{studio_di_fattibilità}
+In seguito alla pubblicazione dei capitolati d'appalto, il \projectManager{} avrà il compito di convocare delle riunioni per discutere sugli aspetti positivi e negativi insiti in essi. Sarà compito degli \emph{Analisti} redigere lo \emph{Studio di Fattibilità} in base a quanto emerso durante le suddette riunioni.
+\\Nello \emph{Studio di Fattibilità}, per ogni capitolato, dovrà essere indicato:
+\begin{itemize}
+\item\textbf{Descrizione:} verrà fornita una breve descrizione del progetto proposto;
+\item\textbf{Dominio tecnologico ed applicativo:} saranno indicate le tecnologie richieste per la realizzazione del progetto e una breve descrizione del contesto applicativo in cui si colloca il prodotto richiesto nel capitolato;
+\item\textbf{Valutazione complessiva:} verranno esposte le considerazioni emerse durante le discussioni. Infine si indicheranno le motivazioni principali per cui si è deciso di scartare o adottare il capitolato.
+\end{itemize}
+
+\subsubsection{Analisi dei Requisiti}
+\label{analisi_req}
+Il documento \emph{Analisi dei Requisiti} sarà redatto dagli \emph{Analisti}. In esso saranno inseriti tutti i requisiti ed i casi d'uso\glossario{} emersi durante l'attività di analisi.
+
+\paragraph{Requisiti\\}
+\label{requisiti}
+Ogni requisito dovrà essere il più completo e non ambiguo possibile. I requisiti dovranno essere classificati per tipo e priorità, utilizzando la seguente notazione:
+\begin{center}
+\textbf{R[importanza][tipo][codice]}
+\end{center}
+dove:
+\begin{itemize}
+\item\textbf{Importanza:} può assumere i seguenti valori:
+\begin{itemize}
+\item\textbf{0:} in questo caso si tratta di un requisito obbligatorio;
+\item\textbf{1:} in questo caso si tratta di un requisito desiderabile;
+\item\textbf{2:} in questo caso si tratta di un requisito opzionale.
+\end{itemize}
+\item\textbf{Tipo:} può assumere i seguenti valori:
+\begin{itemize}
+\item\textbf{F:} per indicare un requisito funzionale;
+\item\textbf{Q:} per indicare un requisito di qualità;
+\item\textbf{P:} per indicare un requisito prestazionale;
+\item\textbf{V:} per indicare un requisito di vincolo.
+\end{itemize}
+\item\textbf{Codice:} rappresenta il codice univoco di ogni requisito, il quale va indicato in forma gerarchica.
+\end{itemize}
+I requisiti verranno rappresentati nel documento \emph{Analisi dei Requisiti}, in una tabella contenente l'identificativo, una breve descrizione e la fonte da cui sono stati tratti.
+
+\paragraph{Casi d'uso\\}
+\label{casi d'uso}
+Per ogni caso d'uso\glossario{} dovrà essere fornito:
+\begin{itemize}
+\item\textbf{Identificativo:} ogni caso d'uso\glossario{} va tracciato con un codice. Quest'ultimo sarà composto dalle due lettere maiuscole \lq\lq{}\textbf{UC}\rq\rq{}, seguite dal numero identificativo del caso d'uso\glossario{} (es. \textbf{UC2.4.6});
+\item\textbf{Diagramma:} verrà utilizzato UML\glossario{} per creare i diagrammi dei caso d'uso\glossario{}, con lo scopo di semplificare la comprensione dei requisiti.
+\\Di seguito sono riportate le convenzioni adottate nella realizzazione dei diagrammi:
+\begin{itemize}
+\item\textbf{Standard:} verrà adottato lo standard UML\glossario{} 2.0;
+\item\textbf{Lingua:} verrà adottata la lingua italiana all'interno dei diagrammi. 
+\end{itemize}
+\item\textbf{Descrizione:} una breve didascalia che descrive il caso d'uso\glossario{};
+\item\textbf{Flusso principale:} verrà fornita una descrizione del flusso principale degli eventi del caso d'uso\glossario{};
+\item\textbf{Scenario alternativo:} nel caso sia presente uno scenario alternativo, il caso d'uso\glossario{} dovrà essere correlato da una descrizione di tale scenario;
+\item\textbf{Attori:} gli attori coinvolti nel caso d'uso\glossario{};
+\item\textbf{Precondizione:} la precondizione del requisito;
+\item\textbf{Postcondizione:} la postcondizione del requisito.
+\end{itemize}
+
+\paragraph{Tracciamento dei requisiti\\}
+\label{tracc_req}
+Per il tracciamento dei requisiti si utilizzerà il software \textbf{ReqMonkeys}\footnote{Per maggiori informazioni vedere \ref{reqmonkeys}.}, creato dal gruppo \authorName{}.
+
+\subsection{Progettazione}
+\label{progettazione}
+
+\subsubsection{Specifica Tecnica}
+\label{specifica}
+I \emph{Progettisti} dovranno descrivere la progettazione ad alto livello dell'architettura del software e dei vari componenti nel documento di \emph{Specifica Tecnica}. Si cercherà di creare un'architettura il più \emph{estendibile} e \emph{manutenibile} possibile in modo da facilitare future modifiche al software.
+
+\paragraph{Diagrammi UML\\}
+\label{diagrammi_uml_st}
+Verrà utilizzato il linguaggio UML\glossario{} per definire i seguenti diagrammi:
+\begin{itemize}
+\item Diagrammi delle classi;
+\item Diagrammi dei package;
+\item Diagrammi delle attività;
+\item Diagrammi di sequenza.
+\end{itemize}
+Di seguito sono riportate le convenzioni utilizzate nella realizzazione dei diagrammi UML\glossario{}:
+\begin{itemize}
+	\item\textbf{Standard:} lo standard UML\glossario{} utilizzato è il 2.0;
+	\item\textbf{Lingua:} la lingua utilizzata all'interno dei diagrammi è l'inglese.
+\end{itemize}
+
+\paragraph{Design pattern\\}
+\label{design_pattern_st}
+I \emph{Progettisti} dovranno utilizzare i design pattern\glossario{} più adatti al contesto, in modo da rendere l'applicazione il più efficiente possibile. Ogni design pattern\glossario{} utilizzato, verrà accompagnato da una breve descrizione e da un diagramma che ne esemplifica il funzionamento.
+
+\paragraph{Classi di verifica\\}
+\label{sp_classiverifica}
+Andranno realizzate delle classi di verifica, da utilizzare per testare che le varie componenti del sistema abbiano un comportamento corretto rispetto alle attese.
+
+\paragraph{Stile di progettazione\\}
+\label{stilediprogettazione}
+Durante la Progettazione, una particolare attenzione sarà posta su:
+\begin{itemize}
+\item\textbf{Puntatori:} non andranno utilizzati puntatori se non \emph{strettamente} necessario, in quanto rendono il codice di difficile comprensione;
+\item\textbf{Ricorsione:} non andrà utilizzata la ricorsione a meno che non sia necessaria, in caso andrà fornita una dimostrazione induttiva sulla correttezza del metodo in questione;
+\item\textbf{Annidamento di cicli:} all'interno di un metodo non dovranno esserci annidamenti di cicli con una profondità maggiore a cinque.
+\end{itemize}
+
+\subsubsection{Definizione di Prodotto}
+\label{definizione}
+Successivamente alla \emph{Specifica Tecnica}, i \emph{Progettisti} dovranno produrre la \emph{Definizione di Prodotto} del software in questione. Tale documento andrà più in dettaglio nella varie componenti del software rispetto alla \emph{Specifica Tecnica}.
+
+\paragraph{Diagrammi UML\\}
+\label{diagrammi_uml_dp}
+Verrà utilizzato il linguaggio UML\glossario{} per definire i seguenti diagrammi:
+\begin{itemize}
+\item Diagrammi delle classi;
+\item Diagrammi delle attività;
+\item Diagrammi di sequenza.
+\end{itemize}
+Di seguito sono riportate le convenzioni utilizzate nella realizzazione dei diagrammi UML\glossario{}:
+\begin{itemize}
+	\item\textbf{Standard:} lo standard UML\glossario{} utilizzato è il 2.0;
+	\item\textbf{Lingua:} la utilizzata all'interno dei diagrammi è l'inglese.
+\end{itemize}
+
+\paragraph{Descrizione di classi\\}
+Ogni classe progettata dovrà essere descritta nella \emph{Definizione di Prodotto}.
+\\Per ogni classe andrà fornito:
+\begin{itemize}
+\item\textbf{Diagramma:} un diagramma UML\glossario{} che rappresenta la classe;
+\item\textbf{Descrizione:} una breve descrizione del funzionamento della classe in questione;
+\item\textbf{Utilizzo:} il contesto di utilizzo della classe all'interno del software;
+\item\textbf{Attributi:} verranno indicati i vari attributi della classe, corredati da una breve descrizione;
+\item\textbf{Metodi:} verranno indicati i metodi della classe, corredati da una breve descrizione dei vari parametri e del metodo.
+\end{itemize}
+
+\paragraph{Test d'unità\\}
+\label{Test_unità_st}
+I \emph{Progettisti} dovranno provvedere alla creazione di test d'unità per verificare il corretto funzionamento delle varie componenti del sistema.
+
+\subsection{Verifica}
+\label{verifica}
+La verifica di processi, documenti e prodotti è un’attività da eseguire continuamente durante lo sviluppo del progetto. Di conseguenza, servono modalità operative chiare e dettagliate per i \textit{Verificatori}, in modo da uniformare le attività di verifica svolte ed ottenere il miglior risultato possibile. Si descrivono ora le modalità ordinate e puntuali di verifica di processi, documenti, attività e codice alle quali ci si riferirà in questo documento e alle quali i \textit{Verificatori} dovranno attenersi.
+
+\subsubsection{Tecniche di analisi}
+Esistono due tecniche di analisi: l'\textit{analisi statica} e l'\textit{analisi dinamica.}
+\paragraph{Analisi statica} può essere di tipo walkthrough o inspection.
+\begin{itemize}
+ 	\item \textbf{Walkthrough:} questa tecnica di analisi prevede una lettura critica del codice o del documento prodotto. Tale tecnica è molto dispendiosa in termini di risorse, visto che viene applicata all'intero documento, senza avere una precisa idea di quale sia il tipo di anomalia e di dove ricercarla. Essa è però necessaria nelle prime fasi del progetto, vista l'inesperienza da parte del gruppo nell'attuare un tipo di verifica più precisa e mirata. Dopo una prima fase di lettura ed identificazione degli errori, si procede alla discussione degli stessi, proponendo le modifiche da apportare per garantirne la correzione. Il passo finale consiste nell'applicare le modifiche proposte, redigendo un rapporto preciso che elenchi le modifiche effettuate. Una caratteristica di questo tipo di analisi è che richiede l'utilizzo di più risorse umane;
+ 	\item \textbf{Inspection:} questa tecnica di analisi presuppone l'esperienza da parte del verificatore, nell'individuare gli errori e le anomalie più frequenti. A tal scopo è necessaria una \textit{lista di controllo}, stilata in una precedente analisi di tipo walkthrough, nella quale vengono elencate le sezioni più critiche. Questo permette quindi una verifica più rapida che non necessità della lettura dell'intero documento o codice, oltre che richiedere meno risorse umane. Dopo aver terminato l'analisi, sarà necessario stilare un rapporto di verifica che tenga traccia del lavoro svolto e delle modifiche apportate.
+\end{itemize}
+
+%\subsubsection{Metriche}\label{metriche}
+%\newcommand{\echoHeader}{
+%	\begin{tabular}{|p{4cm}|c|c|p{4cm}|}
+%		\hline
+%		\textbf{Errore riscontrato}		 & 
+%		\textbf{Gravità} &
+%		\textbf{Priorità} &
+%		\textbf{Modalità operative} \\
+%		\hline}
+%\begin{table}[!h]
+%	\begin{center}
+%		\echoHeader{}
+%		Indici fuori range &
+%		Alta &
+%		Alta &
+%		Ticket\\
+%		\hline
+%	\end{tabular}
+%	\caption{Errori riscontrati nei processi}
+%	\label{table_errori_proc}
+%	\end{center}
+%\end{table}
+%
+%\begin{table}[!h]
+%	\begin{center}
+%		\echoHeader{}
+%		Errore ortografico &
+%		Bassa &
+%		Bassa &
+%		Ticket\\
+%		\hline
+%		Mancato rispetto delle norme &
+%		Media &
+%		Media &
+%		Ticket\\
+%		\hline
+%		Mancata occorrenza di un termine del Glossario &
+%		Media &
+%		Media &
+%		Ticket\\
+%		\hline
+%	\end{tabular}
+%	\caption{Errori riscontrati nei documenti}
+%	\label{table_errori_doc}
+%	\end{center}
+%\end{table}
+%
+%\begin{table}[!h]
+%	\begin{center}
+%		\echoHeader{}
+%		Mancata compilazione &
+%		Alta &
+%		Alta &
+%		Ticket o correzione immediata\\
+%		\hline
+%		Mancato rispetto delle norme di codifica &
+%		Media &
+%		Media &
+%		Ticket\\
+%		\hline
+%	\end{tabular}
+%	\caption{Errori riscontrati nel codice}
+%	\label{table_errori_doc}
+%	\end{center}
+%\end{table}
+%La priorità di risoluzione di un errore può assumere i seguenti valori:
+%\begin{itemize}
+%	\item \textbf{Bassa:} indica che l'errore deve essere corretto entro la scadenza della prossima milestone\glossario{};
+%	\item \textbf{Media:} indica che l'errore deve essere risolto nel giro di 5-6 giorni;
+%	\item \textbf{Alta:} indica che l'errore deve essere risolto subito.
+%\end{itemize}
+%Le modalità operative che ogni \emph{Verificatore} deve seguire sono le seguenti:
+%\begin{itemize}
+%	\item \textbf{Ticket:}
+%	\item \textbf{Aggiunta ad elenco bug:}
+%\end{itemize}
+
+\subsubsection{Verifica dei documenti}
+\label{verifica_doc}
+Il processo di verifica dei documenti viene eseguito ogni qualvolta un documento abbia subito una modifica e debba essere approvato. È compito del \projectManager{} affidare ai \emph{Verificatori} la verifica di un documento.
+Per eseguire una corretta verifica di un documento va seguita la seguente prassi:
+\begin{enumerate}
+\item \textbf{Controllo tipografico:} tramite l'utilizzo di \TeX{}maker e di Aspell\glossario{} verranno trovati errori tipografici presenti nel documento;
+\item \textbf{Controllo lessicale:} il \emph{Verificatore} dovrà controllare che il documento non contenga degli errori lessicali attraverso un'attenta lettura delle parti da verificare: se non è ancora presente una lista di controllo, si effettuerà un'analisi di tipo \textit{walkthrough}, altrimenti si procederà all'analisi \textit{inspection};
+\item \textbf{Controllo di glossario:} il \emph{Verificatore} dovrà controllare che ogni termine presente nel glossario sia evidenziato correttamente all'interno del documento;
+\item \textbf{Controllo di contenuto:} il \emph{Verificatore} dovrà controllare che il documento contenga tutti gli argomenti da trattare, che non manchi nulla, e che sia impaginato con una struttura adeguata;
+\item \textbf{Rispetto delle norme di progetto:} il \emph{Verificatore} dovrà controllare che il documento segua le norme di progetto stabilite;
+\item \textbf{Stesura lista di controllo:} si dovrà stilare una lista degli errori più frequenti, in modo da facilitare le successive attività di verifica dei documenti;
+\item \textbf{Calcolo dell'indice di Gulpease:} su ogni documento redatto il \emph{Verificatore} dovrà calcolare l’indice di Gulpease. Nel caso in cui l’indice non rispettasse il range di valori specificato nel \PdQ, sarà necessario eseguire un walkthrough del documento alla ricerca delle frasi troppo lunghe o complesse;
+\item \textbf{Segnalazione degli errori riscontrati:} una volta terminata la verifica il \emph{Verificatore} dovrà creare i ticket opportuni per segnalare gli errori riscontrati, come spiegato in sezione \ref{cticket}.
+\end{enumerate}
+
+\subsubsection{Verifica dei diagrammi}\mbox{}\\
+\label{verifica_diagrammi}
+Al \emph{Verificatore} è richiesta la verifica dei seguenti diagrammi UML\glossario{}:
+\begin{itemize}
+\item \textbf{Diagrammi di flusso:} la verifica dei diagrammi di flusso deve avvenire manualmente controllando che essi aderiscano allo standard UML\glossario{} 2.0 e rappresentino in modo corretto la procedura in questione;
+\item \textbf{Diagrammi dei casi d'uso:} la verifica dei diagrammi dei casi d'uso deve avvenire manualmente, controllando che essi rispettino lo standard UML\glossario{} 2.0. In particolare, deve essere verificato il corretto utilizzo di inclusioni ed estensioni; inoltre, si deve assicurare che ci sia la massima corrispondenza tra il diagramma e la descrizione testuale.
+\end{itemize}
+
+\subsubsection{Verifica del codice}
+\label{verifica_codice}
+Nella verifica del codice verranno utilizzati i seguenti strumenti:
+
+\paragraph{Analisi statica\\}
+\label{analisi_statica}
+Per la verifica statica in Jenkins sono stati integrati i seguenti strumenti:
+\begin{itemize}
+\item\textbf{Compilatori:} il compilatore è il primo strumento di analisi, in quanto segnala in modo inequivocabile errori e warning. Dato che il software dovrà essere multipiattaforma, i sorgenti del progetto dovranno essere compilati con i seguenti compilatori:
+\begin{itemize}
+\item\textbf{GCC\footnote{\url{http://gcc.gnu.org}}:} compilatore per ambiente Linux\glossario{};
+\item\textbf{Clang\footnote{\url{http://clang.llvm.org}}:} compilatore per ambiente Mac OS\glossario{};
+\item\textbf{MinGW\footnote{\url{http://www.mingw.org}}:} compilatore per ambiente Windows\glossario{}.
+\end{itemize}
+\item\textbf{CppCheck\footnote{\url{http://cppcheck.sourceforge.net}}:} si tratta di un analizzatore statico di codice per il C++\glossario{}, che permette la rilevazione di alcuni errori;
+\item \textbf{CCCC\footnote{\url{http://cccc.sourceforge.net}} \textit{C and C++ Code Counter}:} Misura metriche riguardanti codice sorgente C++\g{}. Tra le più rilevanti ci sono: complessità ciclomatica, linee di codice per linee di commento, metodi per classe ed accoppiamento tra gli oggetti.
+\end{itemize}
+
+\paragraph{Analisi dinamica\\}
+\label{analisi_dinamica}
+L'analisi dinamica verrà effettuata con:
+\begin{itemize}
+\item\textbf{Valgrind\footnote{\url{http://valgrind.org}}:} tool\glossario{} che permette di rilevare memory leak\glossario{}, altri problemi di memoria comuni in C++\glossario{} ed effettuare il profiling\glossario{} del software. Compatibile solo con sistemi Unix;
+\item\textbf{Very Sleepy:} tool per il profiling\glossario{} del software in ambiente Windows\glossario{};
+\item\textbf{Dr. Memory\footnote{\url{http://www.drmemory.org}}:} tool per il controllo della memoria in ambiente Windows\glossario{};
+\end{itemize}
+
+\paragraph{Test d'unità\\}
+\label{test_unità}
+Per i test di unità sul codice si utilizzerà il framework\glossario{} Qt Test\footnote{\url{http://qt-project.org/doc/qt-5.0/qttestlib/qtest-overview.html}}.
+\\Per maggiori informazioni si rimanda al \PdQ{}.
+
+\paragraph{Resoconto bug\\}
+\label{resoconto_bug}
+Se durante la verifica del codice, il \emph{Verificatore} trova dei bug\glossario{}, dovrà utilizzare lo strumento Mantis\footnote{\url{http://www.mantisbt.org}} per segnalare i problemi ai \emph{Programmatori}.
+
+\subsection{Codifica}
+\label{codifica}
+Di seguito sono riportate le convenzioni che i \emph{Programmatori} dovranno seguire durante la fase di Codifica.
+\\Per rendere il codice più leggibile e facilmente comprensibile, i \emph{programmatori} dovranno seguire le Qt\glossario{} Coding Convention e le Qt\glossario{} Styling Code. (Vedi sezione \ref{rnormativi})
+\\È consentita la possibilità di effettuare dei cambiamenti alle convenzioni stabilite, in seguito ad una decisione del \projectManager{}. 
+
+\subsubsection{Linguaggio di codifica}
+\label{linguaggio}
+Una prima analisi del capitolato e dei suoi requisiti ha delineato come scelta ottimale l'uso del linguaggio C++\glossario{} per lo sviluppo dell'applicativo richiesto.
+
+\subsubsection{Convenzioni di codifica}
+\label{convenzioni}
+Di seguito è riportato l'insieme di norme e convenzioni che il gruppo \authorName{} seguirà nella scrittura e documentazione del codice.
+\\L'unica lingua ammessa per i nomi di variabili, classi, metodi e commenti è l'inglese.
+
+\paragraph{Nomenclatura\\}
+\label{nomenclatura}
+Per l'assegnazione di nomi a classi, variabili, metodi e costanti andranno seguite le seguenti regole:
+\begin{itemize}
+\item\textbf{Classi:} va utilizzata la notazione mixed case, con la prima lettera maiuscola;
+\item\textbf{Metodi:} va utilizzata la notazione mixed case, con la prima lettera minuscola;
+\item\textbf{Variabili:} va utilizzata la notazione mixed case, con la prima lettera minuscola;
+\item\textbf{Costanti:} va scritto il nome \textit{interamente} in maiuscolo, separando le varie parole con il carattere \lq\lq{}\_\rq\rq{} (underscore).
+\end{itemize}
+
+\paragraph{Intestazione di un file\\}
+\label{intestazione}
+Ad ogni file di codice dovrà corrispondere una singola classe propria.
+\\Una classe dovrà essere suddivisa in un file \textit{header} (.h) e in un file di \textit{implementazione} (.cpp).
+Ogni file \textit{header} dovrà necessariamente avere un'intestazione, la quale dovrà avere la seguente forma:
+\begin{verbatim}
+/*!
+*\file Nome del file
+*\author Cognome Nome (e-mail)
+*\date Data di creazione del file
+*\brief Descrizione breve della classe
+*Descrizione dettagliata della classe
+*/
+/*
+*Changes:
+*+----------+--------+--------------+------------------------+----------------+
+*|  Version +  Date  +  Programmer  +         Changes        +   Description  |
+*+----------+--------+--------------+------------------------+----------------+
+*|                                                                            |
+*|   x.y.z  | AAMMGG | Nome Cognome | ClassName::MethodName  | Description    |
+*|                                                                            |
+*+----------+--------+--------------+------------------------+----------------+
+*/
+\end{verbatim}
+dove:
+\begin{itemize}
+\item\textbf{File:} deve essere il nome del file, comprendente di estensione (.h o .cpp);
+\item\textbf{Author:} deve essere il creatore del file e non necessariamente il programmatore che sta modificando il file attualmente;
+\item\textbf{Date:} deve essere la data di creazione del file, espressa come indicato in sezione \ref{fricorrenti};
+\item\textbf{Brief:} è una descrizione breve della classe (massimo due righe);
+\item\textbf{Changes:} rappresenta la tabella di avanzamento del file, comprensiva di modifiche, aggiunte ed eliminazioni di metodi della classe.
+\\Nello specifico la tabella deve avere le seguenti righe:
+\begin{itemize}
+\item\textbf{Version:} la versione del file successivamente alla modifica;
+\item\textbf{Date:} la data in cui è stato modificato il file;
+\item\textbf{Programmer:} il programmatore che ha fatto la modifica, che può non essere necessariamente il creatore del file;
+\item\textbf{Changes:} rappresenta il metodo che ha subito cambiamenti;
+\item\textbf{Description:} una breve descrizione del cambiamento effettuato.
+\end{itemize}
+\end{itemize}
+
+\paragraph{Commenti nei metodi\\}
+\label{commenti}
+Sempre nel file \textit{header} prima di ogni metodo, si dovrà inserire un commento che dovrà rispettare la seguente forma:
+\begin{verbatim}
+/*!brief Breve descrizione del metodo
+*Descrizione dettagliata del metodo.
+*\param Descrizione del primo parametro
+*\param Descrizione dell'n-esimo parametro
+*\return il tipo del valore di ritorno
+*/
+/*
+*Pre-Condition: {La pre-condizione}
+*Post-Condizione: {La post-condizione}
+*/
+\end{verbatim}
+dove:
+\begin{itemize}
+\item\textbf{Brief:} deve essere una breve descrizione del funzionamento del metodo (massimo due righe);
+\item\textbf{Pre-Condition:} deve essere la pre condizione che vale prima della chiamata del metodo;
+\item\textbf{Post-Condition:} deve essere la post condizione che varrà dopo la chiamata del metodo;
+\item\textbf{Return:} deve essere il tipo di ritorno;
+\end{itemize}
+
+\paragraph{Commenti nei file di implementazione\\}
+\label{implementazione}
+Nei vari file di implementazione è gradita la presenza di commenti in modo da facilitare la comprensione del codice. I commenti devono essere scritti nel modo più chiaro e descrittivo possibile. Ogni variabile di particolare importanza, o il quale utilizzo è particolarmente complesso, dovrà essere accompagnata da una breve descrizione del suo scopo. In particolare è gradita la presenza di \textit{invarianti}, \textit{pre e post condizioni} sui cicli, nel caso in cui essi abbiano almeno due livelli di annidamento.

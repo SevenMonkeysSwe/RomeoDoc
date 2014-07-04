@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Romeo" company="" webLink="http://" view-date="2014-03-11" view-index="0" gantt-divider-location="407" resource-divider-location="277" version="2.0" locale="it">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpc0" name="#" width="17" order="0"/>
+        <field id="tpd3" name="Nome" width="29" order="1"/>
+        <field id="tpd4" name="Data d'inizio" width="21" order="2"/>
+        <field id="tpd5" name="Data di fine" width="18" order="3"/>
+        <field id="tpd6" name="Durata" width="14" order="4"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="taskLabelDown" value=""/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="50" order="0"/>
+        <field id="1" name="Ruolo predefinito" width="50" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <only-show-weekends value="false"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+        <date year="2012" month="4" date="9"/>
+        <date year="2005" month="3" date="28"/>
+        <date year="2006" month="4" date="17"/>
+        <date year="2007" month="4" date="9"/>
+        <date year="2008" month="3" date="24"/>
+        <date year="2009" month="4" date="13"/>
+        <date year="2010" month="4" date="5"/>
+        <date year="1" month="1" date="1"/>
+        <date year="1" month="1" date="6"/>
+        <date year="1" month="4" date="25"/>
+        <date year="1" month="5" date="1"/>
+        <date year="1" month="6" date="2"/>
+        <date year="1" month="8" date="15"/>
+        <date year="1" month="11" date="1"/>
+        <date year="1" month="12" date="8"/>
+        <date year="1" month="12" date="25"/>
+        <date year="1" month="12" date="26"/>
+        <date year="" month="1" date="1"/>
+        <date year="" month="1" date="6"/>
+        <date year="" month="4" date="25"/>
+        <date year="" month="5" date="1"/>
+        <date year="" month="6" date="2"/>
+        <date year="" month="8" date="15"/>
+        <date year="" month="11" date="1"/>
+        <date year="" month="12" date="8"/>
+        <date year="" month="12" date="25"/>
+        <date year="" month="12" date="26"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+            <taskproperty id="tpc0" name="#" type="custom" valuetype="text"/>
+        </taskproperties>
+        <task id="3" name="Scelta Capitolato" color="#000000" meeting="true" start="2013-11-29" duration="0" complete="0" expand="true">
+            <depend id="0" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="0" name="ANALISI" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2013-12-02" duration="14" complete="0" expand="false">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="FA"/>
+            <task id="372" name="Norme di Progetto" meeting="false" start="2013-12-02" duration="12" complete="0" expand="true">
+                <depend id="402" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-1"/>
+                <task id="387" name="Stesura NP" color="#99cc00" meeting="false" start="2013-12-02" duration="4" complete="0" expand="true">
+                    <depend id="388" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-1.1"/>
+                </task>
+                <task id="388" name="Verifica NP" color="#ff9999" meeting="false" start="2013-12-06" duration="1" complete="0" expand="true">
+                    <depend id="392" type="2" difference="0" hardness="Strong"/>
+                    <depend id="396" type="2" difference="0" hardness="Strong"/>
+                    <depend id="398" type="2" difference="0" hardness="Strong"/>
+                    <depend id="400" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-1.2"/>
+                </task>
+                <task id="389" name="Incremento NP" color="#99ffff" meeting="false" start="2013-12-11" duration="4" complete="0" expand="true">
+                    <depend id="684" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-1.3"/>
+                </task>
+                <task id="684" name="Verifica NP" color="#ff9999" meeting="false" start="2013-12-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FA-1.4"/>
+                </task>
+            </task>
+            <task id="392" name="Studio di Fattibilità" color="#000000" meeting="false" start="2013-12-09" duration="3" complete="0" expand="true">
+                <depend id="402" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-2"/>
+                <task id="407" name="Stesura SF" color="#99cc00" meeting="false" start="2013-12-09" duration="2" complete="0" expand="true">
+                    <depend id="409" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-2.1"/>
+                </task>
+                <task id="409" name="Verifica SF" color="#ff9999" meeting="false" start="2013-12-11" duration="1" complete="0" expand="true">
+                    <depend id="394" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-2.2"/>
+                </task>
+            </task>
+            <task id="394" name="Analisi dei Requisiti" color="#000000" meeting="false" start="2013-12-12" duration="4" complete="0" expand="true">
+                <depend id="402" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-3"/>
+                <task id="413" name="Stesura AR" color="#99cc00" meeting="false" start="2013-12-12" duration="3" complete="0" expand="true">
+                    <depend id="411" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-3.1"/>
+                </task>
+                <task id="411" name="Verifica AR" color="#ff9999" meeting="false" start="2013-12-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FA-3.2"/>
+                </task>
+            </task>
+            <task id="396" name="Piano di Progetto" color="#000000" meeting="false" start="2013-12-09" duration="6" complete="0" expand="true">
+                <depend id="402" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-4"/>
+                <task id="417" name="Stesura PP" color="#99cc00" meeting="false" start="2013-12-09" duration="5" complete="0" expand="true">
+                    <depend id="415" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-4.1"/>
+                </task>
+                <task id="415" name="Verifica PP" color="#ff9999" meeting="false" start="2013-12-16" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FA-4.2"/>
+                </task>
+            </task>
+            <task id="398" name="Piano di Qualifica" color="#000000" meeting="false" start="2013-12-09" duration="6" complete="0" expand="true">
+                <depend id="402" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-5"/>
+                <task id="421" name="Stesura PQ" color="#99cc00" meeting="false" start="2013-12-09" duration="5" complete="0" expand="true">
+                    <depend id="419" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-5.1"/>
+                </task>
+                <task id="419" name="Verifica PQ" color="#ff9999" meeting="false" start="2013-12-16" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FA-5.2"/>
+                </task>
+            </task>
+            <task id="400" name="Glossario" color="#000000" meeting="false" start="2013-12-09" duration="6" complete="0" expand="true">
+                <depend id="402" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-6"/>
+                <task id="425" name="Stesura G" color="#99cc00" meeting="false" start="2013-12-09" duration="5" complete="0" expand="true">
+                    <depend id="423" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FA-6.1"/>
+                </task>
+                <task id="423" name="Verifica G" color="#ff9999" meeting="false" start="2013-12-16" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FA-6.2"/>
+                </task>
+            </task>
+            <task id="402" name="Verifica Generale" color="#ffff00" meeting="false" start="2013-12-18" duration="2" complete="0" expand="true">
+                <depend id="67" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FA-7"/>
+            </task>
+            <task id="67" name="CONSEGNA RR" color="#ff9900" meeting="true" start="2013-12-20" duration="0" complete="0" priority="2" expand="true">
+                <customproperty taskproperty-id="tpc0" value="FA-8"/>
+            </task>
+        </task>
+        <task id="4" name="ANALISI INCREMENTALE" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2013-12-27" duration="6" complete="0" expand="false">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="FAI"/>
+            <task id="622" name="Norme di Progetto" meeting="false" start="2013-12-27" duration="6" complete="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="FAI-1"/>
+                <task id="628" name="Incremento NP" color="#66ffff" meeting="false" start="2013-12-27" duration="5" complete="0" expand="true">
+                    <depend id="626" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FAI-1.1"/>
+                </task>
+                <task id="626" name="Verifica NP" color="#ff9999" meeting="false" start="2014-01-07" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FAI-1.2"/>
+                </task>
+            </task>
+            <task id="616" name="Analisi dei Requisiti" color="#000000" meeting="false" start="2013-12-27" duration="6" complete="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="FAI-2"/>
+                <task id="618" name="Incremento AR" color="#66ffff" meeting="false" start="2013-12-27" duration="5" complete="0" expand="true">
+                    <depend id="620" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FAI-2.1"/>
+                </task>
+                <task id="620" name="Verifica AR" color="#ff9999" meeting="false" start="2014-01-07" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FAI-2.2"/>
+                </task>
+            </task>
+            <task id="636" name="Piano di Progetto" color="#000000" meeting="false" start="2013-12-27" duration="6" complete="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="FAI-3"/>
+                <task id="638" name="Incremento PP" color="#66ffff" meeting="false" start="2013-12-27" duration="5" complete="0" expand="true">
+                    <depend id="640" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FAI-3.1"/>
+                </task>
+                <task id="640" name="Verifica PP" color="#ff9999" meeting="false" start="2014-01-07" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FAI-3.2"/>
+                </task>
+            </task>
+            <task id="630" name="Piano di Qualifica" color="#000000" meeting="false" start="2013-12-27" duration="6" complete="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="FAI-4"/>
+                <task id="632" name="Incremento PQ" color="#66ffff" meeting="false" start="2013-12-27" duration="5" complete="0" expand="true">
+                    <depend id="634" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FAI-4.1"/>
+                </task>
+                <task id="634" name="Verifica PQ" color="#ff9999" meeting="false" start="2014-01-07" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FAI-4.2"/>
+                </task>
+            </task>
+            <task id="610" name="Glossario" color="#000000" meeting="false" start="2013-12-27" duration="6" complete="0" expand="true">
+                <customproperty taskproperty-id="tpc0" value="FAI-5"/>
+                <task id="612" name="Incremento G" color="#66ffff" meeting="false" start="2013-12-27" duration="5" complete="0" expand="true">
+                    <depend id="614" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FAI-5.1"/>
+                </task>
+                <task id="614" name="Verifica G" color="#ff9999" meeting="false" start="2014-01-07" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FAI-5.2"/>
+                </task>
+            </task>
+        </task>
+        <task id="8" name="RR" color="#ff0000" meeting="true" start="2014-01-08" duration="0" complete="0" priority="4" expand="true">
+            <depend id="5" type="2" difference="1" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="RR"/>
+        </task>
+        <task id="5" name="PROGETTAZIONE ARCHITETTURALE" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2014-01-10" duration="18" complete="0" expand="false">
+            <depend id="9" type="2" difference="4" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="FPA"/>
+            <task id="710" name="Norme di Progetto" meeting="false" start="2014-01-10" duration="2" complete="0" expand="true">
+                <depend id="734" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-1"/>
+                <task id="712" name="Incremento NP" color="#99ffff" meeting="false" start="2014-01-10" duration="1" complete="0" expand="true">
+                    <depend id="714" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-1.1"/>
+                </task>
+                <task id="714" name="Verifica NP" color="#ff9999" meeting="false" start="2014-01-13" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPA-1.2"/>
+                </task>
+            </task>
+            <task id="686" name="Analisi dei Requisiti" color="#000000" meeting="false" start="2014-01-10" duration="2" complete="0" expand="true">
+                <depend id="734" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-2"/>
+                <task id="688" name="Incremento AR" color="#66ffff" meeting="false" start="2014-01-10" duration="1" complete="0" expand="true">
+                    <depend id="690" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-2.1"/>
+                </task>
+                <task id="690" name="Verifica AR" color="#ff9999" meeting="false" start="2014-01-13" duration="1" complete="0" expand="true">
+                    <depend id="769" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-2.2"/>
+                </task>
+            </task>
+            <task id="769" name="Specifica Tecnica" color="#000000" meeting="false" start="2014-01-14" duration="15" complete="0" expand="true">
+                <depend id="734" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-3"/>
+                <task id="771" name="Definizione del Prodotto" color="#006666" meeting="false" start="2014-01-14" duration="5" complete="0" expand="true">
+                    <depend id="776" type="2" difference="0" hardness="Strong"/>
+                    <depend id="780" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.1"/>
+                </task>
+                <task id="774" name="Scelte Progettuali" color="#999900" meeting="false" start="2014-01-14" duration="5" complete="0" expand="true">
+                    <depend id="776" type="2" difference="0" hardness="Strong"/>
+                    <depend id="780" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.2"/>
+                </task>
+                <task id="776" name="Design Pattern" color="#ccccff" meeting="false" start="2014-01-21" duration="4" complete="0" expand="true">
+                    <depend id="778" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.3"/>
+                </task>
+                <task id="778" name="Tracciamento Requisiti-Componenti" color="#ccffcc" meeting="false" start="2014-01-27" duration="2" complete="0" expand="true">
+                    <depend id="782" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.4"/>
+                </task>
+                <task id="780" name="Stime Risorse e Costi" color="#ffffcc" meeting="false" start="2014-01-21" duration="4" complete="0" expand="true">
+                    <depend id="782" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.5"/>
+                </task>
+                <task id="782" name="Stesura ST" color="#99cc00" meeting="false" start="2014-01-29" duration="3" complete="0" expand="true">
+                    <depend id="784" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.6"/>
+                </task>
+                <task id="784" name="Verifica ST" color="#ff9999" meeting="false" start="2014-02-03" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPA-3.7"/>
+                </task>
+            </task>
+            <task id="698" name="Piano di Progetto" color="#000000" meeting="false" start="2014-01-13" duration="2" complete="0" expand="true">
+                <depend id="734" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-4"/>
+                <task id="700" name="Incremento PP" color="#66ffff" meeting="false" start="2014-01-13" duration="1" complete="0" expand="true">
+                    <depend id="702" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-4.1"/>
+                </task>
+                <task id="702" name="Verifica PP" color="#ff9999" meeting="false" start="2014-01-14" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPA-4.2"/>
+                </task>
+            </task>
+            <task id="704" name="Piano di Qualifica" color="#000000" meeting="false" start="2014-01-10" duration="3" complete="0" expand="true">
+                <depend id="734" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-5"/>
+                <task id="706" name="Incremento PQ" color="#66ffff" meeting="false" start="2014-01-10" duration="2" complete="0" expand="true">
+                    <depend id="708" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-5.1"/>
+                </task>
+                <task id="708" name="Verifica PQ" color="#ff9999" meeting="false" start="2014-01-14" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPA-5.2"/>
+                </task>
+            </task>
+            <task id="692" name="Glossario" color="#000000" meeting="false" start="2014-01-10" duration="17" complete="0" expand="true">
+                <depend id="734" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-6"/>
+                <task id="694" name="Incremento G" color="#66ffff" meeting="false" start="2014-01-10" duration="16" complete="0" expand="true">
+                    <depend id="696" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPA-6.1"/>
+                </task>
+                <task id="696" name="Verifica G" color="#ff9999" meeting="false" start="2014-02-03" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPA-6.2"/>
+                </task>
+            </task>
+            <task id="734" name="Verifica Generale" color="#ffff00" meeting="false" start="2014-02-04" duration="1" complete="0" expand="true">
+                <depend id="68" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-7"/>
+            </task>
+            <task id="68" name="CONSEGNA RP" color="#ff9900" meeting="true" start="2014-02-05" duration="0" complete="0" priority="2" expand="true">
+                <depend id="6" type="2" difference="0" hardness="Strong"/>
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPA-8"/>
+            </task>
+        </task>
+        <task id="9" name="RP" color="#ff0000" meeting="true" start="2014-02-11" duration="0" complete="0" priority="4" expand="true">
+            <depend id="1259" type="2" difference="1" hardness="Strong"/>
+            <depend id="1260" type="2" difference="1" hardness="Strong"/>
+            <depend id="1264" type="2" difference="1" hardness="Strong"/>
+            <depend id="1275" type="2" difference="1" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="RP"/>
+        </task>
+        <task id="6" name="PROGETTAZIONE DI DETTAGLIO E CODIFICA" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2014-02-05" duration="20" complete="0" expand="false">
+            <depend id="10" type="2" difference="4" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="FPDC"/>
+            <task id="881" name="Norme di Progetto" meeting="false" start="2014-02-05" duration="8" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-1"/>
+                <task id="883" name="Incremento NP" color="#99ffff" meeting="false" start="2014-02-05" duration="3" complete="0" expand="true">
+                    <depend id="885" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-1.2"/>
+                </task>
+                <task id="1259" name="Revisione NP" color="#8cb6ce" meeting="false" start="2014-02-12" duration="2" complete="0" expand="true">
+                    <depend id="885" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-1.2"/>
+                </task>
+                <task id="885" name="Verifica NP" color="#ff9999" meeting="false" start="2014-02-14" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-1.3"/>
+                </task>
+            </task>
+            <task id="889" name="Piano di Progetto" color="#000000" meeting="false" start="2014-02-05" duration="8" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-2"/>
+                <task id="891" name="Incremento PP" color="#66ffff" meeting="false" start="2014-02-05" duration="3" complete="0" expand="true">
+                    <depend id="893" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-2.1"/>
+                </task>
+                <task id="1260" name="Revisione PP" color="#8cb6ce" meeting="false" start="2014-02-12" duration="2" complete="0" expand="true">
+                    <depend id="893" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-2.2"/>
+                </task>
+                <task id="893" name="Verifica PP" color="#ff9999" meeting="false" start="2014-02-14" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-2.3"/>
+                </task>
+            </task>
+            <task id="853" name="Piano di Qualifica" color="#000000" meeting="false" start="2014-02-05" duration="8" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-3"/>
+                <task id="855" name="Incremento PQ" color="#66ffff" meeting="false" start="2014-02-05" duration="3" complete="0" expand="true">
+                    <depend id="857" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-3.1"/>
+                </task>
+                <task id="1264" name="Revisione PQ" color="#8cb6ce" meeting="false" start="2014-02-12" duration="2" complete="0" expand="true">
+                    <depend id="857" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-3.2"/>
+                </task>
+                <task id="857" name="Verifica PQ" color="#ff9999" meeting="false" start="2014-02-14" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-3.3"/>
+                </task>
+            </task>
+            <task id="904" name="Unità realizzative" meeting="false" start="2014-02-05" duration="1" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <depend id="929" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-4"/>
+                <task id="906" name="Definizione e Assegnazione" color="#ffffcc" meeting="false" start="2014-02-05" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-4.1"/>
+                </task>
+            </task>
+            <task id="859" name="Specifica Tecnica" color="#000000" meeting="false" start="2014-02-05" duration="8" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-5"/>
+                <task id="871" name="Incremento ST" color="#66ffff" meeting="false" start="2014-02-05" duration="3" complete="0" expand="true">
+                    <depend id="873" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-5.1"/>
+                </task>
+                <task id="1275" name="Revisione ST" color="#8cb6ce" meeting="false" start="2014-02-12" duration="2" complete="0" expand="true">
+                    <depend id="873" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-5.2"/>
+                </task>
+                <task id="873" name="Verifica ST" color="#ff9999" meeting="false" start="2014-02-14" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-5.3"/>
+                </task>
+            </task>
+            <task id="920" name="Definizione del Prodotto" meeting="false" start="2014-02-05" duration="4" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <depend id="929" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-6"/>
+                <task id="922" name="Standard di Progetto" color="#339900" meeting="false" start="2014-02-05" duration="3" complete="0" expand="true">
+                    <depend id="925" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-6.1"/>
+                </task>
+                <task id="923" name="Strumenti per le Prove di Unità" color="#660066" meeting="false" start="2014-02-05" duration="3" complete="0" expand="true">
+                    <depend id="925" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-6.2"/>
+                </task>
+                <task id="925" name="Verifica DP" color="#ff9999" meeting="false" start="2014-02-10" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-6.3"/>
+                </task>
+            </task>
+            <task id="929" name="Codifica" color="#000000" meeting="false" start="2014-02-11" duration="14" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <depend id="1280" type="1" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-7"/>
+                <task id="931" name="I° Ciclo Incrementale" color="#0099ff" meeting="false" start="2014-02-11" duration="11" complete="0" expand="true">
+                    <depend id="934" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-7.1"/>
+                </task>
+                <task id="934" name="II° Ciclo Incrementale" color="#0000ff" meeting="false" start="2014-02-26" duration="3" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-7.2"/>
+                </task>
+            </task>
+            <task id="1280" name="Manuale Utente" color="#8cb6ce" meeting="false" start="2014-02-11" duration="15" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-8"/>
+                <task id="942" name="Stesura MU" color="#33ff33" meeting="false" start="2014-02-11" duration="14" complete="0" expand="true">
+                    <depend id="948" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-8.1"/>
+                </task>
+                <task id="948" name="Verifica MU" color="#ff9999" meeting="false" start="2014-03-03" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-8.2"/>
+                </task>
+            </task>
+            <task id="875" name="Glossario" color="#000000" meeting="false" start="2014-02-05" duration="19" complete="0" expand="true">
+                <depend id="887" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-9"/>
+                <task id="877" name="Incremento e Revisione G" color="#66ffff" meeting="false" start="2014-02-05" duration="18" complete="0" expand="true">
+                    <depend id="879" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FPDC-9.1"/>
+                </task>
+                <task id="879" name="Verifica G" color="#ff9999" meeting="false" start="2014-03-03" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FPDC-9.2"/>
+                </task>
+            </task>
+            <task id="887" name="Verifica Generale" color="#ffff00" meeting="false" start="2014-03-04" duration="1" complete="0" expand="true">
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-10"/>
+            </task>
+            <task id="69" name="CONSEGNA RQ" color="#ff9900" meeting="true" start="2014-03-05" duration="0" complete="0" priority="2" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FPDC-11"/>
+            </task>
+        </task>
+        <task id="10" name="RQ" color="#ff0000" meeting="true" start="2014-03-11" duration="0" complete="0" priority="4" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="RQ"/>
+        </task>
+        <task id="7" name="VERIFICA E VALIDAZIONE" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2014-03-13" duration="14" complete="0" expand="false">
+            <depend id="11" type="2" difference="0" hardness="Strong"/>
+            <customproperty taskproperty-id="tpc0" value="FVV"/>
+            <task id="1201" name="Norme di Progetto" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-1"/>
+                <task id="1203" name="Incremento NP" color="#99ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1205" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-1.1"/>
+                </task>
+                <task id="1205" name="Verifica NP" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-1.2"/>
+                </task>
+            </task>
+            <task id="1213" name="Piano di Progetto" color="#000000" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-2"/>
+                <task id="1215" name="Incremento PP" color="#66ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1217" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-2.1"/>
+                </task>
+                <task id="1217" name="Verifica PP" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-2.2"/>
+                </task>
+            </task>
+            <task id="1207" name="Piano di Qualifica" color="#000000" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-3"/>
+                <task id="1209" name="Incremento PQ" color="#66ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1211" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-3.1"/>
+                </task>
+                <task id="1211" name="Verifica PQ" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-3.2"/>
+                </task>
+            </task>
+            <task id="1189" name="Specifica Tecnica" color="#000000" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-4"/>
+                <task id="1191" name="Incremento ST" color="#66ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1193" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-4.1"/>
+                </task>
+                <task id="1193" name="Verifica ST" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-4.2"/>
+                </task>
+            </task>
+            <task id="1219" name="Definizione del Prodotto" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-5"/>
+                <task id="1238" name="Incremento DP" color="#66ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1240" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-5.1"/>
+                </task>
+                <task id="1240" name="Verifica DP" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-5.2"/>
+                </task>
+            </task>
+            <task id="1229" name="Manuale Utente" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-6"/>
+                <task id="1231" name="Incremento MU" color="#66ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1233" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-6.1"/>
+                </task>
+                <task id="1233" name="Verifica MU" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-6.2"/>
+                </task>
+            </task>
+            <task id="1195" name="Glossario" color="#000000" meeting="false" start="2014-03-13" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-7"/>
+                <task id="1197" name="Incremento G" color="#66ffff" meeting="false" start="2014-03-13" duration="2" complete="0" expand="true">
+                    <depend id="1199" type="2" difference="0" hardness="Strong"/>
+                    <customproperty taskproperty-id="tpc0" value="FVV-7.1"/>
+                </task>
+                <task id="1199" name="Verifica G" color="#ff9999" meeting="false" start="2014-03-17" duration="1" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-7.2"/>
+                </task>
+            </task>
+            <task id="1227" name="Verifica e Validazione" color="#000000" meeting="false" start="2014-03-17" duration="12" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-8"/>
+                <task id="1285" name="Test" color="#8cb6ce" meeting="false" start="2014-03-17" duration="10" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-8.1"/>
+                </task>
+                <task id="1244" name="Collaudo" color="#3333ff" meeting="false" start="2014-03-17" duration="12" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-8.2"/>
+                </task>
+                <task id="1288" name="Correzioni" color="#990099" meeting="false" start="2014-03-17" duration="12" complete="0" expand="true">
+                    <customproperty taskproperty-id="tpc0" value="FVV-8.3"/>
+                </task>
+            </task>
+            <task id="70" name="CONSEGNA RA" color="#ff9900" meeting="true" start="2014-04-02" duration="0" complete="0" priority="2" expand="true">
+                <depend id="11" type="2" difference="1" hardness="Strong"/>
+                <customproperty taskproperty-id="tpc0" value="FVV-9"/>
+            </task>
+        </task>
+        <task id="11" name="RA" color="#ff0000" meeting="true" start="2014-04-03" duration="0" complete="0" priority="4" expand="true">
+            <customproperty taskproperty-id="tpc0" value="RA"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Alberto" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Beatrice" function="Default:0" contacts="" phone=""/>
+        <resource id="2" name="Davide" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Jimmy" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Luca" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Nicola" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Nicolò" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="389" resource-id="0" function="Default:0" responsible="false" load="15.0"/>
+        <allocation task-id="421" resource-id="0" function="Default:0" responsible="false" load="70.0"/>
+        <allocation task-id="425" resource-id="0" function="Default:0" responsible="false" load="15.0"/>
+        <allocation task-id="640" resource-id="0" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="634" resource-id="0" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="688" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="778" resource-id="0" function="Default:0" responsible="true" load="20.0"/>
+        <allocation task-id="780" resource-id="0" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="873" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="948" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="887" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1217" resource-id="0" function="Default:0" responsible="true" load="5.0"/>
+        <allocation task-id="700" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="774" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="782" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1264" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="922" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1231" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1288" resource-id="0" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="1285" resource-id="0" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="413" resource-id="1" function="Default:0" responsible="false" load="30.0"/>
+        <allocation task-id="417" resource-id="1" function="Default:0" responsible="false" load="70.0"/>
+        <allocation task-id="632" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="774" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="778" resource-id="1" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="780" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="782" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="706" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="887" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1231" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1227" resource-id="1" function="Default:0" responsible="true" load="45.0"/>
+        <allocation task-id="1240" resource-id="1" function="Default:0" responsible="true" load="5.0"/>
+        <allocation task-id="885" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="712" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="855" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="1275" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="922" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="948" resource-id="1" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="879" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1203" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1288" resource-id="1" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1285" resource-id="1" function="Default:0" responsible="true" load="5.0"/>
+        <allocation task-id="409" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="413" resource-id="2" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="419" resource-id="2" function="Default:0" responsible="false" load="30.0"/>
+        <allocation task-id="423" resource-id="2" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="402" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="628" resource-id="2" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="620" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="632" resource-id="2" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="690" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="771" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="778" resource-id="2" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="734" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="891" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="931" resource-id="2" function="Default:0" responsible="true" load="60.0"/>
+        <allocation task-id="934" resource-id="2" function="Default:0" responsible="true" load="60.0"/>
+        <allocation task-id="887" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1238" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1199" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="925" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="782" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1260" resource-id="2" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="906" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="942" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="780" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1209" resource-id="2" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="388" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="407" resource-id="3" function="Default:0" responsible="false" load="85.0"/>
+        <allocation task-id="413" resource-id="3" function="Default:0" responsible="false" load="85.0"/>
+        <allocation task-id="684" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="618" resource-id="3" function="Default:0" responsible="true" load="85.0"/>
+        <allocation task-id="612" resource-id="3" function="Default:0" responsible="true" load="15.0"/>
+        <allocation task-id="771" resource-id="3" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="778" resource-id="3" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="780" resource-id="3" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="784" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="706" resource-id="3" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="734" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="855" resource-id="3" function="Default:0" responsible="true" load="33.4"/>
+        <allocation task-id="931" resource-id="3" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="934" resource-id="3" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="1233" resource-id="3" function="Default:0" responsible="false" load="5.0"/>
+        <allocation task-id="1227" resource-id="3" function="Default:0" responsible="false" load="95.0"/>
+        <allocation task-id="700" resource-id="3" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="782" resource-id="3" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="1264" resource-id="3" function="Default:0" responsible="false" load="10.0"/>
+        <allocation task-id="871" resource-id="3" function="Default:0" responsible="false" load="33.3"/>
+        <allocation task-id="923" resource-id="3" function="Default:0" responsible="true" load="33.3"/>
+        <allocation task-id="942" resource-id="3" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="1209" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="387" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="413" resource-id="4" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="415" resource-id="4" function="Default:0" responsible="false" load="40.0"/>
+        <allocation task-id="626" resource-id="4" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="638" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="614" resource-id="4" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="712" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="771" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="776" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="778" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="782" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="857" resource-id="4" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="931" resource-id="4" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="934" resource-id="4" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="887" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1215" resource-id="4" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1191" resource-id="4" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="1227" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="942" resource-id="4" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="411" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="415" resource-id="5" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="421" resource-id="5" function="Default:0" responsible="false" load="80.0"/>
+        <allocation task-id="425" resource-id="5" function="Default:0" responsible="false" load="15.0"/>
+        <allocation task-id="402" resource-id="5" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="618" resource-id="5" function="Default:0" responsible="false" load="85.0"/>
+        <allocation task-id="612" resource-id="5" function="Default:0" responsible="false" load="15.0"/>
+        <allocation task-id="776" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="778" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="700" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="931" resource-id="5" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="934" resource-id="5" function="Default:0" responsible="false" load="80.0"/>
+        <allocation task-id="1193" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="688" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="774" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="782" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1259" resource-id="5" function="Default:0" responsible="true" load="3.0"/>
+        <allocation task-id="1264" resource-id="5" function="Default:0" responsible="false" load="3.0"/>
+        <allocation task-id="1275" resource-id="5" function="Default:0" responsible="false" load="3.0"/>
+        <allocation task-id="923" resource-id="5" function="Default:0" responsible="false" load="33.3"/>
+        <allocation task-id="942" resource-id="5" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="883" resource-id="5" function="Default:0" responsible="true" load="33.3"/>
+        <allocation task-id="855" resource-id="5" function="Default:0" responsible="false" load="33.4"/>
+        <allocation task-id="1209" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="387" resource-id="6" function="Default:0" responsible="false" load="80.0"/>
+        <allocation task-id="417" resource-id="6" function="Default:0" responsible="false" load="60.0"/>
+        <allocation task-id="421" resource-id="6" function="Default:0" responsible="false" load="25.0"/>
+        <allocation task-id="425" resource-id="6" function="Default:0" responsible="false" load="15.0"/>
+        <allocation task-id="618" resource-id="6" function="Default:0" responsible="false" load="85.0"/>
+        <allocation task-id="612" resource-id="6" function="Default:0" responsible="false" load="15.0"/>
+        <allocation task-id="778" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="702" resource-id="6" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="696" resource-id="6" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="734" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="893" resource-id="6" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="871" resource-id="6" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="931" resource-id="6" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="934" resource-id="6" function="Default:0" responsible="false" load="90.0"/>
+        <allocation task-id="887" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1205" resource-id="6" function="Default:0" responsible="true" load="2.0"/>
+        <allocation task-id="1227" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="708" resource-id="6" function="Default:0" responsible="true" load="10.0"/>
+        <allocation task-id="714" resource-id="6" function="Default:0" responsible="true" load="50.0"/>
+        <allocation task-id="706" resource-id="6" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="771" resource-id="6" function="Default:0" responsible="false" load="80.0"/>
+        <allocation task-id="776" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="782" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="784" resource-id="6" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="942" resource-id="6" function="Default:0" responsible="false" load="20.0"/>
+        <allocation task-id="879" resource-id="6" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="923" resource-id="6" function="Default:0" responsible="false" load="50.0"/>
+        <allocation task-id="1211" resource-id="6" function="Default:0" responsible="true" load="3.0"/>
+    </allocations>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpc0" order="0" width="69" visible="true"/>
+        <displaycolumn property-id="tpd3" order="1" width="116" visible="true"/>
+        <displaycolumn property-id="tpd4" order="2" width="85" visible="true"/>
+        <displaycolumn property-id="tpd5" order="3" width="74" visible="true"/>
+        <displaycolumn property-id="tpd6" order="4" width="56" visible="true"/>
+    </taskdisplaycolumns>
+    <previous>
+        <previous-tasks name="">
+            <previous-task id="3" start="2013-11-29" duration="0" meeting="true" super="false"/>
+            <previous-task id="0" start="2013-12-02" duration="14" meeting="false" super="true"/>
+            <previous-task id="372" start="2013-12-02" duration="12" meeting="false" super="true"/>
+            <previous-task id="387" start="2013-12-02" duration="4" meeting="false" super="false"/>
+            <previous-task id="388" start="2013-12-06" duration="1" meeting="false" super="false"/>
+            <previous-task id="389" start="2013-12-11" duration="4" meeting="false" super="false"/>
+            <previous-task id="684" start="2013-12-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="392" start="2013-12-09" duration="3" meeting="false" super="true"/>
+            <previous-task id="407" start="2013-12-09" duration="2" meeting="false" super="false"/>
+            <previous-task id="409" start="2013-12-11" duration="1" meeting="false" super="false"/>
+            <previous-task id="394" start="2013-12-12" duration="4" meeting="false" super="true"/>
+            <previous-task id="413" start="2013-12-12" duration="3" meeting="false" super="false"/>
+            <previous-task id="411" start="2013-12-17" duration="1" meeting="false" super="false"/>
+            <previous-task id="396" start="2013-12-09" duration="6" meeting="false" super="true"/>
+            <previous-task id="417" start="2013-12-09" duration="5" meeting="false" super="false"/>
+            <previous-task id="415" start="2013-12-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="398" start="2013-12-09" duration="6" meeting="false" super="true"/>
+            <previous-task id="421" start="2013-12-09" duration="5" meeting="false" super="false"/>
+            <previous-task id="419" start="2013-12-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="400" start="2013-12-09" duration="6" meeting="false" super="true"/>
+            <previous-task id="425" start="2013-12-09" duration="5" meeting="false" super="false"/>
+            <previous-task id="423" start="2013-12-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="402" start="2013-12-18" duration="2" meeting="false" super="false"/>
+            <previous-task id="67" start="2013-12-20" duration="0" meeting="true" super="false"/>
+            <previous-task id="4" start="2013-12-27" duration="6" meeting="false" super="true"/>
+            <previous-task id="622" start="2013-12-27" duration="6" meeting="false" super="true"/>
+            <previous-task id="628" start="2013-12-27" duration="5" meeting="false" super="false"/>
+            <previous-task id="626" start="2014-01-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="616" start="2013-12-27" duration="6" meeting="false" super="true"/>
+            <previous-task id="618" start="2013-12-27" duration="5" meeting="false" super="false"/>
+            <previous-task id="620" start="2014-01-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="636" start="2013-12-27" duration="6" meeting="false" super="true"/>
+            <previous-task id="638" start="2013-12-27" duration="5" meeting="false" super="false"/>
+            <previous-task id="640" start="2014-01-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="630" start="2013-12-27" duration="6" meeting="false" super="true"/>
+            <previous-task id="632" start="2013-12-27" duration="5" meeting="false" super="false"/>
+            <previous-task id="634" start="2014-01-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="610" start="2013-12-27" duration="6" meeting="false" super="true"/>
+            <previous-task id="612" start="2013-12-27" duration="5" meeting="false" super="false"/>
+            <previous-task id="614" start="2014-01-07" duration="1" meeting="false" super="false"/>
+            <previous-task id="8" start="2014-01-08" duration="0" meeting="true" super="false"/>
+            <previous-task id="5" start="2014-01-09" duration="24" meeting="false" super="false"/>
+            <previous-task id="68" start="2014-02-12" duration="0" meeting="true" super="false"/>
+            <previous-task id="9" start="2014-02-13" duration="0" meeting="true" super="false"/>
+            <previous-task id="6" start="2014-02-17" duration="29" meeting="false" super="false"/>
+            <previous-task id="69" start="2014-03-31" duration="0" meeting="true" super="false"/>
+            <previous-task id="10" start="2014-04-03" duration="0" meeting="true" super="false"/>
+            <previous-task id="7" start="2014-04-04" duration="10" meeting="false" super="false"/>
+            <previous-task id="70" start="2014-04-18" duration="0" meeting="true" super="false"/>
+            <previous-task id="11" start="2014-04-22" duration="0" meeting="true" super="false"/>
+        </previous-tasks>
+    </previous>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

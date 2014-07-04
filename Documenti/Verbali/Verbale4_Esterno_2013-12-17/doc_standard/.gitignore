@@ -1,0 +1,10 @@
+/*.pdf
+*.lof
+*.lot
+*.aux
+*.out
+*.toc
+*.bak
+*.log
+*.synctex.gz
+*.project

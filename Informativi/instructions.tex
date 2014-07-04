@@ -1,0 +1,34 @@
+\documentclass[10pt]{article}
+	\usepackage[italian]{babel}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{geometry}
+	\usepackage{graphicx}%package per la gestione delle immagini
+	\geometry{a4paper}
+	
+	\title{ISTRUZIONI PER IL CORRETTO USO DEL TEMPLATE}
+	\author{Nicola Magnabosco}
+	\begin{document}
+	\maketitle
+	\section{Scopo del Documento}
+	Il presente documento ha come scopo quello di delineare una guida per la corretta creazione e compilazione di un documento, usando il template appositamente creato, che fornisce uno standard per i documenti prodotti dal gruppo denominato '\textit{Seven Monkeys}'.
+	\section{Passi Preliminari alla Creazione di un Nuovo Documento}
+	Ogni documento ha una propria, omonima cartella. Supponiamo di dover lavorare al file \textit{Norme di Progetto}.
+	Spostiamoci dunque nella cartella \textbf{/Documentazione/Documenti/NormeDiProgetto}. All'interno di questa trovremo un file \textit{NormeDiProgetto.tex}, una cartella \textit{content} e una cartella \textit{doc\_to\_modify}.
+	\begin{itemize}
+		\item \textbf{NormeDiProgetto.tex} è il template del documento. Da qui si avvierà la successiva compilazione. All'apertura del file, è necessaria una ridefinizione dei comandi base del documento (dichiarati all'interno del file \textbf{../Documentazione/Documenti/doc\_standard/commands.tex}\footnote{Per una lista completa dei comandi a disposizione consultare il file "../Documenti/Command List/command\_list.pdf}.
+		\item \textbf{content} è la cartella dove andranno inseriti i vari file del documento (uno per ogni capitolo), seguendo la document class standard di \LaTeX \textit{article}.
+		\item \textbf{doc\_to\_modify} contiene due file: \textit{history.tex} e \textit{content\_file.tex}. Il primo file andrà modificato dopo ogni sessione di lavoro indicando l'attività svolta, il nome, il ruolo e la data di modifica. Il secondo file invece va aggiornato ogni qual volta si inserisce un nuovo paragrafo al documento, ponendo attenzione all'inclusione del corretto path. I file da includere saranno tutti i paragrafi contenuti all'interno della cartella content.
+	\end{itemize}
+	\section{Struttura del Template}
+	
+	Il template è organizzato secondo la classe standard per i documenti \textit{article} di \LaTeX.
+	In particolare ogni documento deve essere strutturato in paragrafi contenenti al più una sezione e molteplici sottosezioni.
+	I file creati (uno per ogni paragrafo) devono avere come estensione '\textbf{.tex}' e devono essere \underline{\textbf{salvati}} all'interno della directory \textbf{content} con il nome della sezione contenuta.
+	
+	Una volta creato il paragrafo è necessario \underline{\textbf{modificare}} il file '\textbf{doc\_to\_modify/content\_file.tex}, aggiungendo l'input del paragrafo creato: \begin{center}\begin{verbatim}
+			Esempio	"\input{./content/nome_paragrafo}"
+		\end{verbatim}\end{center}
+		
+		Una volta completata la stesura di tutti i paragrafi per visualizzare l'output basta semplicemente compliare il file \textbf{NomeDelDocumento.tex} che automaticamente genererà un documento correttamente impaginato secondo gli standard prefissati.
+	\end{document}

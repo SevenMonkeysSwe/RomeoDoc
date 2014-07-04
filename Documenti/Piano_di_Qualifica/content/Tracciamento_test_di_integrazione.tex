@@ -1,0 +1,93 @@
+\newdimen\larghezza
+\setlength{\larghezza}{7cm}
+\newdimen\dimTipo
+\setlength{\dimTipo}{2cm}
+\newdimen\dimFonti
+\setlength{\dimFonti}{2cm}
+	
+\begin{center}
+\begin{longtable}{|c|c|c|c|}
+\hline
+
+\textbf{Test} & \textbf{Descrizione} & \textbf{Componente} & \textbf{Stato} \\
+
+
+\hline
+TI-Algorithms & \parbox[t]{\larghezza}{\textbf{Algoritmi di clustering:} verificare la presenza di tutti gli algoritmi di clustering definiti nei requisti}  & Algorithms & Superato \\ 
+\hline
+TI-Component & \parbox[t]{\larghezza}{\textbf {Componenti grafici delle finestre:} verifica la corretta visualizzazione e responsività dei menù nelle finestre del sistema}  & Component & Superato \\ 
+\hline
+TI-Core & \parbox[t]{\larghezza}{\textbf {Core del sistema:} verifica il corretto funzionamento delle operazioni di analisi}  & Core & Superato \\ 
+\hline
+TI-DAO & \parbox[t]{\larghezza}{\textbf {Interfaccia Database:} verifica la corretta interazione del sistema con il database}  & DAO & Superato \\ 
+\hline
+TI-Dialog & \parbox[t]{\larghezza}{\textbf {Sistema di dialogo con l'utente:} verifica il corretto funzionamento delle finestre di dialogo con l'utente}  & Dialog & Superato \\ 
+\hline
+TI-ExporterModel & \parbox[t]{\larghezza}{\textbf {Sistema di esportazione:} verifica che le immagini vengano esportate correttamente}  & ExporterModel & Superato \\ 
+\hline
+TI-Features & \parbox[t]{\larghezza}{\textbf{Feature Extractor:} verificare la presenza di tutte le feature extractor definite nei requisti}  & Features & Superato \\ 
+\hline
+TI-Help & \parbox[t]{\larghezza}{\textbf {Sistema d'aiuto:} verifica il corretto funzionamento delle operazioni del sistema di aiuto}  & Help & Superato \\ 
+\hline
+TI-Log & \parbox[t]{\larghezza}{\textbf {Sistema di log:} verifica che venga creato un file di testo che riporta tutte le operazioni compiute dal sistema}  & Log & Superato \\ 
+\hline
+TI-Model & \parbox[t]{\larghezza}{\textbf {Logica di Business:}  viene verificato il funzionamento della logica di business del sistema}  & Model & Superato \\ 
+\hline
+TI-QtModel & \parbox[t]{\larghezza}{\textbf{Visualizzazione dati:} verificare che l'interfaccia,fornisca tutti e soli i dati richiesti al database}  & QtModel & Superato \\ 
+\hline
+TI-ReaderModel & \parbox[t]{\larghezza}{\textbf{Sistema di importazione:} verifica che le immagini vengano importate correttamente.}  & ReaderModel & Superato \\ 
+\hline
+TI-Romeo & \parbox[t]{\larghezza}{\textbf {Test d'integrazione finale:} viene testata l'integrazione di Model View e Controller}  & Romeo & Superato \\ 
+\hline
+TI-View & \parbox[t]{\larghezza}{\textbf {Interfaccia grafica:} verifica la corretta visualizzazione dell'interfaccia grafica nella sua completezza}  & View & Superato \\ 
+\hline
+TI-Window & \parbox[t]{\larghezza}{\textbf {Finestre del sistema:} verifica la corretta visualizzazione delle informazioni all'interno delle finestre }  & Window & Superato \\ 
+\hline
+\caption{Test di integrazione}
+\end{longtable}
+\end{center}
+\begin{center}
+\begin{longtable}{|c|c|}
+\hline
+
+\textbf{Componente} & \textbf{Test} \\
+
+
+\hline
+\parbox[t]{7cm}{Romeo} & \parbox[t]{5cm}{TI-Romeo } \\
+\hline
+\parbox[t]{7cm}{Romeo::Controller} & \parbox[t]{5cm}{Architettura del sistema } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model} & \parbox[t]{5cm}{TI-Model } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Core} & \parbox[t]{5cm}{TI-Core } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Core::Algorithms} & \parbox[t]{5cm}{TI-Algorithms } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Core::Features} & \parbox[t]{5cm}{TI-Features } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Help} & \parbox[t]{5cm}{TI-Help } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::QtModel} & \parbox[t]{5cm}{TI-QtModel } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Util} & \parbox[t]{5cm}{Architettura del sistema } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Util::DAO} & \parbox[t]{5cm}{TI-DAO } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Util::ExporterModel} & \parbox[t]{5cm}{TI-ExporterModel } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Util::Log} & \parbox[t]{5cm}{TI-Log } \\
+\hline
+\parbox[t]{7cm}{Romeo::Model::Util::ReaderModel} & \parbox[t]{5cm}{TI-ReaderModel } \\
+\hline
+\parbox[t]{7cm}{Romeo::View} & \parbox[t]{5cm}{TI-View } \\
+\hline
+\parbox[t]{7cm}{Romeo::View::Component} & \parbox[t]{5cm}{TI-Component } \\
+\hline
+\parbox[t]{7cm}{Romeo::View::Dialog} & \parbox[t]{5cm}{TI-Dialog } \\
+\hline
+\parbox[t]{7cm}{Romeo::View::Window} & \parbox[t]{5cm}{TI-Window } \\
+\hline
+\caption{Tracciamento componente-test di integrazione}
+\end{longtable}
+\end{center}

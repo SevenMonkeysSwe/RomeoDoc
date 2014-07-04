@@ -1,0 +1,109 @@
+
+\subsection{Test di unità }
+\label{testdiunita}
+
+Di seguito vengono riportati i test di unità  previsti.
+
+\newdimen\larghezza
+\setlength{\larghezza}{6cm}
+\newdimen\dimTipo
+\setlength{\dimTipo}{5cm}
+\begin{center}
+\begin{longtable}{|c|c|c|c|}
+\hline
+
+\textbf{Test} & \textbf{Descrizione} & \textbf{Stato} & \textbf{Metodi} \\
+
+
+\hline
+TU1 & \parbox[t]{\larghezza}{ Si verifica che,passato il path di un immagine 2D di test valida,essa venga importata correttamente.Si verifica inoltre,che dato un immagine di test 2D di formato non valido,l'importazione fallisca } & Superato & \parbox[t]{\dimTipo} { ImageReader() \\ readFile2D() \\ } \\
+\hline
+TU2 & \parbox[t]{\larghezza}{ Si verifica che,passato il path di un immagine 3D di test valida,essa venga importata correttamente.Si verifica inoltre,che dato un immagine di test 3D di formato non valido,l'importazione fallisca } & Superato & \parbox[t]{\dimTipo} { ImageReader() \\ readFile3D() \\ } \\
+\hline
+TU3 & \parbox[t]{\larghezza}{ Si verifica che,passato il path di un video di test valido,esso venga importato correttamente.Si verifica inoltre,che dato un video di test di formato non valido,l'importazione fallisca } & Superato & \parbox[t]{\dimTipo} { VideoReader() \\ readFile2D() \\ readFile3D() \\ } \\
+\hline
+TU4 & \parbox[t]{\larghezza}{ Si verifica che,passato un path e un immagine 2D valida,essa venga esportata in maniera corretta e nella cartella indicata } & Superato & \parbox[t]{\dimTipo} { ImageExporter() \\ exportFile() \\ } \\
+\hline
+TU5 & \parbox[t]{\larghezza}{ Si verifica che,passato un path e un immagine 3D valida,essa venga esportata in maniera corretta e nella cartella indicata } & Superato & \parbox[t]{\dimTipo} { AnalyzeExporter() \\ exportFile() \\ NiftiExporter() \\ exportFile() \\ } \\
+\hline
+TU6 & \parbox[t]{\larghezza}{ Si verifica che dato un Subject ben formato,esso venga correttamente salvato nel database.Si verifica inoltre che lo stesso venga letto dal database correttamente,ottenendo un oggetto identico a quello di partenza   } & Superato & \parbox[t]{\dimTipo} { SubjectDAO() \\ existSubjectlWithName() \\ getSubjectByName() \\ getAllSubject() \\ getAllSubjectName() \\ createSubject() \\ subjectsOfGroup() \\ getGroupOfSubject() \\ getSubjectsByType() \\ } \\
+\hline
+TU7 & \parbox[t]{\larghezza}{ Si verifica che dato un GroupOfSubject ben formato,esso venga correttamente salvato nel database.Si verifica inoltre che lo stesso venga letto dal database correttamente,ottenendo un oggetto identico a quello di partenza  } & Superato & \parbox[t]{\dimTipo} { GroupDAO() \\ existGroupWithName() \\ getAllGroup() \\ getGroupByName() \\ createGroup() \\ deleteGroup() \\ addSubjectToGroup() \\ removeSubjectFromGroup() \\ getSubjectOfGroup() \\ } \\
+\hline
+TU8 & \parbox[t]{\larghezza}{ Si verifica che dato un Dataset ben formato,esso venga correttamente salvato nel database.Si verifica inoltre che lo stesso venga letto dal database correttamente,ottenendo un oggetto identico a quello di partenza  } & Superato & \parbox[t]{\dimTipo} { DatasetDAO() \\ existSubjectWithName() \\ getAllDataset() \\ getAllDatasetName() \\ getGroupOfDataset() \\ getProtocolOfDataset() \\ createDataset() \\ deleteDataset() \\ addProtocol() \\ } \\
+\hline
+TU9 & \parbox[t]{\larghezza}{ Si verifica che dato un Protocol ben formato,esso venga correttamente salvato nel database.Si verifica inoltre che lo stesso venga letto dal database correttamente,ottenendo un oggetto identico a quello di partenza  } & Superato & \parbox[t]{\dimTipo} { ProtocolDAO() \\ existProtocolWithName() \\ getAllProtocol() \\ getProtocolByName() \\ createProtocol() \\ deleteProtocol() \\ getAllProtocolName() \\ getAllProtocolOfDataset() \\ } \\
+\hline
+TU10 & \parbox[t]{\larghezza}{ Si verifica che dato un Algorithm ben formato,esso venga correttamente salvato nel database.Si verifica inoltre che lo stesso venga letto dal database correttamente,ottenendo un oggetto identico a quello di partenza  } & Superato & \parbox[t]{\dimTipo} { AlgorithmDAO() \\ getAlgorithmById() \\ addAlgorithm() \\ deleteAlgorithm() \\ getAllAlgorithm() \\ getAlgorithmOfProtocol() \\ } \\
+\hline
+TU11 & \parbox[t]{\larghezza}{ Si verifica che dato un Analysis ben formato,esso venga correttamente salvato nel database.Si verifica inoltre che lo stesso venga letto dal database correttamente,ottenendo un oggetto identico a quello di partenza  } & Superato & \parbox[t]{\dimTipo} { AnalysisDAO() \\ createAnalysis() \\ deleteAnalysis() \\ getAllAnalysis() \\ getAnalysisByDate() \\ getAnalysisOfDataset() \\ } \\
+\hline
+TU12 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Standard Deviation.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ StandardDeviationFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU13 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Standard Deviation.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ StandardDeviationFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU14 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Skewness.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ SkewnessFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU15 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Skewness.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ SkewnessFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU16 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Kurtosis.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ KurtosisFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU17 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Kurtosis.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ KurtosisFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU18 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Mean.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ MeanFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU19 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Mean.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FirstOrderFeature \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ MeanFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU20 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Correlation.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters()  \\ CorrelationFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU21 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Correlation.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters()  \\ CorrelationFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU22 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Energy.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters()  \\ EnergyFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU23 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Energy.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters()  \\ EnergyFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU24 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Contrast.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters()  \\ ContrastFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU25 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Contrast.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ ContrastFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU26 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Homogeneity.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ HomogeneityFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU27 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Homogeneity.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ HomogeneityFeature () \\ singleChannelExecution3D() \\ } \\
+\hline
+TU28 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicata correttamente,la feature extractor Entropy.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ EntropyFeature() \\ singleChannelExecution2D() \\ } \\
+\hline
+TU29 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicata correttamente,la feature extractor Entropy.Per fare ciò viene confrontato il risultato,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { SecondOrderFeature() \\ getWindowSize() \\ getParameters() \\ getType() \\ setParameters() \\ EntropyFeature() \\ singleChannelExecution3D() \\ } \\
+\hline
+TU30 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicato correttamente,l' algoritmo di clustering Fuzzy C Mean.Per fare ciò viene confrontato il risultato ottenuto,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FuzzyCMeansAlgorithm() \\ singleChannelExecution2D() \\ getNumberOfCluster() \\ getFuzzyIndex() \\ getMaxIteration() \\ getThreshold() \\ } \\
+\hline
+TU31 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicato correttamente,l' algoritmo di clustering Fuzzy C Mean.Per fare ciò viene confrontato il risultato ottenuto,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { FuzzyCMeansAlgorithm() \\ singleChannelExecution3D() \\ getNumberOfCluster() \\ getFuzzyIndex() \\ getMaxIteration() \\ getThreshold() \\ } \\
+\hline
+TU32 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicato correttamente,l' algoritmo di clustering Hierarchical.Per fare ciò viene confrontato il risultato ottenuto,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { HiererchicalAlgorithm() \\ singleChannelExecution2D() \\ getDistance() \\ getLinkageCriteria() \\ } \\
+\hline
+TU33 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicato correttamente,l' algoritmo di clustering Hierarchical.Per fare ciò viene confrontato il risultato ottenuto,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { HiererchicalAlgorithm() \\ singleChannelExecution3D() \\ getDistance() \\ getLinkageCriteria() \\ } \\
+\hline
+TU34 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage2D venga applicato correttamente,l' algoritmo di clustering KMeans.Per fare ciò viene confrontato il risultato ottenuto,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { KMeansAlgorithm() \\ singleChannelExecution2D() \\ getNumberOfCluster() \\ getNumberOfReplicates() \\ getMaxIteration() \\ getDistance() \\ } \\
+\hline
+TU35 & \parbox[t]{\larghezza}{ Si verifica che,data un InternalImage3D venga applicato correttamente,l' algoritmo di clustering KMeans.Per fare ciò viene confrontato il risultato ottenuto,con l'immagine attesa,fornita direttamente dal proponente stesso. } & Superato & \parbox[t]{\dimTipo} { KMeansAlgorithm() \\ singleChannelExecution3D() \\ getNumberOfCluster() \\ getNumberOfReplicates() \\ getMaxIteration() \\ getDistance() \\ } \\
+\hline
+TU36 & \parbox[t]{\larghezza}{ Si verifica che,dato un percorso del filesystem,e delle stringhe di prova,venga creato un file di log.
+In tale file devono essere stampate le stringhe attese rispetto a quelle date in input  } & Superato & \parbox[t]{\dimTipo} { Log() \\ countLines() \\ logWriter() \\ setEnabled() \\ writeLog() \\ } \\
+\hline
+TU37 & \parbox[t]{\larghezza}{ Si verifica che data una Feature ben formata con dei parametri corretti,essa venga correttamente salvata nel database.Si verifica inoltre che la stessa venga letta dal database correttamente,ottenendo un oggetto identico a quello di partenza } & Superato & \parbox[t]{\dimTipo} { FeatureDAO() \\ createFeature() \\ removeFeature() \\ getFeatureOfProtocol() \\ getAllFeatureOfProtocol() \\ } \\
+\hline
+TU38 & \parbox[t]{\larghezza}{ Get-Set } & Superato & \parbox[t]{\dimTipo} { setToolBar() \\ getTypeRomeo() \\ selectAll() \\ setSubjectName() \\ setImagePath() \\ setMaskPath() \\ setTypeSelection() \\ getSubjectName() \\ getMaskPath() \\ getTypeSelected() \\ getTableView \\ getType() \\ getSelectedSubjects() \\ setNSubjects \\ getTypeSelected() \\ getAlgorithmSelected() \\ getProtocolName() \\ getFeaturesTable() \\ getGroupTable() \\ getProtocolsTable() \\ getGroupInfoLabel() \\ getProtocolInfoLabel() \\ setProtocolInfo() \\ setGroupInfo() \\ getTableView() \\ setSubjectImg() \\ setSubjectMask() \\ setSubjectInfo() \\ getGroup() \\ getSubjectsTable() \\ getAlgorithmLabel() \\ getFeatureLabel() \\ setFeature() \\ getFeature() \\ getControllerManger() \\ setEditFields() \\ getMainWindowController() \\ } \\
+\hline
+TU39 & \parbox[t]{\larghezza}{ Architettura di sistema } & Superato & \parbox[t]{\dimTipo} { loadCss() \\ setupMainWindow() \\ addCentralWidget() \\ loadCssStatic() \\ setupLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ setupLeftFrame() \\ setupRightFrame() \\ loadCss() \\ setupToolTip() \\ addConnect() \\ setupView() \\ setupLayout() \\ createTop() \\ createButtom() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ setupTopLayout() \\ createTop() \\ createButtom() \\ setupLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ createTop() \\ createButtom() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ createCenter() \\ setupTopLayout() \\ setupLayout() \\ setupLayout() \\ createTop() \\ createCenter() \\ createButtom() \\ setupTopLayout() \\ setupCenterLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\}\\
+
+& & & \parbox[t]{\dimTipo} {  setupView() \\ setupLayout() \\ createTop() \\ createButtom() \\ setupTable() \\ setupInfoBlock() \\ loadCss() \\ setupToolTip() \\ addConnect() \\ setupView() \\ itemSelected() \\ setupLayout() \\ createTop() \\ createButtom() \\ setupTopLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ itemSelected() \\ setupLayout() \\ createTop() \\ createButton() \\ setupTopLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ createButtom() \\ addConnect() \\ setupLayout() \\ setupTopLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ setupView() \\ setupLayout() \\ createTop() \\createButtom() \\ setupTopLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ setupLayout() \\ createTop() \\ createButtom() \\ setupTopLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\  }\\
+
+& & & \parbox[t]{\dimTipo} {setupView() \\ setupLayout() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ setupView() \\ createTop() \\ createButtom() \\ loadCss() \\ setupObjectName() \\ setupToolTip() \\ addConnect() \\ createTop() \\ createButtom() \\ } \\
+\hline
+
+TU40 & \parbox[t]{\larghezza}{ Signal-Slot } & Superato & \parbox[t]{\dimTipo} { slotOk() \\ slotHelp() \\ slotBack() \\ slotChangeSubjectName() \\ slotChangeSubjectImage() \\ slotChangeSubjectMask() \\ slotSaveSubject() \\ slotAddImage() \\ slotAddMask() \\ slotChangeType() \\ slotSelectAll() \\ slotDeselectAll() \\ slotTypeSelection() \\ slotSaveGroup() \\ slotBack() \\ slotAddFeatureClicked() \\ slotFeatureSelected() \\ slotOk() \\ slotTypeChanged() \\ slotGroupSelected() \\ slotProtocolSelected() \\ sloSaveDataset() \\ slotNewSubject() \\ slotShowSubjects() \\ slotNewGroup() \\ slotShowGroups() \\ slotNewProtocol() \\ slotShowProtocols() \\ slotNewDataset() \\ slotShowDatasets() \\ slotAboutRomeo() \\ slotShowHelp() \\ slotAnalysisResults() \\ slotStartAnalysis() \\ slotWelcome() \\ slotItemSelected() \\ slotItemSelected() \\ slotDeleteGroup() \\ slotEditGroup() \\ slotProtocolSelected() \\ }\\
+
+& & &\parbox[t]{\dimTipo} {slotDeleteProtocol() \\ slotViewResult() \\ slotExportResult() \\ slotSelectedTreeItem() \\ slotSubjetOrder() \\ slotProtocolOrder() \\ slotShowAll() \\ slotShowResults() \\ slotSelectResult() \\ slotNextPage() \\ slotPreviousPage() \\ slotStartAnalysis() \\ slotSelectAllFeatures() \\ slotDeselectAllFeatures() \\ slotDatasetSelected() \\ slotExitFromAnalysis() \\ slotContinueAnalysis() \\ slotSelectOutputDirectory() \\ } \\
+\hline
+\caption{Descrizione test di unità }
+\end{longtable}
+\end{center}

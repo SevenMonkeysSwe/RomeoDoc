@@ -1,0 +1,52 @@
+\input{doc_to_modify/packages}
+\input{../Template/doc_standard/commands}
+\input{doc_to_modify/styles}
+		\begin{document}
+			% COMMAND TO REDEFINE
+			\renewcommand{\documentName}{User Manual}
+			\renewcommand{\currentVersion}{v2.0.0}
+			\renewcommand{\redactionDate}{2014-02-11}
+			\renewcommand{\editors}{
+			\begin{itemize}
+			\item Martignago Jimmy
+			\item Magnabosco Nicola
+			\end{itemize}
+			}
+			\renewcommand{\verifiers}{
+			\begin{itemize}
+			\item Bissacco Nicolò
+			\item Luisetto Luca
+			\end{itemize}
+			}
+			\renewcommand{\approved}{
+			\begin{itemize}
+			\item Scapin Davide
+			\end{itemize}
+			}
+			\renewcommand{\usage}{External}
+			\renewcommand{\distributionList}{
+			\begin{itemize}
+			\item \authorName
+			\item \commitName
+			\item \commitNameC
+			\end{itemize}}
+			\renewcommand{\sommario}{Romeo User Manual}
+			\newcommand{\documentPath}{}
+			\renewcommand{\g}{\small{\textsubscript{\textbf{G}}}}
+			\renewcommand{\subject}{Subject\g{}}
+			\renewcommand{\protocol}{Protocol\g{}}
+			
+			% TITLE PAGE
+			\input{doc_to_modify/firstpage}	\pagebreak		
+			\input{doc_to_modify/history} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\listoffigures \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{doc_to_modify/content_files}
+			
+		\end{document}

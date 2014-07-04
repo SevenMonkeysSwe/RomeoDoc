@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Capitolato_5.tex
+% Current Version: 0.1.0
+% Created: 2013-12-09
+% Author: Martignago Jimmy
+% Email: jimmy.martignago@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.1.0			Martignago Jimmy	2013-12-14		Apportate modifiche a seguito verifica.
+% 0.0.3			Martignago Jimmy	2013-12-12		Modifiche impaginazione.
+% 0.0.2			Martignago Jimmy	2013-12-11		Stesura file.
+% 0.0.1			Martignago Jimmy	2013-12-09		Creazione file ed impostazione struttura.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Capitolato C5: SGAD}
+\label{capitolato5}
+Questo capitolato è presentato da una giovane azienda, la \textit{FunGo Studios}, un game studio che realizza giochi mobile e API\glossario{} per \textit{gamification erogate} in modalità \textit{Software as a Service}.
+
+\subsection{Descrizione del capitolato}
+\label{descrizionecap5}
+L'oggetto dell'appalto presentato da questo capitolato, consiste nella realizzazione di un \textit{social game} strategico, con grafica semplificata. L'accento è posto prevalentemente sulla parte architetturale lato server, come espressamente indicato dai proponenti durante la presentazione. Si tratta infatti di creare un'Architettura Distribuita basata sull'\textit{actor pattern}, per ovviare alle problematiche a cui vanno incontro i server \textit{stateless}, nel momento in cui devono gestire sessioni di gioco di un numero considerevole di utenti (si rimanda alla lettura del capitolato per approfondire tali problematiche \ref{rifinformativi}).
+\\Questo tipo di architettura, prevede un processo attivo per ogni sessione di gioco con le seguenti caratteristiche:
+\begin{itemize}
+\item può risiedere su una macchina qualunque del \textit{cluster} (server);
+\item ha lo stato del giocatore ed è l'unico che lo può modificare;
+\item gestisce le chiamate alle API\glossario{} per quell'utente tramite l'\textit{actor model};
+\item carica lo stato del giocatore all'inizio di una sessione e lo scrive sul database alla fine di una sessione (\textit{timeout}), oppure periodicamente e alla fine della sessione.
+\end{itemize}
+
+\subsection{Studio del dominio}
+\label{dominiocap5}
+\subsubsection{Dominio applicativo}
+\label{dominioapp5}
+Il dominio applicativo è intuitivamente chiaro. Si vuole creare un gioco online, in maniera che lavori il più efficientemente possibile. Il gruppo quindi, non ha ritenuto che quest'aspetto fosse di difficile comprensione e rappresenta un punto di forza del capitolato.
+
+\subsubsection{Dominio tecnologico}
+\label{dominiotec5}
+Per lo sviluppo, sono necessarie le seguenti tecnologie:
+\begin{itemize}
+\item\textbf{HTML/CSS/JavaScript:} per la realizzazione di un \textit{client web} minimale che rappresenti l'area di gioco;
+\item a scelta, uno dei seguenti linguaggi per l'implementazione delle API\glossario{} e degli attori:
+\begin{itemize}
+\item\textbf{Ruby\footnote{\url{https://www.ruby-lang.org}} + Dcell\footnote{\url{https://github.com/celluloid/dcell}}:} il primo è un linguaggio di \textit{scripting} completamente ad oggetti, mentre il secondo è un framework\glossario{} che si basa sull'actor model implementato da \textit{Celluloid}\footnote{\url{https://github.com/celluloid/celluloid}};
+\item\textbf{Scala\footnote{\url{http://www.scala-lang.org/}} + Akka\footnote{\url{http://akka.io/}}:} il primo è un linguaggio di programmazione \textit{general-purpose} multi-paradigma, studiato per integrare le funzionalità della programmazione ad oggetti e quelle dei linguaggi funzionali, mentre il secondo è un framework\glossario{} che integra l'actor model.
+\end{itemize}
+\end{itemize}
+
+\subsection{Valutazione complessiva}
+\label{valutazione5}
+\subsubsection{Aspetti positivi}
+\label{aspettipos5}
+\begin{itemize}
+\item\textbf{Interesse per lo sviluppo lato server:} il progetto, principalmente, ruota attorno allo sviluppo di un architettura server. Data la scarsa conoscenza in materia, l'approfondimento di questo tipo di sviluppo, ha suscitato un buon interesse da parte del gruppo;
+\item\textbf{Rapporto con il proponente:} confrontarsi con una realtà giovane e in ascesa come quella del \textit{FunGo Studio}, potrebbe essere altamente formante e stimolante. 
+\end{itemize}
+
+\subsubsection{Aspetti negativi}
+\label{aspettineg5}
+\begin{itemize}
+\item\textbf{Conoscenza del dominio tecnologico assente:} le tecnologie sopra citate, necessarie allo sviluppo sono totalmente assenti nel gruppo. L'apprendimento delle stesse, comporterebbe un rischio notevole ai fini della buona riuscita del progetto. Si tratta infatti di dover approcciare una diversa tipologia di linguaggi di programmazione, non più orientata agli oggetti, ma bensì funzionale. Nessun componente del gruppo ha mai affrontato lo studio di un linguaggio funzionale;
+\item\textbf{Chiarezza requisiti:} sebbene il dominio applicativo risulti abbastanza chiaro, i requisiti espressi nel capitolato sono molto generici. Questo comporterebbe un rischio durante l'analisi dei requisiti, appianabile solo con uno stretto rapporto con i proponenti. Quest'ultimi sembrerebbero in ogni caso, disponibili ad approfondire i punti più oscuri.
+\end{itemize}
+
+\subsubsection{Conclusioni}
+\label{conclusioni5}
+Questo capitolato è stato scartato subito dopo la prima analisi. \`E stato concordato dalla maggior parte dei componenti, che le lacune nel dominio tecnologico sono troppo grandi per essere colmate in maniera efficace. Sommato a questo, l'interesse generale del gruppo per il progetto sussisteva, ma non tale da giustificare tutti gli sforzi necessari.

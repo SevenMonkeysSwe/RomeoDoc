@@ -1,0 +1,1143 @@
+\color{black}
+\section{Specifica componenti Romeo::View}
+\label{specificaView}
+\begin{figure} [!h]
+\centering
+	\includegraphics[width=0.8\linewidth] {../Specifica_Tecnica/Content/Immagini/RelazioniView.png}
+			\caption{Diagramma Package \textsl{Romeo::View}}
+			\label{comp_romeo::view}
+\end{figure}
+Package\g{} per il componente View dell'architettura MVC.
+\pagebreak
+\subsection{Specifica componenti View::Window}
+\label{specificaWindow}
+\begin{figure}[!h]
+
+			\includegraphics[width=0.8\linewidth]{../Specifica_Tecnica/Content/Immagini/Window.png}
+			\caption{Diagramma package \textsl{Romeo::View::Window}}
+			\label{comp_romeo::view::window}
+\end{figure}
+Package\g{} che contiene tutti i tipi di finestre disponibili nel sistema con cui l'utente potrà interagire per accedere alle funzionalità di \project.
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+%     MAINWINDOW
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{MainWindow (class)}
+\label{speMainWindow}
+\begin{figure}[!h]
+\centering
+			\includegraphics[width=0.4\linewidth]{./Content/Immagini/view/MainWindow.png}
+			\caption{Classe MainWindow: attributi e metodi}
+			\label{cl_mainWind}
+\end{figure}
+\paragraph{Descrizione \\}
+Classe che rappresenta la sola ed unica finestra attiva presente in \project{}. Dovendo essere l'unica istanza all'interno dell'applicativo, è stata implementata tramite design pattern\g{} Singleton.
+\paragraph{Utilizzo\\}
+La classe viene utilizzata per poter interagire con il core dell'applicazione mettendo a disposizione le varie funzionalità.
+\paragraph{Classi ereditate\\}
+\begin{itemize}
+\item Qt::QMainWindow.
+\end{itemize}
+\paragraph{\color{black}Attributi \\}
+%APANEL
+\color{teal}\verb!- Window::APanel* central!
+\begin{quote}
+\color{black}Puntatore al widget che verrà impostato come centralWidget di MainWindow.
+\end{quote} 
+%MENUBAR
+\color{teal}\verb!- Component::MenuBar* menuBar!
+\begin{quote}
+\color{black}Puntatore alla barra del menu che conterrà tutte le funzionalità che l'utente avrà a disposizione.
+\end{quote} 
+%TOOLBAR
+\color{teal}\verb!- Component::ToolBar* toolBar!
+\begin{quote}
+\color{black} Puntatore alla barra che darà la possibilità all'utente di filtrare e ordinare i dati. 
+\end{quote} 
+\color{teal}\verb!- static MainWindow mainWindow!
+\begin{quote}
+\color{black} Puntatore al campo dati statico che rappresenta l'unica istanza presente per la classe stessa, MainWindow che verrà istanziata in modo \emph{lazy} quando verrà richiesta la creazione dell'oggetto. 
+\end{quote} 
+\paragraph{\textcolor{black}{Metodi\\}}
+%costruttore
+\color{blue}\verb!- MainWindow(parent : QWidget*=0)!
+\begin{quote}
+\color{black}Costruttore privato (come prevede il design pattern\g{} Singleton) per la classe MainWindow. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item parent : QWidget*=0 \\ Puntatore al QWidget padre di MainWindow.
+\end{itemize}
+\end{quote}
+%LOADCSS
+\color{blue}\verb!-loadCss():void!
+\begin{quote}
+\color{black} Metodo che carica il file contentente il css di default per MainWindow. \\
+\textbf{Note}
+ \begin{itemize}
+ \item deve essere marcato costante.
+ \end{itemize}
+\end{quote} 
+%SETUPMAINWINDOW
+\color{blue}\verb!-setupMainWindow(): void !
+\begin{quote}
+\color{black}Metodo che imposta la dimensione della finestra e la menuBar per la MainWindow
+\end{quote} 
+%addConnections
+\color{blue}\verb!-addConnections(): void!
+\begin{quote}
+\color{black} Metodo che si occupa di creare tutte le connessioni necessarie tra i vari oggetti che inviano un signal\g{} e quelli che implementano lo slot\g{} alla ricezione del signal\g{}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item deve essere marcato costante.
+ \end{itemize}
+\end{quote} 
+%getMainWindow
+\color{blue}\verb!+static getMainWindow():MainWindow* !
+\begin{quote}
+\color{black} Metodo statico che ritorna il puntatore all'unica istanza della classe MainWindow. Se l'istanza non esiste ancora, essa verrà creata e poi verrà ritornata. \\
+\textbf{Note}
+\begin{itemize}
+\item deve essere un metodo statico.
+\end{itemize}
+\end{quote} 
+%addCentralWidget
+\color{blue}\verb!+addCentralWidget(central : APanel*):void !
+\begin{quote}
+\color{black} Metodo che imposta l'oggetto puntato da central come central widget di MainWindow; central deve puntare a un oggetto sottotipo di APanel. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item central : APanel* \\ rappresenta il widget da settare come centralWidget di MainWindow.
+\end{itemize}
+\end{quote} 
+%setToolBar
+\color{blue}\verb!+setToolBar(toolBar : QToolBar*): void !
+\begin{quote}
+\color{black}Metodo che imposta la toolbar di MainWindow.\\
+\textbf{Argomenti}
+\begin{itemize}
+\item toolBar : QToolBar* \\ rappresenta il puntatore all'oggetto di tipo QToolBar che verrà settato come tool bar a MainWindow.
+\end{itemize}
+\end{quote} 
+%deleteToolBars()
+\color{blue}\verb!+deleteToolBars():void !
+\begin{quote}
+\color{black} Metodo che rimuove la toolbar di MainWindow.
+\end{quote} 
+%loadCssStatic
+\color{blue}\verb!+ loadCssStatic(path : const QString&): void!
+\color{black}
+\begin{quote}
+ Metodo che apre e legge il file, il cui nome è contenuto in path, che contiene le impostazioni css per l'applicativo \project{}. \\ 
+ \textbf{Note}
+ \begin{itemize}
+ \item deve essere marcato statico;
+ \item deve essere marcato costante.
+ \end{itemize}
+\textbf{Argomenti\\}
+\begin{itemize}
+\item path : const QString\& \\ Stringa contenente il path del file da aprire e leggere.
+\end{itemize}
+\end{quote} 
+% writeStatusBar
+\color{blue}\verb!+writeStatusBar(txt : const QString&, timeout:int=0):void! (slot)
+\color{black}
+\begin{quote}Slot\g{} che ha il compito di visualizzare la barra di stato attivato alla ricezione di un signal\g{}.\\ 
+\textbf{Argomenti\\}
+\begin{itemize}
+\item txt : const QString\& \\ Stringa contenente il testo da visualizzare;
+\item timeout: int=0 \\ intero che rappresenta il tempo per il quale il messaggio (txt) debba essere visualizzato: di default 0.
+\end{itemize}
+\end{quote} 
+\color{black}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		APANEL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{APanel (abstract)}
+\label{speAPanel}
+\begin{figure}[!h]
+\centering
+			\includegraphics[width=0.4\linewidth]{./Content/Immagini/view/APanel.png}
+			\caption{Classe APanel: attributi e metodi}
+			\label{cl_apanelV}
+\end{figure}
+\paragraph{Descrizione \\}
+Classe che rappresenta il widget che verrà poi impostato come centralWidget di MainWindow.
+\paragraph{Utilizzo\\}
+La classe astratta fornisce dei contratti puri che verranno implementati dalle sottoclassi, e offre dei metodi disponibili alle sottoclassi.
+\paragraph{Classi ereditate\\}
+\begin{itemize}
+\item Qt::QWidget.
+\end{itemize}
+\paragraph{\textcolor{black}{Metodi\\}}
+%costruttore
+\color{blue}\verb! # APanel(parent : QWidget*=0)!
+\begin{quote}
+\color{black}Costruttore protetto per la classe APanel. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item parent : QWidget*=0 \\ Puntatore al QWidget padre di APanel.
+\end{itemize}
+\end{quote}
+%setupLayout
+\color{blue}\verb! #setupLayout(): void !
+\begin{quote}
+\color{black} Metodo virtuale puro che ha come contratto la costruzione del layout del widget. Il metodo deve essere ridefinito dalle classi che ereditano da questa, definendo la costruzione del proprio layout.
+\begin{itemize}
+\item questo metodo deve essere marcato virtuale puro;
+\item questo metodo deve essere ridefinito.
+\end{itemize}
+\end{quote} 
+%LOADCSS
+\color{blue}\verb! #loadCss(): void !
+\begin{quote}
+\color{black} Metodo virtuale puro che ha come contratto il caricamento del file contentente il css per il widget. Il metodo deve essere ridefinito dalle classi che ereditano da questa, definendo il proprio css, qualora ne sia provvisto, altrimenti avrà corpo vuoto. \\ 
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale puro;
+ \item questo metodo deve essere ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupObjectName
+\color{blue}\verb! #setupObjectName():void!
+\begin{quote}
+\color{black} Metodo virtuale puro con contratto quello di settare il nome ad ogni oggetto, contenuto nel widget. Il metodo deve essere ridefinito dalle classi che ereditano da questa, per gli oggetti contenuti nella classe. \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale puro;
+ \item questo metodo deve essere ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupToolTip
+\color{blue}\verb! #setupToolTip():void!
+\begin{quote}
+\color{black} Metodo virtuale puro che ha come contratto quello di settare i Tooltip\g{} agli oggetti della finestra. Il metodo deve essere ridefinito dalle classi che ereditano da questa impostando per ogni oggetto i ToolTip necessari per mostrare all'utente che sta utilizzando \project{} i suggerimenti e  spiegare a cosa serve quell'oggetto su cui si è posizionato con il cursore. \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale puro;
+ \item questo metodo deve essere ridefinito.
+ \end{itemize}
+\end{quote} 
+%addConnect
+\color{blue}\verb! #addConnect(): void!
+\begin{quote}
+\color{black} Metodo virtuale puro che ha come contratto quello di fissare tutte le istruzioni \emph{connect}. Il metodo deve essere ridefinito dalle classi che ereditano da questa inserendo le connect necessarie al widget.\\ 
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante;
+ \item questo metodo deve essere marcato virtuale puro;
+ \item questo metodo deve essere ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupView
+\color{blue}\verb! #setupView(): void !
+\begin{quote}
+\color{black} Metodo virtuale puro che ha come contratto quello di settare il layout del widget. Il metodo deve essere ridefinito dalle classi che ereditano da questa impostando il proprio layout.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale puro;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%initializeView
+\color{blue}\verb! # initializeView(): void !
+\color{black} 
+\begin{quote}
+Metodo che invoca i metodi astratti precedentemente descritti, ridefiniti nella sottoclasse che eredita da APanel.
+\end{quote}
+%getTypeRomeo
+\color{blue}\verb! #  getTypeRomeo(parent:QObject*=0):QStringListModel*!
+\color{black} 
+\begin{quote}
+Metodo che ritorna una lista di stringhe usate dalla combobox per selezionare il tipo dell'immagine.
+\end{quote}
+\color{black}
+\pagebreak
+%------------------------SIGNALS
+\color{blue}\verb! + helpView():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di visualizzare la guida utente, ovvero quando viene premuto il pulsante di help presente in tutte le viste.
+\end{quote}
+%backview
+\color{blue}\verb! + backView():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di ritornare alla vista precedente, ovvero quando viene premuto il pulsante back presente nelle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+%saveOb
+\color{blue}\verb! + saveObject():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di salvare le modifiche fatte nella vista corrente, ovvero quando viene premuto il pulsante save presente nelle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+%editObj
+\color{blue}\verb! + editObject():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di modificare qualcosa nella vista corrente, ovvero quando viene premuto il pulsante edit presente nelle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+%deleteOb
+\color{blue}\verb! + deleteObject():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di eliminare l'oggetto selezionato ovvero quando viene premuto il pulsante delete presente nelle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+%startAn
+\color{blue}\verb! + startAnalysis():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide avviare un'analisi, ovvero quando viene premuto il pulsante start Analysis presente nelle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+%selectAll
+\color{blue}\verb! + selectAll():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide selezionare tutti gil elementi presenti in una lista o tabella. Emesso dalle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+%deselectAll
+\color{blue}\verb! + deselectAll():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide deselezionare tutti gil elementi selezionati in una lista o tabella. Emesso dalle viste che mettono a disposizione questa funzionalità.
+\end{quote}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		WELCOMEVIEW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{WelcomeView (class)}
+\label{speWelView}
+\begin{figure}[!h]
+\centering
+			\includegraphics[width=0.4\linewidth]{./Content/Immagini/view/WelcomeView.png}
+			\caption{Classe WelcomeView: attributi e metodi}
+			\label{cl_welcomeV}
+\end{figure}
+\paragraph{Descrizione \\}
+Classe che rappresenta il widget della pagina iniziale, dove l'utente può scegliere le diverse operazioni da eseguire.
+\paragraph{Utilizzo\\}
+La classe implementerà i metodi virtuali puri della superclasse inoltre metterà a disposizione i pulsanti che daranno all'utente la possibilità di interagire con l'applicazione svolgendo l'operazione desiderata.
+\paragraph{Classi ereditate\\}
+\begin{itemize}
+\item Window::APanel.
+\end{itemize}
+\paragraph{\textcolor{black}{Attributi\\}}
+%newSubjectButton
+\color{teal}\verb!-newSubjectButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la creazione di un nuovo Subject\g{}. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la creazione di un nuovo Subject\g{}.
+\end{quote} 
+%showSubjectButton
+\color{teal}\verb!-showSubjectButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la visualizzazione dei Subject\g{} presenti nell'applicativo. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la visualizzazione dei Subject\g{}.
+\end{quote}
+%newGroupButton
+\color{teal}\verb!-newGroupButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la creazione di un nuovo gruppo di Subject\g{}. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la creazione di un nuovo gruppo di Subject\g{}.
+\end{quote} 
+%showGroupButton
+\color{teal}\verb!-showGroupButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la visualizzazione dei gruppi di Subject\g{} presenti nell'applicativo e la possibilità di modificarne il contenuto, aggiungendo o togliendo Subject\g{} dal gruppo selezionato. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la visualizzazione dei Subject\g{}.
+\end{quote}
+%newProtocolButton
+\color{teal}\verb!-newProtocolButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la creazione di un nuovo Protocol\g{}. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la creazione di un nuovo Protocol\g{}.
+\end{quote} 
+%showProtocolButton
+\color{teal}\verb!-showGroupButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la visualizzazione dei Protocol\g{} presenti nell'applicativo e la possibilità di eliminare quelli selezionati. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la visualizzazione dei Subject\g{}.
+\end{quote}
+%newDatasetButton
+\color{teal}\verb!-newGroupButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la creazione di un nuovo Dataset\g{}. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la creazione di un nuovo Dataset\g{}.
+\end{quote} 
+%showDatasetButton
+\color{teal}\verb!-showDatasetButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la visualizzazione dei Dataset\g{} presenti nell'applicativo. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la visualizzazione dei Dataset\g{}.
+\end{quote}
+%startAnalysisButton
+\color{teal}\verb!-showDatasetButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per iniziare una nuova analisi. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la creazione di una nuova analisi e la sua successiva esecuzione.
+\end{quote}
+%analysisResultsButton
+\color{teal}\verb!-analysisResultsButton:QPushButton*!
+\begin{quote}
+\color{black}pulsante per la visualizzazione delle analisi effettuate con \project{} e i risultati prodotti da esse. Alla pressione del pulsante verrà emesso un signal\g{} e verrà mostrata l'interfaccia per la visualizzazione delle analisi presenti nell'applicativo.
+\end{quote}
+\paragraph{\textcolor{black}{Metodi\\}}
+%%%%%%%%%%%%%%
+%costruttore
+\color{blue}\verb! + WelcomeView(parent : QWidget*=0)!
+\begin{quote}
+\color{black}Costruttore per la classe WelcomeView. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item parent : QWidget*=0 \\ Puntatore al QWidget padre di WelcomeView.
+\end{itemize}
+\end{quote}
+%%%%%%%%%%%%%%
+%setupLeftFrame
+\color{blue}\verb! - setupLeftFrame(): void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte sinistra del widget iniziale.
+\end{quote} 
+%setupRightFrame
+\color{blue}\verb! -setupRightFrame(): void !
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte destra del widget iniziale.
+\end{quote}  
+%LOADCSS
+\color{blue}\verb! #loadCss(): void !
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupObjectName
+\color{blue}\verb! # setupObjectName():void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupToolTip
+\color{blue}\verb! # setupToolTip(): void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%addConnect
+\color{blue}\verb! #addConnect():void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante;
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupView
+\color{blue}\verb! #setupView():void!
+\color{black}
+\begin{quote}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.
+\textbf{Note}
+\begin{itemize}
+\item questo metodo deve essere marcato virtuale;
+\item questo metodo è stato ridefinito.
+\end{itemize}
+\end{quote}
+\color{black}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		NEWSUBJECTVIEW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{NewSubjectView (class)}
+\label{speNsubV}
+\begin{figure}[!h]
+\centering
+			\includegraphics[width=0.4\linewidth]{./Content/Immagini/view/NewSubjectView.png}
+			\caption{Classe NewSubjectView: attributi e metodi}
+			\label{cl_nsubview}
+\end{figure}
+\paragraph{Descrizione \\}
+Classe che rappresenta il widget per la creazione di un nuovo \subject{}.
+\paragraph{Utilizzo\\}
+La classe implementerà i metodi virtuali puri della superclasse inoltre darà la possibilità all'utente di inserire il nome del \subject{}, selezionare il file corrispondente all'immagine da analizzare, opzionalmente potrà scegliere il file per la maschera e infine salvare le operazioni fatte, o ritornare alla finestra iniziale.
+\paragraph{Classi ereditate\\}
+\begin{itemize}
+\item Window::APanel.
+\end{itemize}
+\paragraph{\textcolor{black}{Attributi\\}}
+\color{teal}\verb!-subjectName: QString!
+\begin{quote}
+\color{black}Stringa che rappresenta il nome del \subject{}.
+\end{quote}
+\color{teal}\verb!-subjectImage: QString!
+\begin{quote}
+\color{black}Stringa che rappresenta il percorso dell'immagine da associare al \subject{}.
+\end{quote}
+\color{teal}\verb!-subjectMask: QString !
+\begin{quote}
+\color{black}Stringa che rappresenta il percorso della maschera da associare all'immagine del \subject{}.
+\end{quote}
+%typeSelected
+\color{teal}\verb! -typeSelected: QString!
+\color{black} 
+\begin{quote}
+Stringa che rappresenta il tipo di immagine associata al Subject\g{} in creazione.
+\end{quote}
+%searchFileButton
+\color{teal}\verb!-searchFileButton: QPushButton* !
+\begin{quote}
+\color{black}pulsante che quando verrà premuto, emetterà un signal\g{} e verrà aperta una finestra di dialogo per navigare il file system e selezionare il file contenente l'immagine da caricare.
+\end{quote}
+%searchMaskButton
+\color{teal}\verb!-searchMaskButton: QPushButton* !
+\begin{quote}
+\color{black}pulsante che quando verrà premuto, emetterà un signal\g{} e verrà aperta una finestra di dialogo per navigare il file system e selezionare il file contenente la maschera da caricare.
+\end{quote}
+\color{teal}\verb! bottomWidget:NavWidget*!
+\color{black} 
+\begin{quote}
+Puntatore al widget che rappresenta la parte bassa della finestra contentente i pulsanti necessari al salvataggio all'annullamento delle operazioni e tornare indietro.
+\end{quote}
+%%%% METODI 
+\paragraph{\textcolor{black}{Metodi\\}}
+%costruttore
+\color{blue}\verb! + NewSubjectView(parent : QWidget*=0)!
+\begin{quote}
+\color{black}Costruttore per la classe NewSubjectView. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item parent: QWidget*=0  \\ Puntatore al QWidget padre di NewSubjectView.
+\end{itemize}
+\end{quote}
+%setupLayout()
+\color{blue}\verb! #setupLayout():void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+\begin{itemize}
+\item questo metodo deve essere marcato virtuale;
+\item questo metodo è stato ridefinito.
+\end{itemize}
+\end{quote} 
+%Top
+\color{blue}\verb! -createTop():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte in alto del widget contenente la form per l'inserimento dei dati necessari per la creazione di un nuovo \subject{}.
+\end{quote} 
+%createButtom
+\color{blue}\verb! -createButtom():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte in basso del widget contenente il pulsante per ritornare alla pagine iniziale, il pulsante per il salvataggio e l'accesso alla guida.
+\end{quote} 
+%LOADCSS
+\color{blue}\verb! #loadCss():void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo metododeve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupObjectName
+\color{blue}\verb! #setupObjectName():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupToolTip
+\color{blue}\verb! #setupToolTip():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%addConnect
+\color{blue}\verb! #addConnect():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante;
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupView
+\color{blue}\verb! #setupView():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote}
+%setSubjectName
+\color{blue}\verb! +setSubjectName(name: QString&):void!
+\begin{quote}
+\color{black} Metodo che modifica il nome associato al \subject{} da creare.  \\
+ \textbf{Argomenti:}
+ \begin{itemize}
+\item name : const QString\& \\ riferimento costante alla stringa contentente il nuovo nome per il \subject{}.
+\end{itemize}
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo verrà invocato dal controller che si occupa di questa vista.
+ \end{itemize}
+\end{quote}
+%setImagePath
+\color{blue}\verb! + setImagePath( path: QString&):void !
+\begin{quote}
+\color{black} Metodo che modifica il path dell'immagine associata al \subject{} da creare. \\
+  \textbf{Argomenti:}
+ \begin{itemize}
+\item path : const QString\& \\ riferimento costante alla stringa contentente il nuovo path dell'immagine per il \subject{}.
+\end{itemize} 
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo verrà invocato dal controller che si occupa di questa vista.
+ \end{itemize}
+\end{quote}
+%setMaskPath
+\color{blue}\verb! +setMaskPath(path: QString&): void !
+\begin{quote}
+\color{black} Metodo che modifica il path della maschera associata al \subject{} da creare. \\
+  \textbf{Argomenti:}
+ \begin{itemize}
+\item path : const QString\& \\ riferimento costante alla stringa contentente il nuovo path della maschera per il \subject{}.
+\end{itemize}
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo verrà invocato dal controller che si occupa di questa vista.
+ \end{itemize}
+\end{quote}
+%setTypeSelection
+\color{blue}\verb! +setTypeSelection(type: const QString&):void! 
+\begin{quote}
+\color{black} Metodo che modifica il tipo dell'immagine associata al \subject{} in creazione. \\
+  \textbf{Argomenti:}
+ \begin{itemize}
+\item type : const QString\& \\ riferimento costante alla stringa contentente il nuovo tipo dell'immagine associata al  \subject{}.
+\end{itemize}
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo verrà invocato dal controller che si occupa di questa vista.
+ \end{itemize}
+\end{quote}
+%getSubjectName
+\color{blue}\verb! + getSubjectName(): QString!
+\begin{quote}
+\color{black} Metodo che restituisce un QString contenente il nome del \subject{} \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getImagePath
+\color{blue}\verb! + getImagePath(): QString!
+\begin{quote}
+\color{black} Metodo che restituisce un QString contenente il path dell'immagine associata al \subject{} \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getMaskPath
+\color{blue}\verb! + getMaskPath(): QString!
+\color{black}
+\begin{quote}
+ Metodo che restituisce un QString contenente il path della maschera associata al \subject{} \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getType sel
+\color{blue}\verb! + getTypeSelected(): QString!
+\color{black}
+\begin{quote}
+ Metodo che restituisce un QString contenente il tipo selezionato.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%resetFields
+\color{blue}\verb! + resetFields(): void!
+\color{black}
+\begin{quote}
+ Metodo che resetta la form, eliminando il contenuto di ogni campo mettendo le impostazioni di default.\\
+\end{quote}
+%addimage
+\color{blue}\verb! + addImage():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di cercare nel file system l'immagine da associare al \subject{} ovvero quando viene premuto il pulsante searchFileButton.
+\end{quote}
+%addmask
+\color{blue}\verb! + addMask():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di cercare nel file system la maschera da associare al \subject{} ovvero quando viene premuto il pulsante searchMaskButton.
+\end{quote}
+%saveSub
+\color{blue}\verb! + saveSubject():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di salvare il \subject{} appena creato, ovvero quando viene premuto il pulsante save contentuto in bottomWidget.
+\end{quote}
+%nameTextch
+\color{blue}\verb! + nameTextChanded(text:QString&):void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente modifica il nome contenuto nella linea di testo per l'inseriemnto del nome del \subject.\\
+\textbf{Argomenti:}
+\begin{itemize}
+\item text: QString\&\\ rappresenta il nuovo nome da assegnare al Subject\g{}. 
+\end{itemize}
+\end{quote}
+%imagegetextch
+\color{blue}\verb! + imageTextChanded(text:QString&):void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente modifica il file dell'immagine da associare al Subject\g{}. \\
+\textbf{Argomenti:}
+\begin{itemize}
+\item text: QString\&\\ rappresenta il path della nuova immagine da associare al Subject\g{}. 
+\end{itemize}
+\end{quote}
+%maskchang
+\color{blue}\verb! + maskTextChanded(text:QString&):void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} eemesso quando l'utente modifica il file dell'immagine da associare al Subject\g{}. \\
+\textbf{Argomenti:}
+\begin{itemize}
+\item text: QString\&\\ rappresenta il path della nuova maschera da associare al Subject\g{}. 
+\end{itemize}
+\end{quote}
+\color{black}
+\pagebreak
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	NEWGROUPVIEW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{NewGroupView (class)}
+\label{speNgroV}
+\begin{figure}[!h]
+\centering
+			\includegraphics[width=0.6\linewidth]{./Content/Immagini/view/NewGroupView.png}
+			\caption{Classe NewGroupView: attributi e metodi}
+			\label{cl_ngro}
+\end{figure}
+\paragraph{Descrizione \\}
+Classe che rappresenta il widget per la creazione di un nuovo gruppo di \subject{}.
+\paragraph{Utilizzo\\}
+La classe implementerà i metodi virtuali puri della superclasse inoltre darà la possibilità all'utente di:
+\begin{itemize}
+\item inserire il nome del nuovo gruppo di \subject{};
+\item selezionare il tipo dell'immagine che dovranno avere i \subject{} da aggiungere al gruppo;
+\item selezionare, dalla lista dei \subject con associata un'immagine del tipo precedentemente scelto, i \subject{} di interesse;
+\item salvare le operazioni fatte, o ritornare alla finestra iniziale.
+\end{itemize}
+\paragraph{Classi ereditate\\}
+\begin{itemize}
+\item Window::APanel.
+\end{itemize}
+\paragraph{\textcolor{black}{Attributi\\}}
+%model
+\color{teal}\verb!-model: NewGroupTableModel* !
+\color{black}
+\begin{quote} Modello contenente i \subject{} contenuti nel gruppo attualmente in creazione.
+\end{quote}
+%tableView
+\color{teal}\verb!-tableView: QTabelView* !
+\color{black}
+\begin{quote} Contiene la lista dei \subject{} presenti in \emph{model}.
+\end{quote}
+%nsub
+\color{teal}\verb!-nSubject:int !
+\color{black}
+\begin{quote}Indica il numero di \subject{} presenti nel sistema con associata un'immagine del tipo indicato dal campo \emph{comboBoxType}.
+\end{quote}
+
+%groupLine
+\color{teal}\verb!-groupLineEdit: QLineEdit* !
+\color{black}
+\begin{quote} Linea di testo, contenente il nome del gruppo in creazione.
+\end{quote}
+%comboBox
+\color{teal}\verb!-comboBoxType: QComboBox* !
+\color{black}
+\begin{quote}Contiene l'elenco dei tipi di immagine che \project è in grado di elaborare; serve per selezionare poi i \subject{} che hanno il tipo di immagine indicato da questo campo dati.
+\end{quote}
+\paragraph{\textcolor{black}{Metodi\\}}
+%costruttore
+\color{blue}\verb! + NewGroupView(parent : QWidget*=0)!
+\begin{quote}
+\color{black}Costruttore per la classe NewGroupView. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item parent: QWidget*=0  \\ Puntatore al QWidget padre di NewGrouView.
+\end{itemize}
+\end{quote}
+%setupTopLayout
+\color{blue}\verb! -setupTopLayout():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di impostare il layout in alto del widget, aggiungendo gli oggetti che lo compongono, e dando delle impostazioni grafiche.
+\end{quote} 
+%createTop
+\color{blue}\verb! -createTop():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte in alto del widget contenente la form per l'inserimento dei dati necessari per la creazione di un nuovo gruppo di \subject{}.
+\end{quote} 
+%createButtom
+\color{blue}\verb! -createButtom():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte in basso del widget contenente il pulsante per ritornare alla pagina iniziale, il pulsante per il salvataggio e l'accesso alla guida.
+\end{quote}
+%setupLayout()
+\color{blue}\verb! #setupLayout():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.
+\begin{itemize}
+\item questo metodo deve essere marcato virtuale;
+\item questo metodo è stato ridefinito.
+\end{itemize}
+\end{quote}  
+%LOADCSS
+\color{blue}\verb! #loadCss():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupObjectName
+\color{blue}\verb! #setupObjectName():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupToolTip
+\color{blue}\verb! #setupToolTip():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%addConnect
+\color{blue}\verb! #addConnect():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante;
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupView
+\color{blue}\verb! #setupView():void!
+\color{black}
+\begin{quote}
+Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote}
+%getTableView
+\color{blue}\verb! + getTableView:QTableView*!
+\color{black} 
+\begin{quote}Metodo che ritorna la tabella contenente tutti i \subject{} contenuti che gruppo.
+\end{quote}
+%updateProxyMod
+\color{blue}\verb! + updateProxyModel: QSortFilterProxyModel*!
+\color{black} 
+\begin{quote}Metodo che aggiorna il model della tabella dei \subject{} cliccando gli header della tabella stessa.
+\end{quote}
+%getNewGroup
+\color{blue}\verb! + getNewGroupTableModel(): NewGroupTableModel*!
+\color{black} 
+\begin{quote}Metodo che ritorna il campo dati \emph{model}. \\
+\textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getname
+\color{blue}\verb! + getName(): QString!
+\color{black} 
+\begin{quote}Metodo ch ritorna il nome del gruppo in creazione. \\
+\textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getType
+\color{blue}\verb! + getType(): QString!
+\color{black} 
+\begin{quote}Metodo che ritorna il tipo di immagine che devono avere i \subject{} da inserire nel gruppo. \\
+\textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getSelectedSubjects
+\color{blue}\verb! + getSelectedSubjects(): QModelIndexList*!
+\color{black} 
+\begin{quote}Metodo che ritorna la lista dei \subject selezionati. \\
+\textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%resetForm
+\color{blue}\verb! + resetFields: void !
+\color{black} 
+\begin{quote}Metodo che imposta tutti gli object contenuti dentro alla finestra al loro valore di default. \\
+\end{quote}
+%setNsub
+\color{blue}\verb! + setNSubjects(n: int):void!
+\color{black} 
+\begin{quote}Metodo che imposta il campo dati \emph{nSubject}. \\
+\textbf{Argomenti:}
+ \begin{itemize}
+ \item n: int \\numero di\subject{} presenti per il tipo selezionato, da assegnare al campo dati \emph{nSubject}.
+ \end{itemize}
+\end{quote}
+%typeSelection
+\color{blue}\verb! + typeSelection(selection: QString&):void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente ha selezionato il tipo dalla combobox.
+\end{quote}
+\color{black}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		NEWPROTOCOLVIEW
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{NewProtocolView (class)}
+\label{speNproV}
+\begin{figure}[!h]
+\centering
+			\includegraphics[width=0.4\linewidth]{./Content/Immagini/view/NewProtocolView.png}
+			\caption{Classe NewProtocolView: attributi e metodi}
+			\label{cl_nsproview}
+\end{figure}
+\paragraph{Descrizione \\}
+Classe che rappresenta il widget per la creazione di un nuovo \protocol{}.
+\paragraph{Utilizzo\\}
+La classe implementerà i metodi virtuali puri della superclasse inoltre darà la possibilità all'utente di inserire il nome del \protocol{}, selezionare il tipo di immagine a cui il protocol\g{} verrà applicato, potrà selezionare i Feature Extractors\g{} di interesse, settando i parametri richiesti lasciando opzionalmente quelli presenti di default, e/o selezionare uno e uno solo algoritmo di clastering\g{} comportandosi allo stesso modo per i Feature Extractors\g{}. Può poi proseguire al salvataggio del Protocol\g{} creato.
+\paragraph{Classi ereditate\\}
+\begin{itemize}
+\item Window::APanel.
+\end{itemize}
+%%%%%%%ATTRIBUTI%%%%%%%%%%%
+\paragraph{\textcolor{black}{Attributi\\}}
+\color{teal}\verb!-featureAdd: QPushButton*!
+\begin{quote}
+\color{black}Pulsante che permette di aggiungere una nuova feature, da inserire nel Protocol in creazione.
+\end{quote}
+%model
+\color{teal}\verb!-model: NewProtocolFeatureTabelModel*!
+\begin{quote}
+\color{black}Modello che contiene la lista delle Feature fino a questo momento inserite nel \protocol{} in creazione.
+\end{quote}
+%featureList
+\color{teal}\verb!-featureList: QTabelView*!
+\begin{quote}
+\color{black}contiene la lista delle Feature\g{} contenute dentro a \emph{model}. 
+\end{quote}
+%algorith combo box
+\color{teal}\verb!-algorithmCombobox: QComboBox*!
+\begin{quote}
+\color{black}contiene la lista degli algoritmi di clustering\g{} presenti nell'applicativo \project{}. 
+\end{quote}
+%name line edit
+\color{teal}\verb!-nameLineEdit: QLineEdit*!
+\begin{quote}
+\color{black}Linea di testa utilizzata per inserire il nome del \protocol{} che si sta creando. 
+\end{quote}
+%type combo box
+\color{teal}\verb!-typeComboBox: QComboBox*!
+\begin{quote}
+\color{black}contiene la lista dei tipi di immagine a cui il \protocol{} verrà applicato. Una volta selezionato un tipo, verranno rese disponibili solo le Feature\g{} applicabili al tipo di immagine scelto.
+\end{quote}
+
+%%%%%%%%%%%% METODI %%%%%%%%%%%
+\paragraph{\textcolor{black}{Metodi\\}}
+%costruttore
+\color{blue}\verb! + NewProtocolView(parent : QWidget*=0)!
+\begin{quote}
+\color{black}Costruttore per la classe NewSubjectView. \\
+\textbf{Argomenti}
+\begin{itemize}
+\item parent: QWidget*=0  \\ Puntatore al QWidget padre di NewSubjectView.
+\end{itemize}
+\end{quote}
+%setupLayout()
+\color{blue}\verb! #setupLayout():void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.
+\begin{itemize}
+\item questo metodo deve essere marcato virtuale;
+\item questo metodo è stato ridefinito.
+\end{itemize}
+\end{quote} 
+%createTop
+\color{blue}\verb! -createTop():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte in alto del widget contenente la form per l'inserimento dei dati necessari per la creazione di un nuovo \protocol{}.
+\end{quote} 
+%createButtom
+\color{blue}\verb! -createButtom():void!
+\begin{quote}
+\color{black} Metodo che ha il compito di costruire la parte in basso del widget contenente il pulsante per ritornare alla pagine iniziale, il pulsante per il salvataggio e l'accesso alla guida.
+\end{quote} 
+%LOADCSS
+\color{blue}\verb! #loadCss():void!
+\begin{quote}
+\color{black} Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo metododeve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupObjectName
+\color{blue}\verb! #setupObjectName():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+  \item questo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupToolTip
+\color{blue}\verb! #setupToolTip():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%addConnect
+\color{blue}\verb! #addConnect():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante;
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote} 
+%setupView
+\color{blue}\verb! #setupView():void!
+\begin{quote}
+\color{black}Metodo che implementa il contratto fornito dalla classe astratta \hyperref[speAPanel]{APanel}.\\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato virtuale;
+ \item questo metodo è stato ridefinito.
+ \end{itemize}
+\end{quote}
+%getTypeSelected
+\color{blue}\verb! +getTypeSelected():QString!
+\begin{quote}
+\color{black} Metodo che ritorna il tipo a cui verrà applicato il protocol\g{}.  \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getAlgorithmSelected
+\color{blue}\verb! +getAlgorithmSelected():QString!
+\begin{quote}
+\color{black} Metodo che ritorna il nome dell'algoritmo selezionato.  \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getTypeSelected
+\color{blue}\verb! +getProtocolName():QString!
+\begin{quote}
+\color{black} Metodo che ritorna il nome da associare al nuovo \protocol{}.  \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%getFeaturesTable
+\color{blue}\verb! +getFeaturesTable():QString!
+\begin{quote}
+\color{black} Metodo che ritorna la tabella contenente le features impostate.  \\
+ \textbf{Note}
+ \begin{itemize}
+ \item questo metodo deve essere marcato costante.
+ \end{itemize}
+\end{quote}
+%resetFields
+\color{blue}\verb! +resetFields(): void!
+\begin{quote}
+\color{black} Metodo che ripulisce i campi e li setta alle opzioni di predefinite.
+\end{quote}
+%create left
+\color{blue}\verb! -createLeft(): void!
+\begin{quote}
+\color{black} Metodo che crea il layout per la parte sinistra della finestra contenente il nome da dare al nuovo protocol\g{} e il tipo di immagine a cui il protocol\g{} verrà applicato.
+\end{quote}
+%createright
+\color{blue}\verb! -createRight(): void!
+\begin{quote}
+\color{black} Metodo che crea il layout per la parte destra della finestra contenente le opzioni per l'inserimento dell'algoritmo di clustering\g{}.
+\end{quote}
+%createCenter
+\color{blue}\verb! -createCenter(): void!
+\begin{quote}
+\color{black} Metodo che crea il layout per la parte centrale della finestra contenente le opzioni per l'inserimento delle feature\g{}.
+\end{quote}
+%setupTopLayout
+\color{blue}\verb! -setupTopLayout(): void!
+\begin{quote}
+\color{black} Metodo che imposta il layout della parte alta della finestra contenente le parti: destra, sinistra e centrale create dai metodi precedentemente illustrati.
+\end{quote}
+%addFeatureClicked
+\color{blue}\verb! + addFeatureClicked():void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente decide di aggiungere una nuova Feature\g{} da calcolare al \protocol{}.
+\end{quote}
+%typeChange(index:int)
+\color{blue}\verb! + typeChange(index:int):void! (signal)
+\color{black} 
+\begin{quote}
+Signal\g{} emesso quando l'utente ha selezionato il tipo dalla combobox, servirà poi per poter mostrare all'utente solo le Feature\g{} disponibili per il tipo di immagine selezionato.
+\end{quote}
+\color{black}
+\pagebreak

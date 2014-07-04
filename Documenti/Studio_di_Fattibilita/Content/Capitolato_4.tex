@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Capitolato_4.tex
+% Current Version: 0.1.0
+% Created: 2013-12-09
+% Author: Martignago Jimmy
+% Email: jimmy.martignago@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.1.0			Martignago Jimmy	2013-12-14		Apportate modifiche a seguito verifica.
+% 0.0.3			Martignago Jimmy	2013-12-12		Correzione lessico, modifica errori impaginazione.
+% 0.0.2			Martignago Jimmy	2013-12-11		Stesura file.
+% 0.0.1			Martignago Jimmy	2013-12-09		Creazione file ed impostazione struttura.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Capitolato C4: Seq}
+\label{capitolato4}
+Questo capitolato è stato proposto dalla \textit{Zucchetti s.p.a.}, azienda che opera da anni nel settore del \textit{Software Engineering}. Come si evince dal testo, lo scopo dell'azienda nel commissionare questo progetto sta nel valutarne esclusivamente la fattibilità.
+ 
+\subsection{Descrizione del capitolato}
+\label{descrizionecap4}
+Lo scopo del progetto è sviluppare un software per la gestione di processi sequenziali, costituiti quindi da passi eseguibili da dispositivo mobile. Il sistema, sarà costituito da un applicativo server, che permetta la creazione e la manutenzione di processi. I passi che permettono il completamento del processo, potranno essere vincolati l'uno con l'altro oppure essere portati a termine singolarmente senza vincoli. L'utente quindi, accedendo al sistema tramite dispositivo mobile, sarà in grado di completare i passi secondo le modalità prescritte dal processo e il sistema dovrà essere in grado di decidere se la richiesta di terminazione del passo, può essere evasa. In particolare, possono essere richiesti l'invio di diverse tipologie di informazioni: multimediali (foto e video), posizioni GPS, date e ore ecc. 
+
+\subsection{Studio del dominio}
+\label{dominiocap4}
+\subsubsection{Dominio applicativo}
+\label{dominioapp4}
+Nel capitolato sono presentati tre esempi di contesto applicativo alquanto dissimili tra loro. \`E evidente che un prodotto come quello descritto dai proponenti, è intrinsecamente generico e quindi applicabile a svariati contesti.
+\\La presentazione fatta dal proponente non ha chiarito per nulla questo aspetto. Molto probabilmente questa è stata una scelta ponderata, dettata dal fatto di voler lasciare libero sfogo alla creatività di chi decidesse di svolgere il progetto. Si richiede infatti di pensare e progettare dei processi liberamente, senza per forza seguire gli esempi del capitolato.
+
+\subsubsection{Dominio tecnologico}
+\label{dominiotec4}
+Il dominio tecnologico richiesto è vario e per la maggior parte, poco conosciuto dal gruppo. Serve infatti un database relazionale in cui memorizzare i dati, e il primo pensiero cade naturalmente su MySQL, dato che tutti i componenti ne hanno un infarinatura. Il programma server deve essere sviluppato in Java, come da specifica. La difficoltà di questo punto consta non tanto nel linguaggio, quanto nel fatto che nessun componente ha mai sviluppato programmi server.
+\\L'interfaccia di creazione dei processi e di definizione dei passi, richiederà ovviamente \\ HTML/CSS/JavaScript, in quanto sarà costituita da una pagina web. Infine, l'interfaccia di esecuzione dei passi richiederà HTML5, compatibile con smartphone e tablet.
+
+\subsection{Valutazione complessiva}
+\label{valutazione4}
+\subsubsection{Aspetti positivi}
+\label{aspettipos4}
+\begin{itemize}
+\item\textbf{Interesse nello sviluppo web:} l'unico aspetto interessante del progetto, consta nella possibilità di poter approfondire tutte quelle tecnologie che stanno alla base dello sviluppo web. Data la richiesta d'interazione del sistema con dispositivi mobili, sarebbe necessario inoltre confrontarsi anche con tecnologie che permettono questo sviluppo. L'attualità di queste tematiche rende appetibile il progetto.
+\end{itemize}
+
+\subsubsection{Aspetti negativi}
+\label{aspettineg4}
+\begin{itemize}
+\item\textbf{Dominio applicativo oscuro:} dato che questo aspetto non è stato per nulla specificato dai proponenti, il rischio di non raggiungere le aspettative durante l'analisi dei requisiti è sembrato molto alto. Questo grado di libertà quindi, è stato valutato dal gruppo come potenzialmente pericoloso;
+\item\textbf{Proposta puramente esplorativa:} il fatto di produrre un prodotto a puro scopo esplorativo per l'azienda, non è sembrato sufficientemente stimolante.
+\end{itemize}
+
+\subsubsection{Conclusioni}
+\label{conclusioni4}
+Questa proposta è stata scartata ad una prima analisi dei diversi capitolati. In particolare, il primo punto degli aspetti negativi riportati sopra, è risultato determinante. Sommare all'intrinseca difficoltà di progettazione di un qualsiasi capitolato, anche la grande libertà durante la definizione dei requisiti, è stato valutato un rischio troppo grande data l'inesperienza del gruppo.

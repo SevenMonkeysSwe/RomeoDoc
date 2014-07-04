@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Capitolato_1.tex
+% Current Version: 0.1.0
+% Created: 2013-12-09
+% Author: Martignago Jimmy
+% Email: jimmy.martignago@gmail.com
+% ----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.1.0			Martignago Jimmy	2013-12-14		Apportate modifiche a seguito verifica.
+% 0.0.2			Martignago Jimmy	2013-12-12		- Tagliata sezione "capitolato1";
+%													- aggiunti riferimenti glossario;
+%													- aggiunto comando "\dots" e note a piè pagina sezione				%													"descrizionecapitolato1".
+%													- corretto punteggiatura elenchi
+% 0.0.1			Martignago Jimmy	2013-12-09		Creazione file, impostazione struttura e stesura.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Capitolato C1: MaaP}
+\label{capitolato1}
+La proposta di questo capitolato parte da una startup denominata \textit{CoffeeStrap}\footnote{\url{http://www.coffeestrap.com}}.
+
+\subsection{Descrizione del capitolato}
+\label{descrizionecapitolato1}
+Lo scopo di questo progetto è creare un framework\glossario{} che permetta ad uno sviluppatore di generare interfacce web, per poter amministrare dati di \textit{business} basati sullo \textit{stack} Node.js\footnote{\url{http://nodejs.org}} e MongoDB\footnote{\url{http://www.mongodb.org/}}. Come si legge nel capitolato, il prodotto finale è fortemente ispirato ad Active Admin\footnote{\url{http://www.activeadmin.info/}} nel mondo Ruby on Rails.
+\\ Per comprendere cosa sono i dati di \textit{business}, bisogna fare una breve premessa. Esistono due modalità differenti per amministrare i dati contenuti in un qualsiasi tipo di database:
+\begin{itemize}
+\item\textbf{Amministrazione del database:} le operazioni vengono fatte direttamente sulle cellule costituenti del database (tabelle, indici, viste ecc\dots) in maniera tale da accedere velocemente e consistentemente ai dati. Questa tipologia di amministrazione, non si preoccupa di interpretare le informazioni contenute nella base di dati;
+\item\textbf{Amministrazione dei dati di \textit{business}:} in questo caso si opera ad un livello superiore, interpretando le varie informazioni presenti e raggruppandole in unità macroscopiche (es. clienti, ordini, polizze, ecc\dots). Queste entità vengono denominate di \textit{business} e saranno l'oggetto delle operazioni di amministrazione di questo framework\glossario{}.
+\end{itemize}
+Si richiede inoltre di sviluppare un linguaggio astratto testuale DSL(\textit{Domain Specific Language}). Tale linguaggio deve permettere di generare le pagine web che andranno a gestire il database. Nel capitolato si evince che sarà un linguaggio basato fortemente su JavaScript.
+
+\subsection{Studio del dominio}
+\label{dominiocap1}
+Di seguito vengono esposte le considerazioni del gruppo, riguardo ai domini applicativi e tecnologici implicati dal capitolato.
+
+\subsubsection{Dominio applicativo}
+\label{dominioapp1}
+Nel capitolato si fa riferimento ad Active Admin come ambiente a cui fare riferimento per comprendere la tipologia di prodotto finale. Sebbene nessun componente del gruppo abbia mai lavorato con tale ambiente, è risultato facile intuire di cosa si trattasse nel momento in cui è stato citato phpMyAdmin\footnote{\url{http://www.phpmyadmin.net/}} come riferimento equivalente per MySQL\footnote{\url{http://dev.mysql.com/}}. \`E rimasto poco chiaro in che contesto il proponente intendeva usufruire concretamente di questo prodotto, ma è stato compreso che non era rilevante ai fini dello sviluppo.
+
+\subsubsection{Dominio tecnologico}
+\label{dominiotec1}
+Nel progetto si trovano svariate tecnologie, la maggior parte delle quali non sono mai state utilizzate dai componenti del gruppo:
+\begin{itemize}
+\item\textbf{MongoDB:} database che si sta affermando nel mercato come \textit{standard de facto} per le basi di dati di tipo non relazionale (NoSQL). Orientato ai documenti, permette di scalare orizzontalmente in modo efficiente la base di dati;
+\item\textbf{Node.js:} framework\glossario{} utilizzato per costruire applicazioni web scalabili lato server. Utilizza come interprete \textit{V8 JavaScript Engine}, un motore JavaScript open source, sviluppato da Google per il proprio browser Google Chrome;
+\item\textbf{Express\footnote{\url{http://expressjs.com/}}:} libreria per la realizzazione dell'infrastruttura della \textit{web application} generata;
+\item\textbf{Mongoose.js\footnote{\url{http://mongoosejs.com/}}:} ODM (\textit{Object Document Mapper}) utilizzato in Node.js per l'interfacciamento con MongoDB;
+\item\textbf{JavaScript:} linguaggio alla base di tutte le librerie e framework\glossario{} sopra citati.
+\end{itemize} 
+\subsection{Valutazione complessiva}
+\label{valutazione1}
+\subsubsection{Aspetti positivi}
+\label{aspettipos1}
+Il capitolato presenta alcuni aspetti che hanno portato il gruppo a tenere in considerazione lo svolgimento di tale progetto:
+\begin{itemize}
+\item\textbf{Interesse verso il dominio tecnologico:} il progetto costringe a rapportarsi con una serie di tecnologie molto attuali ed in rapido sviluppo. Oltre a suscitare l'interesse personale dei componenti del gruppo, questo aspetto è positivamente spendibile in ambito lavorativo nel futuro;
+\item\textbf{Conoscenza del dominio applicativo:} ad una prima analisi del capitolato, il dominio applicativo sembra essere chiaro alla maggior parte dei componenti del gruppo. Un eventuale confronto con i proponenti potrebbe completare semplicemente la visione d'insieme del prodotto.
+\end{itemize}
+
+\subsubsection{Aspetti negativi}
+\label{aspettineg1}
+Il progetto presenta i seguenti aspetti negativi per il gruppo:
+\begin{itemize}
+\item\textbf{Conoscenza assente del dominio tecnologico:} se da una parte le tecnologie sono evidentemente interessante e spendibili, dall'altra il gruppo ha percepito che il tempo forse non sarebbe stato sufficiente per assimilare in maniera efficacie i vari framework\glossario{};
+\item\textbf{Requisiti non completamente chiari:} alcuni requisiti sono rimasti oscuri, in particolare la definizione del linguaggio astratto DSL, di cui non era chiaro lo scopo. In fase di analisi dei requisiti, il rischio di non comprendere a fondo le esigenze del proponente è risultato troppo alto;
+\item\textbf{Complessità di realizzazione:} ad una prima analisi, la difficoltà di realizzazione complessiva ha scoraggiato la presa in considerazione della proposta.
+\end{itemize}
+
+\subsubsection{Conclusioni}
+\label{conclusioni1}
+In conclusione, questo capitolato è stato scartato dopo la seconda analisi. I rischi esposti negli aspetti negativi, sono stati giudicati troppo alti dalla maggioranza del gruppo. In particolare, la complessità prevista per la progettazione e pianificazione del progetto, unita alla gestione delle risorse umane per svolgerlo, indipendentemente dal capitolato scelto, è piuttosto alta. Aggiungere a questo, lo sforzo considerevole per apprendere appieno le tecnologie, in prospettiva, ha portato a considerare tale capitolato troppo rischioso da prendere in consegna.

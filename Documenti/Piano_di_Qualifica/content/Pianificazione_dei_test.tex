@@ -1,0 +1,166 @@
+\section{Pianificazione dei test}
+\label{pianificazioneDeiTest}
+Di seguito verranno descritti tutti i test di integrazione, sistema e validazione che il gruppo \authorName{} intende effettuare. È previsto un futuro aggiornamento per quanto riguarda i test di unità. Nel \PdP{} vengono specificate le tempistiche di esecuzione dei test.\\
+Nelle tabelle sottostanti la colonna dello \textit{Stato} dei test riporterà il valore \textbf{N.I.} per i test che devono ancora essere effettuati; essi verranno eseguiti successivamente, come descritto nel \PdP{}.  
+
+\subsection{Test di sistema}
+\label{testdisistema}
+In questa sezione vengono descritti i test di sistema, il cui obbiettivo è quello di verificare il comportamento dinamico dell'intero sistema, rispetto ai requisiti descritti nel documento \textit{Analisi dei Requisiti v4.0.0}.
+Vengono qui di seguito riportati i test di sistema ritenuti meritevoli di un test, al fine di garantire il soddisfacimento dei requisiti software individuati.
+
+\include{./content/tracciamento_test_di_sistema}
+
+\subsection{Test di integrazione}
+\label{test_integrazione}
+In questa sezione vengono descritti i test di integrazione, necessari per verificare che il comportamento di più unità combinate sia corretto.
+L'approccio utilizzato è di tipo \textit{bottom-up}, che consiste nell'integrare prima le unità a livello più basso, ossia quelle che rappresentano la logica di base del sistema e in seguito quelle ai livelli superiori. Le unità base, conosciute anche come \textit{moduli di unità}, si riferiscono ai requisiti obbligatori e quindi alle funzionalità più importanti del sistema. Adottando questo tipo di approccio, è quindi possibile verificare più volte il comportamento di queste unità, massimizzando la ricerca di eventuali errori presenti.
+Il diagramma seguente non rispetta il formalismo UML ma specifica graficamente la strategia d'integrazione adottata.
+
+\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.5]{./img/Integrazione}
+		\caption{Diagramma informale della strategia di integrazione}
+	\end{figure}
+
+\include{./content/Tracciamento_test_di_integrazione}
+
+\subsection{Test di validazione}
+\label{testvalidazione}
+
+In questa sezione vengono descritti i test di validazione,necessari per accertarsi che il prodotto realizzato sia conforme alle attese.
+Per ogni test vengono descritti	i passi che un utente deve eseguire per poter testare i requisiti ad esso associati,mentre il tracciamento tra test di validazione e requisiti è
+riportato nel documento \analisi{}.
+
+\subsubsection{Test TV1}
+\label{tv1}
+L'utente vuole testare la possibilità di creare un nuovo Subject.
+All'utente è richiesto di:
+\begin{itemize}
+\item Dare un nome univoco al Subject (TV1.1)
+\item Caricare un'immagine o un video di formato consentito dal filesystem (TV1.2)
+\item Caricare un'immagine maschera di formato consentito dal filesystem (TV1.3)
+\end{itemize}
+
+\subsubsection{Test TV2}
+\label{tv2}
+L'utente vuole testare la possibilità di creare un nuovo gruppo di Subject.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Dare un nome univoco al gruppo di Subject (TV2.1)
+\item Scegliere i Subject da inserire nel gruppo di Subject (TV2.2)
+\end{itemize}
+
+\subsubsection{Test TV3}
+\label{tv3}
+L'utente vuole testare la possibilità di eliminare gruppo di Subject.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Scegliere un gruppo di Subject da eliminare (TV3.1)
+\item Scegliere più gruppi di Subject da eliminare (TV3.2)
+\item Scegliere di esportare i risultati del Gruppo di Subject prima che venga eliminato (TV3.3)
+\end{itemize}
+
+\subsubsection{Test TV4}
+\label{tv4}
+L'utente vuole testare la possibilità di creare un nuovo Protocol.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Dare un nome univoco al Protocol (TV4.1)
+\item Scegliere una o più feature extractor (TV4.2)
+	\begin{itemize}
+	\item Inserire i parametri per le feature (TV4.2.1)
+	\end{itemize} 
+\item Controllare la possibilità di inserire due feature extractor uguali con parametri diversi(TV4.3)
+\item Scegliere uno e un solo algoritmo di clustering (TV4.4)
+	\begin{itemize}
+	\item Inserire i parametri per l'algoritmo di clustering (TV4.4.1)
+	\end{itemize}
+\item Scegliere di salvare il Protocol (TV4.5)
+\end{itemize}
+
+\subsubsection{Test TV5}
+\label{tv5}
+L'utente vuole testare la possibilità di eliminare un Protocol.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Scegliere uno o più Protocol ed eliminarli (TV5.1)
+\end{itemize}
+
+\subsubsection{Test TV6}
+\label{tv6}
+L'utente vuole testare la possibilità di creare un Dataset.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Dare un nome univoco al Dataset (TV6.1)
+\item Scegliere uno o più Protocol (TV6.2)
+\item Scegliere un gruppo di Subject (TV6.3)
+\end{itemize}
+
+\subsubsection{Test TV7}
+\label{tv7}
+L'utente vuole testare la possibilità di svolgere un'analisi relativa ad un Dataset.
+All'utente viene richiesto di:
+\begin{itemize}
+\item avviare l'analisi relativa ad un Dataset (TV7.1)
+	\begin{itemize}
+	\item Scegliere di visualizzare i risultati durante l'analisi (TV7.1.1)
+	\item Controllare che vengano mostrate le immagini appena pronte (TV7.1.2)
+	\item Controllare che vengano analizzati un Subject alla volta in maniera sequenziale (TV7.1.3)
+	\item Controllare che prima vengano applicati i feature extractor e poi gli algoritmi di clustering (TV7.1.4)	
+	\end{itemize}
+	\item Verificare la presenza ed il corretto funzionamento della barra di avanzamento (TV7.2)
+	\item Verificare che vengano visualizzati i risultati al termine dell'analisi (TV7.3)
+\end{itemize}
+
+\subsubsection{Test TV8}
+\label{tv8}
+L'utente vuole testare la possibilità di esportare i risultati delle analisi effettuate.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Scegliere il percorso del filesystem in cui salvare i risultati relativi ai gruppi di Subject(TV8.1)
+\item Scegliere di voler esportare anche i risultati relativi all'applicazione dei feature extractor (TV8.2)
+\item Controllare nel filesystem che l'esportazione sia avvenuta con successo (TV8.3)	
+\end{itemize}
+
+\subsubsection{Test TV9}
+\label{tv9}
+L'utente vuole testare la corretta visualizzazione dei risultati all'interno del software.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Scegliere un immagine 2D dal menù \lq\lq{}visualizzazione\rq\rq{} del programma (TV9.1)
+\item Controllare che l'immagine 3D venga visualizzata in maniera corretta (TV9.2)
+\item Scegliere un immagine 3D dal menù \lq\lq{}visualizzazione\rq\rq{} del programma (TV9.3)
+\item Controllare che l'immagine 3D venga visualizzata in maniera corretta (TV9.4)
+\end{itemize}
+
+\subsubsection{Test TV10}
+\label{tv10}
+L'utente vuole testare la guida.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Accedere alla sezione help (TV10.1)
+\item Consultare i riferimenti testuali verificando che i link siano funzionanti (TV10.2)
+\end{itemize}
+
+\subsubsection{Test TV11}
+\label{tv11}
+L'utente vuole testare la possibilità di modificare gruppi di Subject.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Scegliere il gruppo di Subject da modificare (TV11.1)
+\item Scegliere i subject da modificare (TV11.2)
+\item Verificare che i subject siano stati eliminati correttamente (TV11.3)
+	\begin{itemize}
+	\item Scegliere di visualizzare il contenuto del gruppo di subject dall'apposito menù (TC11.3.1)
+	\end{itemize}
+\end{itemize}
+	
+\subsubsection{Test TV12}
+\label{tv12}
+L'utente vuole testare la possibilità di eliminare i Dataset.
+All'utente viene richiesto di:
+\begin{itemize}
+\item Scegliere i Dataset da eliminare (TV12.1)
+\item Eliminare i Dataset selezionati (TV12.2)
+\item Verificare che i Dataset siano stati eliminati correttamente dalla lista dei Dataset(TV12.3)
+\end{itemize}

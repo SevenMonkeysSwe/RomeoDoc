@@ -1,0 +1,62 @@
+\section{Tracciamento}
+\label{tracciamento}
+Seguono le tabelle di tracciamento tra componenti e requisiti.
+Il componente Controller,essendo un semplice gestore di flusso di controllo tra View e Model,risulta non tracciato da alcun requisito.
+I componenti Model e Util hanno il solo scopo di contenere altri pacchetti,perciò non sono soggetti a tracciamento.
+
+\subsection{Tracciamento componenti-requisiti}
+\label{componenti-requisiti}
+    
+\newdimen\larghezza
+\setlength{\larghezza}{7cm}
+\newdimen\dimTipo
+\setlength{\dimTipo}{2cm}
+\newdimen\dimFonti
+\setlength{\dimFonti}{2cm}
+	
+\begin{center}
+\begin{longtable}{|c|c|}
+\hline
+
+\textbf{Componente} & \textbf{Requisito} \\
+
+
+\hline
+\parbox[t]{\larghezza}{Romeo}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Controller}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Core}   & \parbox[t]{\larghezza}{ R0F1 \\ R0F1.2 \\ R0F1.2.1 \\ R0F1.2.1.1 \\ R0F1.2.1.2 \\ R0F1.2.1.3 \\ R0F1.2.1.4 \\ R0F1.2.1.5 \\ R0F1.2.1.6 \\ R0F1.3 \\ R0F1.3.1 \\ R0F1.3.2 \\ R0F1.3.3 \\ R0F1.3.4 \\ R0F1.3.5 \\ R0F1.4 \\ R0F10 \\ R0F10.1 \\ R0F10.1.1 \\ R0F10.2 \\ R0F10.2.1 \\ R0F10.3 \\ R0F12.3 \\ R0F26 \\ R0F26.1 \\ R0F26.2 \\ R0F27 \\ R0F27.1 \\ R0F27.2 \\ R0F3 \\ R0F3.1 \\ R0F4 \\ R0F5 \\ R0F5.1 \\ R0F5.2 \\ R0F5.3 \\ R0F5.4 \\ R0F6 \\ R0F8 \\ R0F8.2  \\}\\
+
+& \parbox[t]{\larghezza}{ R0F8.3  \\ R2F3.2 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Core::Adapters}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Core::Adapters::Algorithms}   & \parbox[t]{\larghezza}{ R0F5.4.1 \\ R0F5.4.1.1 \\ R0F5.4.1.1.1 \\ R0F5.4.1.2 \\ R0F5.4.1.2.1 \\ R0F5.4.1.3 \\ R0F5.4.1.3.1 \\ R0F5.4.1.4 \\ R0F5.4.1.4.1 \\ R0F5.4.2 \\ R0F5.4.2.1 \\ R0F5.4.2.1.1 \\ R0F5.4.2.2 \\ R0F5.4.2.2.1 \\ R0F5.4.2.3 \\ R0F5.4.2.3.1 \\ R0F5.4.2.4 \\ R0F5.4.2.4.1 \\ R0F5.4.3 \\ R0F5.4.3.1 \\ R0F5.4.3.1.1 \\ R0F5.4.3.2 \\ R0F5.4.3.2.1 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Core::Adapters::Features}   & \parbox[t]{\larghezza}{ R0F5.2.1 \\ R0F5.2.1.1 \\ R0F5.2.1.1.1 \\ R0F5.2.1.1.2 \\ R0F5.2.10 \\ R0F5.2.10.1 \\ R0F5.2.10.1.1 \\ R0F5.2.10.2 \\ R0F5.2.10.2.1 \\ R0F5.2.11 \\ R0F5.2.11.1 \\ R0F5.2.11.1.1 \\ R0F5.2.11.2 \\ R0F5.2.11.2.1 \\ R0F5.2.12 \\ R0F5.2.12.1 \\ R0F5.2.12.1.1 \\ R0F5.2.12.2 \\ R0F5.2.12.2.1 \\ R0F5.2.13 \\ R0F5.2.13.1 \\ R0F5.2.13.1.1 \\ R0F5.2.13.2 \\ R0F5.2.13.2.1 \\ R0F5.2.14 \\ R0F5.2.14.1 \\ R0F5.2.14.1.1 \\  }\\
+ & \parbox[t]{\larghezza}{  R0F5.2.14.2 \\ R0F5.2.14.2.1 \\ R0F5.2.15 \\ R0F5.2.15.1 \\ R0F5.2.15.1.1 \\ R0F5.2.15.2 \\ R0F5.2.15.2.1 \\ R0F5.2.2 \\ R0F5.2.2.1 \\ R0F5.2.2.1.1 \\ R0F5.2.2.1.2 \\ R0F5.2.3 \\ R0F5.2.3.1 \\ R0F5.2.3.1.1 \\ R0F5.2.3.1.2 \\ R0F5.2.4 \\ R0F5.2.4.1 \\ R0F5.2.4.1.1 \\ R0F5.2.4.1.2 \\ R0F5.2.5 \\ R0F5.2.5.1 \\ R0F5.2.5.1.1 \\ R0F5.2.5.1.2 \\ R0F5.2.5.2 \\ R0F5.2.5.2.1 \\ R0F5.2.6 \\ R0F5.2.6.1 \\ R0F5.2.6.1.1 \\ R0F5.2.6.1.2 \\ R0F5.2.6.2 \\ R0F5.2.6.2.1 \\ R0F5.2.7 \\ R0F5.2.7.1 \\ R0F5.2.7.1.1 \\ R0F5.2.7.1.2 \\ R0F5.2.7.2 \\ R0F5.2.7.2.1 \\ R0F5.2.8 \\ R0F5.2.8.1 \\ R0F5.2.8.1.1 \\ R0F5.2.8.1.2 \\ R0F5.2.8.2 \\ R0F5.2.8.2.1 \\ R0F5.2.9 \\ R0F5.2.9.1 \\ R0F5.2.9.1.1 \\ R0F5.2.9.1.2 \\ R0F5.2.9.2 \\ R0F5.2.9.2.1 \\ R0V7 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Help}   & \parbox[t]{\larghezza}{ R0F14 \\ R0F14.1 \\ R2F14.1.1 \\ R2F14.1.2 \\ R2F14.2 \\ R2F14.2.1 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Util}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Util::DAO}   & \parbox[t]{\larghezza}{ R0F1 \\ R0F1.1 \\ R0F11 \\ R0F13 \\ R0F26 \\ R0F26.1 \\ R0F26.2 \\ R0F27 \\ R0F27.1 \\ R0F27.2 \\ R0F3 \\ R0F3.1 \\ R0F4 \\ R0F4.2 \\ R0F4.3 \\ R0F5 \\ R0F5.1 \\ R0F5.2 \\ R0F5.3 \\ R0F5.4 \\ R0F6 \\ R0F8 \\ R0F8.1  \\ R0F8.2  \\ R0F8.3  \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Util::ExporterModel}   & \parbox[t]{\larghezza}{ R0F10.2 \\ R0F10.2.1 \\ R0F12 \\ R0F12.1 \\ R0F12.2 \\ R0F12.3 \\ R0F12.4 \\ R0F13.1 \\ R0F13.2 \\ R0F4.1 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::Model::Util::Log}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::View}   & \parbox[t]{\larghezza}{ R0F1 \\ R0F9 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::View::Component}   & \parbox[t]{\larghezza}{} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::View::Dialog}   & \parbox[t]{\larghezza}{ R0F10 \\ R0F10.2 \\ R0F10.3 \\ R0F12.4 \\} \\
+\hline
+\parbox[t]{\larghezza}{Romeo::View::Window}   & \parbox[t]{\larghezza}{ R0F1.1 \\ R0F1.2 \\ R0F1.3 \\ R0F10.4  \\ R0F10.5  \\ R0F13 \\ R0F13.1 \\ R0F13.2 \\ R0F26 \\ R0F26.1 \\ R0F26.2 \\ R0F27 \\ R0F27.1 \\ R0F27.2 \\ R0F3 \\ R0F3.1 \\ R0F4 \\ R0F4.2 \\ R0F4.3 \\ R0F5 \\ R0F5.1 \\ R0F6 \\ R0F6.1 \\ R0F8 \\ R0F8.1  \\ R2F5.5 \\} \\
+\hline
+\caption{Tracciamento componenti-requisiti}
+    \end{longtable}
+\end{center}

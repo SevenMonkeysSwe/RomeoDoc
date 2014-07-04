@@ -1,0 +1,333 @@
+\subsection{Codice Matlab}
+\label{codicematlab}
+
+Il proponente fornisce alcuni file di codice matlab, che mostrano gli algoritmi di ogni singola feature extractor\g{} applicata su matrici matlab che rappresentano immagini bidimensionali.
+
+\subsubsection{Standard Deviation Feature}
+\label{stdcode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 3D per la feature di Standard Deviation:
+
+\lstloadlanguages{MATLAB}
+\begin{lstlisting}
+
+% std returns the standard deviation value
+% within the window (in this example 3D window)
+function std=Feat_p1_std(data,size)
+% INPUT: 
+% data: window data
+% size: window size
+nvol = size^3;
+val=Feat_p1_mean(data,size);
+ct = 0;
+for r=1:size
+	for c=1:size
+		for s=1:size
+			ct=ct+(data(r,c,s)-val)^2;
+		end
+	end
+end
+std = sqrt(ct/nvol);
+end
+\end{lstlisting} 
+
+\subsubsection{Skewness Feature}
+\label{skewnesscode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 3D per la feature Skewness:
+
+\begin{lstlisting}
+% skewness returns the skewness 
+%within the window (in this example 3D window)
+function skew=Feat_p1_skew(data,size)
+% INPUT: 
+% data: window data
+% size: window size
+nvol = size^3;
+val=Feat_p1_mean(data,size);
+std=Feat_p1_std(data,size);
+ct = 0;
+for r=1:size
+	for c=1:size
+		for s=1:size
+			ct=ct+(data(r,c,s)-val)^3;
+		end
+	end
+end
+ct2 = ct/nvol;
+skew = ct2/(std^3);
+end
+\end{lstlisting}
+
+\subsubsection{Mean Feature}
+\label{meancode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 3D per la feature Mean:
+
+\begin{lstlisting}
+% mean returns the mean value 
+%within the window (in this example 3D window)
+function val=Feat_p1_mean(data,size)
+% INPUT: 
+% data: window data
+% size: window size
+nvol = size^3;
+ct = 0;
+for r=1:size
+	for c=1:size
+		for s=1:size
+			ct=ct+data(r,c,s);
+		end
+	end
+end
+val = ct/nvol;
+end
+\end{lstlisting}
+
+\subsubsection{Kurtosis Feature}
+\label{kurtosiscode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 3D per la feature Kurtosis:
+
+\begin{lstlisting}
+% kurtosis returns the kurtosis 
+%within the window (in this example 3D window)
+function kurt=Feat_p1_kurt(data,size)
+% INPUT: 
+% data: window data
+% size: window size
+nvol = size^3;
+val=Feat_p1_mean(data,size);
+std=Feat_p1_std(data,size);
+ct = 0;
+for r=1:size
+	for c=1:size
+		for s=1:size
+			ct=ct+(data(r,c,s)-val)^4;
+		end
+	end
+end
+ct2 = ct/nvol;
+kurt = ct2/(std^4)-3;
+end
+\end{lstlisting}
+
+\subsubsection{Contrast Feature}
+\label{contrastcode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Contrast:
+\begin{lstlisting}
+% contrast returns the contrast within the window
+%evaluated from GLCM (sempre 2D)
+function contr=Feat_p1_contr(data,size)
+% INPUT: 
+% data: GLCM
+% size: GLCM size
+ct = 0;
+for i=1:size
+	for j=1:size
+		ct = ct+data(i,j)*(i-j)^2;
+	end
+end
+contr = ct;
+end
+\end{lstlisting}
+\subsubsection{Correlation Feature}
+\label{correlationcode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Correlation:
+\begin{lstlisting}
+% corr returns the correlation within the window evaluated from GLCM (sempre 2D)
+function corr=Feat_p1_corr(data,size)
+% INPUT: 
+% data: GLCM
+% size: GLCM size
+% FORMULA: 
+% Mi and Mj are vectors 
+Mi = meanIndexI(data,size);
+Si = stdIndexI(data,size,Mi);
+
+Mj = meanIndexJ(data,size);
+Sj = stdIndexJ(data,size,Mj);
+
+ct2 = 0;
+for i=1:size
+	for j = 1:size
+		ct1 = data(i,j) * (i-Mi(i))*(j-Mj(j));
+		ct2 = ct2 + ct1 / (Si(i) * Sj(j));
+	end
+end
+	
+corr = ct2;
+	
+%-------------------------------------------------
+function S = stdIndexI(data,size,m)
+
+ct = 0;
+for i=1:size
+	for j=1:size
+		ct = ct + data(i,j)*(i-m(i))^2;
+	end
+	S(i) = sqrt(ct);
+	ct = 0;
+end
+
+%--------------------------------------------------
+function M = meanIndexI(data,size)
+
+ct = 0;
+for i=1:size
+	for j=1:size
+		ct = ct+ i * data(i,j);
+	end
+	M(i) = ct;
+	ct = 0;
+end
+
+end%---------------------------------------------
+
+function S = stdIndexJ(data,size,m)
+
+ct = 0;
+for j=1:size
+	for i=1:size
+		ct = ct + data(i,j)*(j-m(j))^2;
+	end
+	S(j) = sqrt(ct);
+	ct = 0;
+end
+
+%----------------------------------------------
+function M = meanIndexJ(data, size)
+
+ct = 0; 
+for j=1:size
+	for i=1:size
+		ct = ct + j*data(i,j);
+	end
+	M(j) = ct;
+	ct = 0;
+end
+
+end
+\end{lstlisting}
+\subsubsection{Energy Feature}
+\label{energycode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Energy:
+\begin{lstlisting}
+% energy returns the energy within 
+%the window evaluated from GLCM (sempre 2D)
+function energy=Feat_p1_energy(data,size)
+% INPUT: 
+% data: GLCM
+% size: GLCM size
+ct = 0;
+for i=1:size
+	for j=1:size
+		ct = ct+data(i,j)^2;
+	end
+end
+energy = ct;
+end
+\end{lstlisting}
+\subsubsection{Entropy Feature}
+\label{entropycode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Entropy:
+\begin{lstlisting}
+% entropy returns the entropy within 
+%the window evaluated from GLCM (sempre 2D)
+function entropy=Feat_p1_entropy(data,size)
+% INPUT: 
+% data: GLCM
+% size: GLCM size
+ct = 0;
+for i=1:size
+	for j=1:size
+		ct = ct+data(i,j)*ln(data(i,j));
+	end
+end
+entropy = -ct;
+end
+\end{lstlisting}
+\subsubsection{Homogeneity Feature}
+\label{homogeneitycode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Homogeneity:
+\begin{lstlisting}
+% homogeneity returns the homogeneity within
+% the window evaluated from GLCM (sempre 2D)
+function homo=Feat_p1_homo(data,size)
+% INPUT: 
+% data: GLCM
+% size: GLCM size
+ct = 0;
+for i=1:size
+	for j=1:size
+		ct = ct+data(i,j)*(1/(1+abs(i-j)));
+	end
+end
+homo = ct;
+end
+\end{lstlisting}
+
+\subsubsection{Area Under the Curve Feature}
+\label{auccode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Area Under the Curve in un video 2D:
+\begin{lstlisting}
+% AUC computes the area under the curve in an interval of frames 
+function AUC=Clust_par_auc(data,nrow,posin,posend)
+% INPUT: 
+% data: data matrix
+% nrow: nr of curves (nr of voxels)
+% posin: index of first frame
+% posend: index of last frame
+AUC=zeros(nrow,1);
+for i=1:nrow
+    AUC(i)=trapz([posin:posend],data(i,posin:posend),2);
+end
+end
+\end{lstlisting}
+\subsubsection{Maximum Feature}
+\label{maximumcode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Maximum in un video 2D:
+\begin{lstlisting}
+% max searches the maximum value in an interval of frames 
+function maxval=Clust_par_max(data,nrow,posin,posend)
+% INPUT: 
+% data: data matrix
+% nrow: nr of curves (nr of voxels)
+% posin: index of first frame
+% posend: index of last frame
+maxval=zeros(nrow,1);
+for i=1:nrow
+maxval(i)=max(data(i,posin:posend));
+end
+end
+\end{lstlisting}
+\subsubsection{Minimum Feature}
+\label{minimumcode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Minimum in un video 2D:
+\begin{lstlisting}
+% min searches the min value in an interval of frames 
+function val=Clust_par_val(data,nrow,posin,posend)
+% INPUT: 
+% data: data matrix
+% nrow: nr of curves (nr of voxels)
+% posin: index of first frame
+% posend: index of last frame
+minval=zeros(nrow,1);
+for i=1:nrow
+minval(i)=min(data(i,posin:posend));
+end
+end
+\end{lstlisting}
+\subsubsection{Mean Dynamic Feature}
+\label{meandynamiccode}
+Questa funzione matlab rappresenta l'algoritmo per calcolare il valore di un pixel 2D per la feature Mean Dynamic in un video 2D:
+\begin{lstlisting}
+% mean returns the mean value in an interval of frames 
+function val=Clust_par_mean(data,nrow,posin,posend)
+% INPUT: 
+% data: data matrix
+% nrow: nr of curves (nr of voxels)
+% posin: index of first frame
+% posend: index of last frame
+meanval=zeros(nrow,1);
+for i=1:nrow
+meanval(i)=average(data(i,posin:posend));
+end
+end
+\end{lstlisting}

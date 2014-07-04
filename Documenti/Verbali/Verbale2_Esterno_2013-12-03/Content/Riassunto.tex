@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Riassunto.tex
+% Current Version: 0.0.1
+% Created: 2013-12-04
+% Author: Magnabosco Nicola
+% Email: nick.magnabosco@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.0.1			Magnabosco Nicola	2013-12-03		Creazione file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Riassunto della riunione}
+\label{riassunto}
+Questo primo incontro con i proponenti, aveva lo scopo di approfondire gli argomenti trattati nel capitolato, 
+in particolare il funzionamento della cluster analysis\glossario{} e delle 
+feature extractors\glossario{}.
+Il primo punto all'ordine del giorno, è stato l'approfondimento del dominio applicativo. Dato che nel capitolato questo aspetto è espresso in maniera sommaria, è stato chiesto ai proponenti di chiarire chi utilizzerà il 
+prodotto e in che contesto. Ne è emerso che i principali utilizzatori del software saranno, in primo luogo, gli
+stessi proponenti e successivamente, anche ricercatori, medici e chiunque nell'ambito medico abbia la necessità di 
+eseguire cluster analysis\glossario{} su immagini biomediche. L'unica informazione realmente 
+significativa per il gruppo, è che la maggior parte degli utilizzatori finali, non hanno un'adeguata conoscenza informatica. Pertanto è stata sottolineata ancora una volta, l'importanza della facilità di utilizzo del prodotto.
+\\Successivamente, i proponenti sono entrati nel dettaglio del funzionamento del software, specificando i passi 
+che l'utente dovrà essere in grado di poter fare, per raggiungere i risultati attesi. Contemporaneamente, sono stati definiti i significati dei principali termini specifici, quali Dataset\glossario{}, Protocol\glossario, Feature\glossario, ecc\dots.
+Riassumendo, il prodotto dovrà essere in grado di generare e salvare i Dataset\glossario{} e i Protocol\glossario{} necessari all'utente. Deve inoltre essere possibile il riutilizzo dei Protocol\glossario{}, applicandoli a diversi Dataset\glossario{}, purchè il formato sia compatibile. I dati infatti, dovranno essere raggruppati in: 2D, 2D dipendenti dal tempo, 3D e 3D dipendenti dal tempo, dato che i protocolli non sono applicabili a qualsiasi tipo di dato.
+\\Infine, sono state spiegate macroscopicamente come operano al loro interno, le 
+feature extractors\glossario{} e gli algoritmi di clustering\glossario{}. 
+Tali aspetti non sono prettamente fondamentali per lo sviluppo del software, ma aiutano ad avere una visione 
+d'insieme del dominio tecnologico in esso implicato. L'aspetto importante di questi algoritmi, è composto dalle 
+tipologie di dati su cui essi operano e dalle modalità con cui interagiscono tra di loro. In particolare, i vari
+dati, immagini e video, devono essere necessariamente trasformati in un formato vettoriale, in maniera tale
+che le feature extractors\glossario{} possano eventualmente operare su di loro. Dato che tutti i formati che il software deve supportare, si riferiscono ad immagini bitmap\glossario{}, esistono delle librerie che trasformano i dati grezzi, in dati matriciali. Gli algoritmi di clustering\glossario{} invece operano su matrici, per cui sarà necessario fondere i vari vettori prodotti in
+uscita dalle Feature Extractors\glossario{}. In uscita, la cluster analysis\glossario{} produce 
+un vettore, che potrà essere riconvertito in immagine nel proprio formato originale. I formati dipendenti dal tempo invece, perdono il loro attributo temporale; il risultato dell'analisi sarà quindi un immagine statica.

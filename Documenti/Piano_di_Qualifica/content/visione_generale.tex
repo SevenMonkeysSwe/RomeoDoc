@@ -1,0 +1,200 @@
+\externaldocument{Standard_di_qualita}
+\externaldocument{Resoconto_attivita}
+
+\section{Visione generale della strategia di verifica}
+\label{visione}
+
+\subsection{Definizione obiettivi}
+Al fine di garantire la qualità del prodotto da realizzare, è necessario definire a priori gli obiettivi da raggiungere. Senza una guida che aiuti a delineare gli obiettivi, il concetto stesso di qualità rimane astratto. Per questo il gruppo \authorName{}, intende adottare degli standard internazionali che forniscono un modello per la \textit{qualità di processo} e la \textit{qualità di prodotto}.
+
+\subsubsection{Qualità di processo}
+Per ottenere un prodotto di qualità, è necessario che questo derivi da un processo di qualità. Lo standard adottato per garantire la qualità dei processi è l' ISO\glossario{}/IEC\glossario{} 15504\footnote{Per una descrizione dettagliata dello standard, consultare l'appendice \ref{std15504}}, che definisce un modello e delle metriche per la valutazione della maturità dei processi.
+Di seguito verranno illustrati i processi individuati (descritti nel documento \emph{Norme di Progetto v3.0.0}) e i relativi obiettivi di qualità che il gruppo \authorName{} si prefiggerà di raggiungere per ognuno di essi in relazione alla scala di misura fornita dallo standard e dettagliatamente descritta in appendice \ref{std15504}.
+\paragraph{Processo di Sviluppo\\}
+\textbf{Obiettivo:}
+	\begin{itemize}
+	\item livello: 4;
+	\item process Measurement: Largely achieved;
+	\item process Control: Partially achieved.
+\end{itemize}	 
+\paragraph{Processo di Documentazione\\}
+\textbf{Obiettivo:}
+	\begin{itemize}
+	\item livello: 5;
+	\item process Change: Fully achieved;
+	\item process Continuous Improvement: Fully achieved.
+\end{itemize}
+
+\paragraph{Processo di Organizzazione dell'infrastruttura\\}
+\textbf{Obiettivo:}
+	\begin{itemize}
+	\item livello: 3;
+	\item process Definition: Fully achieved;
+	\item process Deployment: Fully achieved.
+\end{itemize}
+ 
+\paragraph{Processo di Gestione del Progetto\\}
+\textbf{Obiettivo:}
+	\begin{itemize}
+	\item livello:  3;
+	\item process Definition: Fully achieved;
+	\item process Deployment: Partially achieved.
+\end{itemize}	
+
+\paragraph{Processo di Garanzia della Qualità\\}
+\textbf{Obiettivo:}
+	\begin{itemize}
+	\item livello: 5;
+	\item process Change: Partially achieved;
+	\item process Continuous Improvement: Partially achieved.
+\end{itemize}
+\paragraph{Processo di Verifica\\}
+\textbf{Obiettivo:}
+	\begin{itemize}
+	\item livello: 4;
+	\item process Measurement: Fully achieved;
+	\item process Control: Partially achieved.
+\end{itemize}
+	
+\subsubsection{Qualità di prodotto}
+Per garantire la qualità del prodotto software da realizzare, il gruppo intende adottare lo standard ISO\glossario{}/IEC\glossario{} 9126\footnote{Per una descrizione dettagliata dello standard, consultare l'appendice \ref{std9126}}. Lo standard suddivide in quattro parti le normative tecniche relative alla qualità del software:
+
+\begin{itemize}
+\item modello per la \textit{qualità del software};
+\item metriche per la \textit{qualità esterna};
+\item metriche per la \textit{qualità interna};
+\item metriche per la \textit{qualità in uso}.
+\end{itemize}
+Oltre che al soddisfacimento delle varie caratteristiche dello standard, particolare attenzione andrà nella creazione di un prodotto \textit{portabile} ed \textit{usabile}.
+\begin{itemize}
+\item\textbf{Portabilità:} è uno dei requisiti importanti specificati dai proponenti. Il prodotto dovrà funzionare nei vari sistemi operativi\glossario{} specificati nell'\analisi{}.
+\item\textbf{Usabilità:} vista l'aleatorietà di questa caratteristica, è difficile trovare una misura per garantirne il soddisfacimento. Si farà riferimento quindi ad un'interazione con i proponenti, attraverso dei prototipi di interfaccia grafica per avere al più presto dei \textit{feedback} a riguardo.
+\end{itemize}
+
+
+\subsection{Organizzazione}
+\label{organizzazione}
+L'attività di verifica, necessaria al fine di garantire la qualità di un processo o prodotto, verrà istanziata ogni qualvolta il prodotto di un processo raggiungerà uno stato ritenuto diverso da quello precedente. La verifica potrà essere più circoscritta e precisa possibile, poiché applicata solamente alle modiche effettuate su una versione precedentemente approvata del prodotto.
+Gli eventuali difetti e/o anomalie riscontrati in un prodotto, verranno trattati dal processo di risoluzione dei problemi.
+Il processo di verifica, diverso nelle varie fasi del progetto (vedi \PdP ), sarà rispettivamente il seguente:\begin{center}
+\begin{itemize}
+	\item \textbf{A (FA):} in tale fase si dovranno seguire i metodi di verifica descritti nelle \NdP{} sui documenti prodotti. I risultati che emergeranno da tali attività di verifica, saranno descritti nell'appendice \ref{RR};
+	
+	\item \textbf{B (FB):} in questa fase si andranno a verificare i processi che hanno portato ad un eventuale incremento nel versionamento dei documenti redatti nella precedente fase, rispettando le procedure descritte nelle \NdP{}. I risultati che emergeranno da tali attività di verifica, saranno descritti nell'appendice \ref{RP};
+	
+	\item \textbf{C (FC):} in questa fase, oltre a verificare i processi che hanno portato ad un eventuale incremento nel versionamento dei documenti, si andranno a verificare i prodotti e i processi attuati per l'attività di progettazione dell'architettura, seguendo le procedure descritte nelle \NdP{}. I risultati che emergeranno da tali attività di verifica, saranno descritti nell'appendice \ref{RQ};
+	
+	\item \textbf{D (FD):} oltre alla verifica della documentazione, da eseguire in maniera analoga dei punti precedenti, in questa fase si verificherà che ogni requisito sia rintracciabile da uno dei componenti emersi durante la fase C. Si dovranno rispettare inoltre le norme di codifica, descritte nelle \NdP{}. I risultati che emergeranno da tali attività, saranno descritti nell'appendice \ref{RA};
+	
+	\item \textbf{E (FE):} oltre all'usuale verifica della documentazione, in questa fase verrà effettuato il collaudo del prodotto, garantendo la correttezza dello stesso, attraverso gli strumenti descritti nelle \NdP{}.
+Gli esiti di tali attività verranno descritti nell'appendice \ref{collaudo}.
+\end{itemize}
+\end{center}
+
+\subsection{Pianificazione strategica e temporale}
+\label{pianificazione_strategica}
+Un'attività di verifica ben organizzata e sistematica, può garantire un alto livello di qualità del prodotto e di minimizzare il rischio di non rispettare le scadenze fissate nel \PdP. Al fine di semplificare l'attività di verifica, è opportuno che prima di iniziare la redazione di un documento o l'attività di codifica, siano ben chiari la struttura e i contenuti degli stessi. È inoltre opportuna un'attenta lettura delle \NdP{}, dove saranno descritte le varie metodologie da seguire per l'individuazione e la correzione degli errori.
+
+\subsection{Responsabilità}
+\label{responsabilità}
+Le responsabilità di tutte le attività di verifica e validazione sono a carico del \textit{Responsabile di Progetto} e dei \textit{Verificatori}. Durante le varie fasi di progetto, questi ruoli saranno assunti da diversi componenti del gruppo, come descritto nel \PdP.
+
+\subsection{Risorse necessarie}
+\label{risorse_necessarie}
+L'utilizzo di risorse \textbf{umane} e \textbf{tecnologiche} è indispensabile per l'attuazione delle verifiche.
+I ruoli necessari per garantire qualità e correttezza sono:
+\begin{itemize}
+	\item \textbf{Responsabile di Progetto:} coordina le attività di verifica;
+	\item \textbf{Verificatore:} esegue la verifica della documentazione ed effettua test per garantire il corretto funzionamento del software;
+	\item \textbf{Amministratore di Progetto:} definisce le norme e le metodologie per le attività di verifica;
+	\item \textbf{Programmatore:} effettua i test sul codice da lui prodotto e apporta eventuali modifiche approvate dall'Amministratore o dal Responsabile.
+\end{itemize}
+Per una descrizione dettagliata dei ruoli e delle rispettive responsabilità, fare riferimento al \PdP.
+\\Nelle \NdP{} sono descritte le risorse \textbf{tecnologiche}, ossia gli strumenti hardware e software, necessari alle attività di verifica delle varie fasi. In particolare esse saranno automatizzate il più possibile, al fine di garantire un processo di verifica più semplice e corretto, congiunto ad una mole di lavoro minore per i verificatori.
+
+\subsection{Tecniche, misure e metriche}
+\label{tecniche_misure_metodi}
+
+\subsubsection{Tecniche di analisi}
+\label{tecniche_di_analisi}
+Le tecniche di analisi che verranno adottate sono due: l'\textit{analisi statica} e l'\textit{analisi dinamica}, entrambe descritte approfonditamente nelle \NdP{}.
+
+\subsubsection{Misure e metriche di qualità}
+\label{misure_e_metriche}
+Al fine di garantire qualità, è necessario fissare delle metriche sulle quali misurare i risultati ottenuti dalle varie attività di verifica. Verranno qui descritte quindi, le metriche che il gruppo intende adottare nel corso della progettazione e realizzazione del prodotto. Vista l'iniziale inesperienza del gruppo e visto il ciclo di vita adottato (vedo \PdP), qualora ci fossero metriche incerte ed approssimative, esse verranno migliorate in modo incrementale.
+Per ogni metrica verrà specificato anche il suo range di \textbf{accettazione}, ossia un intervallo entro il quale un prodotto si può ritenere soddisfacente, oltre che a un range \textbf{ottimale}, ossia un valore entro il quale dovrebbe arrivare la misurazione del prodotto.
+\paragraph{Metriche per i processi}
+\label{metriche_processi}
+Come metrica per i processi si è deciso di utilizzare indici che analizzano sia i costi che i tempi. Questi indici vengono utilizzati anche per tenere sotto controllo i processi durante il loro svolgimento; sono quindi descritti nel \emph{Piano di Progetto v4.0.0}.
+Le metriche in questione sono:
+\begin{itemize}
+ 	\item \textbf{Schedule Variance\glossario{} (SV\glossario{}):} indica se si è in linea, in anticipo o in ritardo rispetto alla pianificazione temporale delle attività. SV\glossario{} è un mero indicatore di efficacia. Se > 0 significa che il gruppo produce con maggiore velocità rispetto alla pianificazione, viceversa se negativo. Il range di accettazione è [>= -(costo preventivo fase x 5\%)] mentre il range ottimale è [>= 0];
+ 	\item \textbf{Budget Variance\glossario{} (GV\glossario{}): }indica se alla data corrente (in qui avviene la misurazione) si è speso di più o meno rispetto a quanto è stato pianificato. BV\glossario{} è un indicatore che ha valore contabile e finanziario. Se > 0 significa che si sta consumando il proprio budget con minore velocità rispetto a quanto pianificato, viceversa se è negativo. Il range di accettazione è [>= -(costo preventivo fase x 10\%)] mentre il range ottimale è [>= 0].
+\end{itemize}
+\paragraph{Metriche per la documentazione.}
+\label{metriche_documentazione} Come metrica per i documenti redatti si è scelto di adottare un indice di leggibilità; l'indice scelto è quello di Gulpease, che oltre ad essere tarato specificamente sulla lingua italiana, ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
+L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere. La formula per il suo calcolo è la seguente:
+
+\begin{center}
+	\begin{math}
+		89+\frac{300*(Numero\quad delle\quad frasi)-10*(Numero\quad delle\quad lettere)}{Numero\quad delle\quad parole}
+	\end{math}
+\end{center}
+
+I risultati sono compresi tra 0 e 100, dove 100 indica la leggibilità più alta e 0 la leggibilità più bassa. In generale risulta che i testi con indice
+\begin{itemize}
+	\item inferiori a 80 sono difficili da leggere per chi ha licenza elementare;
+	\item inferiori a 60 sono difficili da leggere per chi ha licenza media;
+	\item inferiori a 40 sono difficili da leggere per chi ha un diploma superiore.
+\end{itemize}
+A fronte di questi dati si è deciso di fissare un \textit{range} di accettazione di [40-100] e uno ottimale [50-60].
+
+\paragraph{Metriche per il software.}
+\label{metriche_per_il_software}
+Verranno qui elencate le metriche che si intendono adottare per garantire qualità del software. Esse rappresentano gli obiettivi che si cercheranno di raggiungere in quanto a qualità. Il gruppo si riserva la facoltà di apportare modifiche a tali metriche nel corso delle varie revisioni, visti i motivi riguardanti l'inesperienza, già precedentemente citati.
+
+\begin{itemize}
+	\item \textbf{Complessità ciclomatica:} misura direttamente il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso; i nodi del grafo corrispondono a gruppi indivisibili di istruzioni e gli archi connettono due nodi se le istruzioni di un nodo possono essere eseguite dopo le istruzioni dell'altro nodo;
+	Come range di accettazione si è deciso di fissare [1-15], mentre come range ottimale [1-10].
+	\item \textbf{Numero di parametri:} indica il numero di parametri formali di un metodo. Un metodo con un numero alto di parametri può indicare la necessità di introdurre un nuovo metodo a cui associare certe funzionalità interne.
+	Il range di accettazione è [0-8], mentre quello ottimale è [0-4];
+	\item \textbf{Numero di attributi di una classe:} indica il numero di attributi interni di una classe. Un numero troppo elevato potrebbe indicare la necessità di suddividere la classe in una gerarchia. Come range di accettazione si è deciso di fissare [0-15], mentre come range ottimale [3-9];
+	\item \textbf{Linee di codice per linee di commento:} un codice poco commentato comporta una difficile manutenibilità; questa metrica indica il rapporto tra il numero di linee di codice per il numero di linee di commento. Il range di accettazione è [>0.20], quello ottimale è [>0.30];
+	\item \textbf{Logical SLOC:} misura le dimensioni del software basandosi sul numero di linee di codice sorgente. Ci sono due tipi di SLOC, quello \textit{physical} e quello \textit{logical}: si userà il secondo, che conta solamente gli \textit{statement}, ignorando le righe vuote, quelle bianche e i commenti; il range di accettazione è [1-50], mentre quello ottimale è [1-25];
+	\item \textbf{Numero di livelli di annidamento:} rappresenta il numero di livelli di annidamento dei metodi. Un numero elevato riduce il livello di astrazione del codice e comporta un'elevata complessità dello stesso. Il range di accettazione è [1-6], mentre quello ottimale è [1-3];
+	\item \textbf{Accoppiamento}
+	\begin{itemize}
+		\item\textbf{Accoppiamento afferente:} viene calcolato per ogni package\glossario{} dell'architettura. Indica il numero di package\g{} contenente classi, che hanno delle dipendenze con delle classi interne al package\g{} oggetto dell'analisi. Il valore di tale indice è direttamente proporzionale al grado di dipendenza del resto del software dal package\glossario{} preso in considerazione.\\
+		Tale indice dovrebbe avere un valore ragionevole. Se risulta troppo basso, può indicare che il package\glossario{} non offre sufficienti funzionalità al sistema e quindi può essere scarsamente utile. Se invece risulta troppo alto, potrebbe accadere che eventuali modifiche al package\glossario{}, comportino costi elevati di adattamento delle classi che vi dipendono qualora non fosse stato progettato adeguatamente il sistema di interfacce;
+		\item\textbf{Accoppiamento efferente:} viene calcolato per ogni package\glossario{} dell'architettura. Indica il numero di package contenente classi dalle quali dipendono le classi interne al package\glossario{} in analisi. Il valore di tale indice è direttamente proporzionale al grado di indipendenza del package\glossario{} preso in considerazione.\\
+		In generale, tale indice andrebbe tenuto basso. L'obiettivo è quello di aumentare le funzionalità del package\glossario{} senza duplicare i servizi che magari sono offerti da altri package\glossario{}.
+	\end{itemize}
+	\item \textbf{Copertura del codice:} indica la percentuale di istruzioni che saranno eseguite  durante i test. Un'alta percentuale di istruzioni coperte dai test eseguiti, porta a una maggiore probabilità di avere componenti testate con una ridotta quantità di errori.
+\\ Il valore di tale indice, può essere ridotto a causa della presenza di metodi molto semplici che non richiedono di essere testati; esempi di questi metodi sono i \emph{getter} e i \emph{setter}.
+Il range di accettazione è [65\%-100\%] e il range ottimale è [80\%-100\%].
+\end{itemize}
+\paragraph{Riassunto della quantificazione degli obiettivi\\}
+\label{riassuntoObiettivi}
+La tabella seguente riassume la quantificazione degli obiettivi riguardante le metriche individuate.
+\begin{table}[!h]
+		\centering
+		\begin{tabular}{|l|l|c|c|}
+			\hline
+			Metrica & Tipologia & Range Accettazione & Range Ottimale\\
+			\hline
+			Schedule Variance & processi & [>=-(5\% costo prev. fase)]  & [>=0]\\
+			Budget Variance & processi &[>=-(10\% costo prev. fase)] & [>=0]\\
+			\hline
+			Indice Gulpease & documenti & [40-100]&[50-60]\\
+			\hline
+			Complessità Ciclomatica & software & [1-15]&[1-10]\\
+			Numero di Parametri & software & [0-8]&[0-4]\\
+			Attributi della Classe & software & [0-15]&[3-9]\\			
+			Linee Codice per Linee Commento & software & [>0.20]&[>0.30]\\			
+			Logical SLOC & software & [1-50]&[1-25]\\
+			Livelli di Annidamento & software & [1-6]&[1-3]\\			
+			Copertura del Codice & software & [65\%-100\%]&[80\%-100\%]\\
+			\hline			
+		\end{tabular}
+		\caption{Quantificazione degli obiettivi}
+	\end{table}

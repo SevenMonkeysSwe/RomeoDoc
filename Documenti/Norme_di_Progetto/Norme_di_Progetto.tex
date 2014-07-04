@@ -1,0 +1,50 @@
+\input{../Template/doc_standard/packages}
+\input{../Template/doc_standard/commands}
+\input{../Template/doc_standard/styles}
+
+		\begin{document}
+			% COMMAND TO REDEFINE
+			\renewcommand{\documentName}{Norme di Progetto}
+			\renewcommand{\currentVersion}{v3.0.0}
+			\renewcommand{\redactionDate}{2013-12-02}
+			\renewcommand{\editors}{
+			\begin{itemize}
+			\item Adami Alberto
+			\item Bissacco Nicolò
+			\end{itemize}			
+			}		 
+			\renewcommand{\verifiers}{
+			\begin{itemize}			
+			\item Martignago Jimmy
+			\end{itemize}
+			}
+			\renewcommand{\approved}{
+			\begin{itemize}
+			\item Feltre Beatrice
+			\end{itemize}
+			}
+			\renewcommand{\usage}{Interno}
+			\renewcommand{\distributionList}{\begin{itemize}
+			\item \authorName
+			\item \commitName
+			\item \commitNameC
+			\end{itemize}}
+			\renewcommand{\sommario}{Documento contenente l'insieme di norme stabilite 
+			dal gruppo \authorName{} per la realizzazione di \project.}
+			
+				
+			% TITLE PAGE
+			\input{../Template/doc_standard/firstpage}	\pagebreak		
+			\input{doc_to_modify/history} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{secnumdepth}{5}
+			\setcounter{tocdepth}{5}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\listoffigures \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{doc_to_modify/content_files}
+\end{document}

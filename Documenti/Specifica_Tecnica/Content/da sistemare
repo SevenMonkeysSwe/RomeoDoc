@@ -1,0 +1,23 @@
+IN COMPMODEL.TEX
+Romeo::Model::Core
+-manca descrizione di internalData2D e internalData3D
+-mancano le descrizioni di realSubject2D e realSubject3D.
+
+Romeo::Model::Core::Features
+-relazioni d'uso tra i componenti
+
+Romeo::Model::Core::Algorithms
+-sistemare relazione tra i componenti
+
+Romeo::Model::Util::ExporterModel
+-classi contenute
+-sistemare diagramma (anche in visual)
+
+sistemare PACKAGE READERMODEL
+-------------------------------------------------------------
+IN COMPVIEW.TEX
+occorre modificare il diagramma Component(da esportare e aspettare di modificare toolbar in base alla codifica)
+da sistemare toolbar dopo la codifica per capire cosa aggiungere probabilmente è una classe astrattta da cui derivano le diverse toolbar disponibili
+--------------------------------------
+nella contestualizzazione dei design pattern, risistemare, togliendo quelle che non sono piu presenti, aggiungendo quelle che sono state modificate.
+--------------------------------------------

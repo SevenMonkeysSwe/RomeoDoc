@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: Riassunto.tex
+% Current Version: 0.0.1
+% Created: 2013-12-13
+% Author: Feltre Beatrice
+% Email: beatrice.feltre@gmail.com
+%----------------------------------------------------------------------------------------------------------------
+% Modification History:
+% Version		Author	 			Date			Action
+% 0.0.1			Feltre Beatrice		2013-12-13		Creazione file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Riassunto della riunione}
+\label{riassunto}
+Durante questo secondo incontro con i proponenti, erano presenti anche alcuni membri degli altri gruppi che hanno
+deciso di sviluppare il progetto \project. Per questo motivo sono emerse delle problematiche comuni, soprattutto riguardo
+la terminologia delle entità e sul modo in cui il software deve gestire queste ultime.
+\\Di seguito verranno riassunte le definizioni delle varie entità, concordate con i proponenti:
+\begin{itemize}
+\item\textbf{Subject:} un dato, sia esso di tipo 2D, 2D-t, 3D o 3D-t, eventualmente associato ad una maschera\glossario{}. L'utente deve poter caricare il dato nel software, che rimarrà in memoria con un tipo di formato da definire. Una volta creato il Subject\glossario{}, l'utente non ha la possibilità di modificarlo, ma solo di eliminarlo;
+\item\textbf{Protocol:} una combinazione di feature extractors\glossario{}, in un numero variabile da 0 a N ed eventualmente di un algoritmo di clustering\glossario{}. Si è infatti compreso, d'accordo con i proponenti, che l'applicazione di più algoritmi di clustering\glossario{} in cascata, non era possibile da un punto di vista implementativo. Infatti tali algoritmi necessitano di una matrice in input, ma il loro output è un vettore, quindi si presenterebbe un incompatibilità. Una volta creato il \textit{Protocol}\glossario{}, non è possibile modificarlo, ma solo eliminarlo;
+\item\textbf{Dataset:} è la rappresentazione logica di un'analisi. Infatti, è composto da un gruppo di Subject\glossario{} e dai relativi Protocol\glossario{} che si vogliono applicare a quel gruppo. Un Dataset\glossario{} può solo essere creato o eliminato ma non può essere modificato.
+\end{itemize}
+Infine, è emerso un ulteriore requisito, concordato opzionale: si vuole dare la possibilità all'utente, di visualizzare i risultati delle feature extractors\glossario{}, prima di procedere con la \textit{Cluster Ananlysis}\glossario{}. Se il risultato dell'estrazione non viene ritenuto utile, si da la possibilità di fermare l'analisi, in maniera da non perdere del tempo nell'attesa della fine di tutto il processo.

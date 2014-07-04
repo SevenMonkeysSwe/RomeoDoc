@@ -1,0 +1,793 @@
+\newdimen\larghezza
+
+\section{Tracciamento}
+\label{tracciamento}
+
+\subsection{Tracciamento classi-requisiti}
+\label{tracciamentoclassirequisiti}
+
+Nella tabella sottostante sono presenti delle celle vuote in corrispondenza di alcune classi concrete, a causa del tracciamento dei requisiti all'interfaccia che espone i loro metodi.
+
+
+\begin{center}
+\begin{longtable}{|c|l|}
+\hline
+
+\textbf{Classi} & \textbf{Requisiti} \\
+
+\hline 
+AAlgorithm &  \\
+\hline 
+ADatabase &  \\
+\hline 
+AFeature &  \\
+\hline 
+AlgCreator &  \\
+\hline 
+Analysis & R0F10 \\
+ & R0F10.1 \\
+ & R0F10.1.1 \\
+ & R0F10.2 \\
+ & R0F10.2.1 \\
+ & R0F10.3 \\
+ & R0F10.5  \\
+ & R0F12.3 \\
+ & R1F28 \\
+ & R1F30 \\
+ & R1F31 \\
+\hline 
+AnalysisDAO & R0F13 \\
+ & R1F29 \\
+\hline 
+AnalyzeExporter &  \\
+\hline 
+AnalyzeReader & R0F1.2.1.6 \\
+ & R0F1.3.5 \\
+\hline 
+APanel &  \\
+ & R0F9 \\
+\hline 
+ASubject & R0F1 \\
+ & R0F1.1 \\
+\hline 
+ContrastFeature & R0F5.2.5 \\
+ & R0F5.2.5.1 \\
+ & R0F5.2.5.1.1 \\
+ & R0F5.2.5.1.2 \\
+ & R0F5.2.5.2 \\
+ & R0F5.2.5.2.1 \\
+\hline 
+CorrelationFeature & R0F5.2.9 \\
+ & R0F5.2.9.1 \\
+ & R0F5.2.9.1.1 \\
+ & R0F5.2.9.1.2 \\
+ & R0F5.2.9.2 \\
+ & R0F5.2.9.2.1 \\
+\hline 
+Dataset & R0F8 \\
+ & R0F8.1  \\
+ & R0F8.2  \\
+ & R0F8.3  \\
+\hline 
+DatasetDAO & R0F27 \\
+ & R0F27.1 \\
+ & R0F8.1  \\
+\hline 
+DatasetsView & R0F27 \\
+ & R0F27.1 \\
+ & R0F27.2 \\
+\hline 
+Dialog & R0F1.4 \\
+\hline 
+DynamicFeature &  \\
+\hline 
+EnergyFeature & R0F5.2.8 \\
+ & R0F5.2.8.1 \\
+ & R0F5.2.8.1.1 \\
+ & R0F5.2.8.1.2 \\
+ & R0F5.2.8.2 \\
+ & R0F5.2.8.2.1 \\
+\hline 
+EntropyFeature & R0F5.2.7 \\
+ & R0F5.2.7.1 \\
+ & R0F5.2.7.1.1 \\
+ & R0F5.2.7.1.2 \\
+ & R0F5.2.7.2 \\
+ & R0F5.2.7.2.1 \\
+\hline 
+ExecuteAnalysisView & R0F10.3 \\
+ & R0F10.5  \\
+ & R1F31 \\
+\hline 
+Exporter & R0F12.1 \\
+ & R0F12.2 \\
+ & R0F12.3 \\
+ & R0F12.4 \\
+\hline 
+FeatCreator &  \\
+\hline 
+FirstOrderFeature &  \\
+\hline 
+FuzzyCMeans & R0F5.4.2 \\
+ & R0F5.4.2.1 \\
+ & R0F5.4.2.1.1 \\
+ & R0F5.4.2.2 \\
+ & R0F5.4.2.2.1 \\
+ & R0F5.4.2.3 \\
+ & R0F5.4.2.3.1 \\
+ & R0F5.4.2.4 \\
+ & R0F5.4.2.4.1 \\
+\hline 
+GroupDAO & R0F26 \\
+ & R0F26.1 \\
+ & R0F26.2 \\
+ & R0F3 \\
+ & R0F4 \\
+ & R0F4.2 \\
+\hline 
+GroupOfSubject & R0F3 \\
+ & R0F3.1 \\
+ & R2F3.2 \\
+\hline 
+GroupsView & R0F26 \\
+ & R0F26.1 \\
+ & R0F26.2 \\
+ & R0F4 \\
+ & R0F4.1 \\
+ & R0F4.2 \\
+ & R0F4.3 \\
+\hline 
+Help & R2F14.1.1 \\
+ & R2F14.1.2 \\
+ & R2F14.2 \\
+ & R2F14.2.1 \\
+\hline 
+HelpView & R0F14 \\
+ & R0F14.1 \\
+ & R2F14.1.1 \\
+ & R2F14.1.2 \\
+ & R2F14.2 \\
+ & R2F14.2.1 \\
+\hline 
+Hierarchical & R0F5.4.3 \\
+ & R0F5.4.3.1 \\
+ & R0F5.4.3.1.1 \\
+ & R0F5.4.3.2 \\
+ & R0F5.4.3.2.1 \\
+\hline 
+HomogeneityFeature & R0F5.2.6 \\
+ & R0F5.2.6.1 \\
+ & R0F5.2.6.1.1 \\
+ & R0F5.2.6.1.2 \\
+ & R0F5.2.6.2 \\
+ & R0F5.2.6.2.1 \\
+\hline 
+ImageExporter &  \\
+\hline 
+ImageReader & R0F1.2.1.1 \\
+ & R0F1.2.1.2 \\
+ & R0F1.2.1.3 \\
+ & R0F1.3.1 \\
+ & R0F1.3.2 \\
+ & R0F1.3.3 \\
+\hline 
+InternalData &  \\
+\hline 
+InternalData2D &  \\
+\hline 
+InternalData3D &  \\
+\hline 
+ISubject &  \\
+\hline 
+KMeans & R0F5.4.1 \\
+ & R0F5.4.1.1 \\
+ & R0F5.4.1.1.1 \\
+ & R0F5.4.1.2 \\
+ & R0F5.4.1.2.1 \\
+ & R0F5.4.1.3 \\
+ & R0F5.4.1.3.1 \\
+ & R0F5.4.1.4 \\
+ & R0F5.4.1.4.1 \\
+\hline 
+KurtosisFeature & R0F5.2.4 \\
+ & R0F5.2.4.1 \\
+ & R0F5.2.4.1.1 \\
+ & R0F5.2.4.1.2 \\
+\hline 
+Log &  \\
+\hline 
+MainWindow & R0F9 \\
+\hline 
+MaximumFeature & R0F5.2.11 \\
+ & R0F5.2.11.1 \\
+ & R0F5.2.11.1.1 \\
+ & R0F5.2.11.2 \\
+ & R0F5.2.11.2.1 \\
+\hline 
+MeanDFeature & R0F5.2.14 \\
+ & R0F5.2.14.1 \\
+ & R0F5.2.14.1.1 \\
+ & R0F5.2.14.2 \\
+ & R0F5.2.14.2.1 \\
+\hline 
+MeanFeature & R0F5.2.1 \\
+ & R0F5.2.1.1 \\
+ & R0F5.2.1.1.1 \\
+ & R0F5.2.1.1.2 \\
+\hline 
+MenuBar &  \\
+\hline 
+MinimumFeature & R0F5.2.12 \\
+ & R0F5.2.12.1 \\
+ & R0F5.2.12.1.1 \\
+ & R0F5.2.12.2 \\
+ & R0F5.2.12.2.1 \\
+\hline 
+NavWidget &  \\
+\hline 
+NewDatasetView & R0F8 \\
+ & R0F8.1  \\
+ & R0F8.2 \\
+ & R0F8.3  \\
+\hline 
+NewGroupView & R0F3 \\
+ & R0F3.1 \\
+\hline 
+NewProtocolView & R0F5 \\
+ & R0F5.1  \\
+ & R0F5.2  \\
+ & R0F5.2.1 \\
+ & R0F5.2.10 \\
+ & R0F5.2.11 \\
+ & R0F5.2.12 \\
+ & R0F5.2.13 \\
+ & R0F5.2.14 \\
+ & R0F5.2.15 \\
+ & R0F5.2.2 \\
+ & R0F5.2.3 \\
+ & R0F5.2.4 \\
+ & R0F5.2.5 \\
+ & R0F5.2.6 \\
+ & R0F5.2.7 \\
+ & R0F5.2.8 \\
+ & R0F5.2.9 \\
+ & R0F5.3 \\
+ & R0F5.4 \\
+ & R0F5.4.1 \\
+ & R0F5.4.2 \\
+ & R0F5.4.3 \\
+ & R2F5.5 \\
+\hline 
+NewSubjectView & R0F1 \\
+ & R0F1.1 \\
+ & R0F1.2 \\
+ & R0F1.3 \\
+\hline 
+NiftiExporter &  \\
+\hline 
+NiftiReader & R0F1.2.1.5 \\
+ & R0F1.3.4 \\
+\hline 
+Protocol & R0F5 \\
+ & R0F5.1  \\
+ & R0F5.2  \\
+ & R2F5.5 \\
+\hline 
+ProtocolDAO & R0F11 \\
+ & R0F5.1  \\
+ & R0F6 \\
+\hline 
+ProtocolsView & R0F6 \\
+ & R0F6.1 \\
+\hline 
+ProxySubject &  \\
+\hline 
+Reader & R0F1.2 \\
+ & R0F1.2.1 \\
+ & R0F1.3 \\
+ & R0F1.4 \\
+\hline 
+RealSubject & R0F1.2 \\
+ & R0F1.3 \\
+\hline 
+RealSubject2D &  \\
+\hline 
+RealSubject3D &  \\
+\hline 
+ResaultsView & R0F10.4  \\
+ & R0F13 \\
+\hline 
+SecondOrderFeature &  \\
+\hline 
+SelectDeselectWidget &  \\
+\hline 
+SkewnessFeature & R0F5.2.3 \\
+ & R0F5.2.3.1 \\
+ & R0F5.2.3.1.1 \\
+ & R0F5.2.3.1.2 \\
+\hline 
+SlopeFeature & R0F5.2.13 \\
+ & R0F5.2.13.1 \\
+ & R0F5.2.13.1.1 \\
+ & R0F5.2.13.2 \\
+ & R0F5.2.13.2.1 \\
+\hline 
+StartAnalysisView & R0F12.4 \\
+ & R1F32 \\
+\hline 
+StdDeviationFeature & R0F5.2.2 \\
+ & R0F5.2.2.1 \\
+ & R0F5.2.2.1.1 \\
+ & R0F5.2.2.1.2 \\
+\hline 
+SubjectDAO & R0F1.1 \\
+ & R0F2 \\
+ & R0F3.1 \\
+\hline 
+SubjectsView & R0F2 \\
+\hline 
+TimeToPeakFeature & R0F5.2.10 \\
+ & R0F5.2.10.1 \\
+ & R0F5.2.10.1.1 \\
+ & R0F5.2.10.2 \\
+ & R0F5.2.10.2.1 \\
+\hline 
+ToolBar &  \\
+\hline 
+ValueFeature & R0F5.2.15 \\
+ & R0F5.2.15.1 \\
+ & R0F5.2.15.1.1 \\
+ & R0F5.2.15.2 \\
+ & R0F5.2.15.2.1 \\
+\hline 
+VideoReader & R0F1.2.1.4 \\
+\hline 
+WelcomeView &  \\
+\hline
+\caption{Tracciamento Classe-Requisito}
+\end{longtable}
+\end{center}
+
+    
+\subsection{Tracciamento requisiti-classi}
+\label{tracciamentorequisiticlassi}
+
+\begin{center}
+\begin{longtable}{|c|l|}
+\hline
+
+\textbf{Requisiti} & \textbf{Classi} \\
+
+
+\hline
+R0F1 & NewSubjectView \\ 
+ & ASubject \\ 
+\hline
+R0F1.1 & SubjectDAO \\ 
+ & NewSubjectView \\ 
+ & ASubject \\ 
+\hline
+R0F1.2 & Reader \\ 
+ & NewSubjectView \\ 
+ & RealSubject \\ 
+\hline
+R0F1.2.1 & Reader \\ 
+\hline
+R0F1.2.1.1 & ImageReader \\ 
+\hline
+R0F1.2.1.2 & ImageReader \\ 
+\hline
+R0F1.2.1.3 & ImageReader \\ 
+\hline
+R0F1.2.1.4 & VideoReader \\ 
+\hline
+R0F1.2.1.5 & NiftiReader \\ 
+\hline
+R0F1.2.1.6 & AnalyzeReader \\ 
+\hline
+R0F1.3 & Reader \\ 
+ & NewSubjectView \\ 
+ & RealSubject \\ 
+\hline
+R0F1.3.1 & ImageReader \\ 
+\hline
+R0F1.3.2 & ImageReader \\ 
+\hline
+R0F1.3.3 & ImageReader \\ 
+\hline
+R0F1.3.4 & NiftiReader \\ 
+\hline
+R0F1.3.5 & AnalyzeReader \\ 
+\hline
+R0F1.4 & Reader \\ 
+ & Dialog \\ 
+\hline
+R0F10 & Analysis \\ 
+\hline
+R0F10.1 & Analysis \\ 
+\hline
+R0F10.1.1 & Analysis \\ 
+\hline
+R0F10.2 & Analysis \\ 
+\hline
+R0F10.2.1 & Analysis \\ 
+\hline
+R0F10.3 & ExecuteAnalysisView \\ 
+ & Analysis \\ 
+\hline
+R0F10.4 & ResaultsView \\ 
+\hline
+R0F10.5 & ExecuteAnalysisView \\ 
+ & Analysis \\ 
+\hline
+R0F11 & ProtocolDAO \\ 
+\hline
+R0F12 & \\ 
+\hline
+R0F12.1 & Exporter \\ 
+\hline
+R0F12.2 & Exporter \\ 
+\hline
+R0F12.3 & Exporter \\ 
+ & Analysis \\ 
+\hline
+R0F12.4 & Exporter \\ 
+ & StartAnalysisView \\ 
+\hline
+R0F13 & AnalysisDAO \\ 
+ & ResaultsView \\ 
+\hline
+R0F13.1 & \\ 
+\hline
+R0F13.2 & \\ 
+\hline
+R0F14 & HelpView \\ 
+\hline
+R0F14.1 & HelpView \\ 
+\hline
+R0F2 & SubjectDAO \\ 
+ & SubjectsView \\ 
+\hline
+R0F26 & GroupDAO \\ 
+ & GroupsView \\ 
+\hline
+R0F26.1 & GroupDAO \\ 
+ & GroupsView \\ 
+\hline
+R0F26.2 & GroupDAO \\ 
+ & GroupsView \\ 
+\hline
+R0F27 & DatasetDAO \\ 
+ & DatasetsView \\ 
+\hline
+R0F27.1 & DatasetDAO \\ 
+ & DatasetsView \\ 
+\hline
+R0F27.2 & DatasetsView \\ 
+\hline
+R0F3 & GroupDAO \\ 
+ & NewGroupView \\ 
+ & GroupOfSubject \\ 
+\hline
+R0F3.1 & SubjectDAO \\ 
+ & NewGroupView \\ 
+ & GroupOfSubject \\ 
+\hline
+R0F4 & GroupDAO \\ 
+ & GroupsView \\ 
+\hline
+R0F4.1 & GroupsView \\ 
+\hline
+R0F4.2 & GroupDAO \\ 
+ & GroupsView \\ 
+\hline
+R0F4.3 & GroupsView \\ 
+\hline
+R0F5 & NewProtocolView \\ 
+ & Protocol \\ 
+\hline
+R0F5.1 & ProtocolDAO \\ 
+ & NewProtocolView \\ 
+ & Protocol \\ 
+\hline
+R0F5.2 & NewProtocolView \\ 
+ & Protocol \\ 
+\hline
+R0F5.2.1 & NewProtocolView \\ 
+ & MeanFeature \\ 
+\hline
+R0F5.2.1.1 & MeanFeature \\ 
+\hline
+R0F5.2.1.1.1 & MeanFeature \\ 
+\hline
+R0F5.2.1.1.2 & MeanFeature \\ 
+\hline
+R0F5.2.10 & NewProtocolView \\ 
+ & TimeToPeakFeature \\ 
+\hline
+R0F5.2.10.1 & TimeToPeakFeature \\ 
+\hline
+R0F5.2.10.1.1 & TimeToPeakFeature \\ 
+\hline
+R0F5.2.10.2 & TimeToPeakFeature \\ 
+\hline
+R0F5.2.10.2.1 & TimeToPeakFeature \\ 
+\hline
+R0F5.2.11 & NewProtocolView \\ 
+ & MaximumFeature \\ 
+\hline
+R0F5.2.11.1 & MaximumFeature \\ 
+\hline
+R0F5.2.11.1.1 & MaximumFeature \\ 
+\hline
+R0F5.2.11.2 & MaximumFeature \\ 
+\hline
+R0F5.2.11.2.1 & MaximumFeature \\ 
+\hline
+R0F5.2.12 & NewProtocolView \\ 
+ & MinimumFeature \\ 
+\hline
+R0F5.2.12.1 & MinimumFeature \\ 
+\hline
+R0F5.2.12.1.1 & MinimumFeature \\ 
+\hline
+R0F5.2.12.2 & MinimumFeature \\ 
+\hline
+R0F5.2.12.2.1 & MinimumFeature \\ 
+\hline
+R0F5.2.13 & NewProtocolView \\ 
+ & SlopeFeature \\ 
+\hline
+R0F5.2.13.1 & SlopeFeature \\ 
+\hline
+R0F5.2.13.1.1 & SlopeFeature \\ 
+\hline
+R0F5.2.13.2 & SlopeFeature \\ 
+\hline
+R0F5.2.13.2.1 & SlopeFeature \\ 
+\hline
+R0F5.2.14 & NewProtocolView \\ 
+ & MeanDFeature \\ 
+\hline
+R0F5.2.14.1 & MeanDFeature \\ 
+\hline
+R0F5.2.14.1.1 & MeanDFeature \\ 
+\hline
+R0F5.2.14.2 & MeanDFeature \\ 
+\hline
+R0F5.2.14.2.1 & MeanDFeature \\ 
+\hline
+R0F5.2.15 & NewProtocolView \\ 
+ & ValueFeature \\ 
+\hline
+R0F5.2.15.1 & ValueFeature \\ 
+\hline
+R0F5.2.15.1.1 & ValueFeature \\ 
+\hline
+R0F5.2.15.2 & ValueFeature \\ 
+\hline
+R0F5.2.15.2.1 & ValueFeature \\ 
+\hline
+R0F5.2.2 & NewProtocolView \\ 
+ & StdDeviationFeature \\ 
+\hline
+R0F5.2.2.1 & StdDeviationFeature \\ 
+\hline
+R0F5.2.2.1.1 & StdDeviationFeature \\ 
+\hline
+R0F5.2.2.1.2 & StdDeviationFeature \\ 
+\hline
+R0F5.2.3 & NewProtocolView \\ 
+ & SkewnessFeature \\ 
+\hline
+R0F5.2.3.1 & SkewnessFeature \\ 
+\hline
+R0F5.2.3.1.1 & SkewnessFeature \\ 
+\hline
+R0F5.2.3.1.2 & SkewnessFeature \\ 
+\hline
+R0F5.2.4 & NewProtocolView \\ 
+ & KurtosisFeature \\ 
+\hline
+R0F5.2.4.1 & KurtosisFeature \\ 
+\hline
+R0F5.2.4.1.1 & KurtosisFeature \\ 
+\hline
+R0F5.2.4.1.2 & KurtosisFeature \\ 
+\hline
+R0F5.2.5 & NewProtocolView \\ 
+ & ContrastFeature \\ 
+\hline
+R0F5.2.5.1 & ContrastFeature \\ 
+\hline
+R0F5.2.5.1.1 & ContrastFeature \\ 
+\hline
+R0F5.2.5.1.2 & ContrastFeature \\ 
+\hline
+R0F5.2.5.2 & ContrastFeature \\ 
+\hline
+R0F5.2.5.2.1 & ContrastFeature \\ 
+\hline
+R0F5.2.6 & NewProtocolView \\ 
+ & HomogeneityFeature \\ 
+\hline
+R0F5.2.6.1 & HomogeneityFeature \\ 
+\hline
+R0F5.2.6.1.1 & HomogeneityFeature \\ 
+\hline
+R0F5.2.6.1.2 & HomogeneityFeature \\ 
+\hline
+R0F5.2.6.2 & HomogeneityFeature \\ 
+\hline
+R0F5.2.6.2.1 & HomogeneityFeature \\ 
+\hline
+R0F5.2.7 & NewProtocolView \\ 
+ & EntropyFeature \\ 
+\hline
+R0F5.2.7.1 & EntropyFeature \\ 
+\hline
+R0F5.2.7.1.1 & EntropyFeature \\ 
+\hline
+R0F5.2.7.1.2 & EntropyFeature \\ 
+\hline
+R0F5.2.7.2 & EntropyFeature \\ 
+\hline
+R0F5.2.7.2.1 & EntropyFeature \\ 
+\hline
+R0F5.2.8 & NewProtocolView \\ 
+ & EnergyFeature \\ 
+\hline
+R0F5.2.8.1 & EnergyFeature \\ 
+\hline
+R0F5.2.8.1.1 & EnergyFeature \\ 
+\hline
+R0F5.2.8.1.2 & EnergyFeature \\ 
+\hline
+R0F5.2.8.2 & EnergyFeature \\ 
+\hline
+R0F5.2.8.2.1 & EnergyFeature \\ 
+\hline
+R0F5.2.9 & NewProtocolView \\ 
+ & CorrelationFeature \\ 
+\hline
+R0F5.2.9.1 & CorrelationFeature \\ 
+\hline
+R0F5.2.9.1.1 & CorrelationFeature \\ 
+\hline
+R0F5.2.9.1.2 & CorrelationFeature \\ 
+\hline
+R0F5.2.9.2 & CorrelationFeature \\ 
+\hline
+R0F5.2.9.2.1 & CorrelationFeature \\ 
+\hline
+R0F5.3 & NewProtocolView \\ 
+\hline
+R0F5.4 & NewProtocolView \\ 
+\hline
+R0F5.4.1 & NewProtocolView \\ 
+ & KMeans \\ 
+\hline
+R0F5.4.1.1 & KMeans \\ 
+\hline
+R0F5.4.1.1.1 & KMeans \\ 
+\hline
+R0F5.4.1.2 & KMeans \\ 
+\hline
+R0F5.4.1.2.1 & KMeans \\ 
+\hline
+R0F5.4.1.3 & KMeans \\ 
+\hline
+R0F5.4.1.3.1 & KMeans \\ 
+\hline
+R0F5.4.1.4 & KMeans \\ 
+\hline
+R0F5.4.1.4.1 & KMeans \\ 
+\hline
+R0F5.4.2 & NewProtocolView \\ 
+ & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.1 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.1.1 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.2 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.2.1 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.3 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.3.1 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.4 & FuzzyCMeans \\ 
+\hline
+R0F5.4.2.4.1 & FuzzyCMeans \\ 
+\hline
+R0F5.4.3 & NewProtocolView \\ 
+ & Hierarchical \\ 
+\hline
+R0F5.4.3.1 & Hierarchical \\ 
+\hline
+R0F5.4.3.1.1 & Hierarchical \\ 
+\hline
+R0F5.4.3.2 & Hierarchical \\ 
+\hline
+R0F5.4.3.2.1 & Hierarchical \\ 
+\hline
+R0F6 & ProtocolDAO \\ 
+ & ProtocolsView \\ 
+\hline
+R0F6.1 & ProtocolsView \\ 
+\hline
+R0F7 & \\ 
+\hline
+R0F8 & NewDatasetView \\ 
+ & Dataset \\ 
+\hline
+R0F8.1 & DatasetDAO \\ 
+ & NewDatasetView \\ 
+ & Dataset \\ 
+\hline
+R0F8.2 & NewDatasetView \\ 
+ & Dataset \\ 
+\hline
+R0F8.3 & NewDatasetView \\ 
+ & Dataset \\ 
+\hline
+R0F9 & MainWindow \\ 
+ & APanel \\ 
+\hline
+R0Q22 & \\ 
+\hline
+R0Q23 & \\ 
+\hline
+R0Q24 & \\ 
+\hline
+R0Q25 & \\ 
+\hline
+R0Q25.1 & \\ 
+\hline
+R0V15 & \\ 
+\hline
+R0V16 & \\ 
+\hline
+R0V17 & \\ 
+\hline
+R0V18 & \\ 
+\hline
+R0V19 & \\ 
+\hline
+R0V20 & \\ 
+\hline
+R0V21 & \\ 
+\hline
+R1F28 & Analysis \\ 
+\hline
+R1F29 & AnalysisDAO \\ 
+\hline
+R1F30 & Analysis \\ 
+\hline
+R1F31 & ExecuteAnalysisView \\ 
+ & Analysis \\ 
+\hline
+R1F32 & StartAnalysisView \\ 
+\hline
+R2F14.1.1 & Help \\ 
+ & HelpView \\ 
+\hline
+R2F14.1.2 & Help \\ 
+ & HelpView \\ 
+\hline
+R2F14.2 & Help \\ 
+ & HelpView \\ 
+\hline
+R2F14.2.1 & Help \\ 
+ & HelpView \\ 
+\hline
+R2F3.2 & GroupOfSubject \\ 
+\hline
+R2F5.5 & NewProtocolView \\ 
+ & Protocol \\ 
+\hline
+\caption{Tracciamento Requisiti-Classi}
+\end{longtable}
+\end{center}

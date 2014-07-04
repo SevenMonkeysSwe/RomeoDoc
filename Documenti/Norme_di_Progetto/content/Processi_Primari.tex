@@ -1,0 +1,257 @@
+\section{Processi primari}
+\label{processiprimari}
+
+\subsection{Processo di sviluppo}
+\label{processosviluppo}
+Il seguente processo contiene le attività che il gruppo \authorName{} attuerà al fine di portare a compimento lo sviluppo di un prodotto software. All'interno sono definite le attività riguardanti l'analisi dei requisiti, la stesura del design architetturale e la codifica del prodotto, l'integrazione e i test delle varie componenti software.\\
+Il processo di sviluppo è composto dalle seguenti attività:
+\begin{itemize}
+\item\textbf{Analisi dei requisiti;}
+\item\textbf{Progettazione architetturale;}
+\item\textbf{Progettazione architetturale di dettaglio;}
+\item\textbf{Codifica e testing delle componenti;}
+%\item\textbf{Integrazione software;}
+%\item\textbf{Integrazione di sistema;}
+%\item\textbf{Installazione software;}
+\end{itemize}
+Di seguito verranno descritte le norme che regolano lo svolgimento delle varie attività.
+
+\subsubsection{Analisi dei requisiti}
+\label{analisideirequisiti}
+Lo scopo di quest'attività è di definire i requisiti del sistema che andrà a fornire dei servizi agli utenti e agli stakeholders, in un determinato ambiente. I compiti di quest'attività constano nell'identificare gli stakeholders, i loro bisogni e le interazioni che avranno con il sistema. Successivamente si dovranno mappare tali requisiti in una serie di requisiti funzionali, qualitativi, prestazionali e di vincolo che aiuteranno la stesura di una progettazione ad alto livello del software.
+
+\paragraph{\underline{Identificazione degli stakeholders}:} quest'azione consiste nell'individuazione di singoli stakeholders o di classi di stakeholders, che hanno interessi giustificati nel seguire il ciclo di vita del software. Tra questi, sono compresi gli utenti, i proponenti del progetto, gli sviluppatori e tutte le altre entità che entreranno in contatto con il prodotto.\\
+Nello specifico caso di questo progetto, lo studio del capitolato e la discussione con i proponenti, costituiscono le principali fonti di informazione per raggiungere lo scopo. Gli \textit{Analisti} sono tenuti a leggere attentamente il capitolato e a contattare i proponenti per comprendere appieno il contesto d'uso in cui si andrà a collocare il prodotto.
+
+\paragraph{\underline{Identificazione dei casi d'uso}:} quest'azione consiste nell'individuazione dei principali casi d'uso del sistema. Quest'ultimi descrivono i modi con cui il sistema può essere utilizzato e costituiscono la base da cui gli \textit{Analisti} deriveranno una parte dei requisiti.\\
+Per adempiere a questo compito, gli \textit{Analisiti} sono tenuti a confrontarsi con gli stakeholders, in maniera tale da comprendere di quali funzionalità necessitino. Devono inoltre contrattare con i proponenti la quantità e la tipologia di funzionalità che il sistema dovrà fornire, in base alle risorse economiche, temporali e intellettuali disponibili per la realizzazione del progetto. Tutti i casi d'uso dovranno essere tracciati, documentati ed approvati sia dagli acquirenti, sia dal \projectManager{}.
+
+\paragraph{\underline{Documentazione dei casi d'uso}:} nel momento in cui un nuovo caso d'uso è individuato, è necessario procedere alla stesura della sua documentazione. Ogni caso d'uso sarà quindi corredato dalle seguenti informazioni:
+\begin{itemize}
+\item\textbf{Identificativo:} ogni caso d'uso\glossario{} va tracciato con un codice. Quest'ultimo sarà composto dalle due lettere maiuscole \lq\lq{}\textbf{UC}\rq\rq{}, seguite dal numero identificativo del caso d'uso\glossario{} (es. \textbf{UC2.4.6});
+\item\textbf{Diagramma:} verrà utilizzato UML\g{} per creare i diagrammi dei caso d'uso\g{}, con lo scopo di semplificare la comprensione dei requisiti.
+\\Di seguito sono riportate le convenzioni adottate nella realizzazione dei diagrammi:
+\begin{itemize}
+\item\textbf{Standard:} verrà adottato lo standard UML\glossario{} 2.0;
+\item\textbf{Lingua:} verrà adottata la lingua italiana all'interno dei diagrammi. 
+\end{itemize}
+\item\textbf{Descrizione:} una breve didascalia che descrive il caso d'uso\glossario{};
+\item\textbf{Flusso principale:} verrà fornita una descrizione del flusso principale degli eventi del caso d'uso\glossario{};
+\item\textbf{Scenario alternativo:} nel caso sia presente uno scenario alternativo, il caso d'uso\glossario{} dovrà essere correlato da una descrizione di tale scenario;
+\item\textbf{Attori:} gli attori coinvolti nel caso d'uso\glossario{};
+\item\textbf{Precondizione:} la precondizione del caso d'uso;
+\item\textbf{Postcondizione:} la postcondizione del caso d'uso.
+\end{itemize}
+
+\paragraph{\underline{Tracciamento dei casi d'uso}:} quest'azione consiste nella memorizzazione dei casi d'uso, in maniera tale da tenerne traccia per una futura consultazione e/o rielaborazione. Inoltre, dato che i casi d'uso costituiscono una fonte di requisiti, tenerne traccia è necessario per poterli mappare.\\
+Nello specifico, per tracciare i casi d'uso si utilizzerà l'applicativo web \textit{ReqMonkeys}. Tale strumento consente di:
+\begin{itemize}
+\item Inserire una fonte;
+\item Eliminare una fonte;
+\end{itemize}
+Per le procedure di esecuzione delle precedenti funzionalità, si faccia riferimento alla sezione \ref{procedurereqmonkeys}.
+
+%\paragraph{\underline{Definizione dei test di validazione}:}
+
+\paragraph{\underline{Identificazione dei requisiti}:} quest'azione consiste nell'identificazione dei requisiti che il sistema software deve soddisfare. Tali requisiti descrivono:
+\begin{itemize}
+\item funzionalità e capacità che il sistema dovrà avere;
+\item usabilità del sistema, intesa sia come estetica della GUI\g{}, sia come interazione uomo-macchina;
+\item affidabilità legata alla gestione degli errori;
+\item prestazioni che il sistema deve avere;
+\item manutenibilità ed estensibilità del prodotto;
+\item qualità che il sistema dovrà  garantire (definita nel \PdQ{}).
+\end{itemize}
+Per svolgere quest'azione, gli \textit{Analisti} sono tenuti a discutere con gli stakeholders, studiare in dettaglio i casi d'uso e tenere conto delle strategie di qualità definite nel \PdQ{}. Inoltre, è necessario assegnare una priorità, definire il tipo dei requisiti e tracciarli con le relative fonti. Infine, ogni requisito deve essere approvato sia dagli acquirenti, sia dal \projectManager{}.
+
+\paragraph{\underline{Documentazione dei requisiti}:} nel momento in cui un nuovo requisito è individuato, è necessario procedere alla stesura della sua documentazione. Ogni requisito dovrà essere il più completo e non ambiguo possibile.\\
+I requisiti dovranno essere classificati per tipo e priorità, utilizzando la seguente notazione:
+\begin{center}
+\textbf{R[importanza][tipo][codice]}
+\end{center}
+dove:
+\begin{itemize}
+\item\textbf{Importanza:} può assumere i seguenti valori:
+\begin{itemize}
+\item\textbf{0:} in questo caso si tratta di un requisito obbligatorio;
+\item\textbf{1:} in questo caso si tratta di un requisito desiderabile;
+\item\textbf{2:} in questo caso si tratta di un requisito opzionale.
+\end{itemize}
+\item\textbf{Tipo:} può assumere i seguenti valori:
+\begin{itemize}
+\item\textbf{F:} per indicare un requisito funzionale;
+\item\textbf{Q:} per indicare un requisito di qualità;
+\item\textbf{P:} per indicare un requisito prestazionale;
+\item\textbf{V:} per indicare un requisito di vincolo.
+\end{itemize}
+\item\textbf{Codice:} rappresenta il codice univoco di ogni requisito, il quale va indicato in forma gerarchica.
+\end{itemize}
+
+\paragraph{\underline{Tracciamento dei requisiti}:} quest'azione consiste nella memorizzazione dei requisiti, in maniera tale da tenerne traccia per poterli sottoporre all'attenzione degli stakeholder e per poterne mappare i test di soddisfacimento, le componenti ad essi associate, le fonti.\\
+Nello specifico, per tracciare i requisiti, si utilizzerà l'applicativo web \textit{ReqMonkeys}. Tale strumento consente di:
+\begin{itemize}
+\item Inserire un requisito;
+\item Modificare la fonte di un requisito;
+\item Modificare la descrizione o l'id di un requisito;
+\item Aggiungere una fonte ad un requisito;
+\item Aggiungere un componente ad un requisito;
+\item Eliminare un requisito;
+\item Rimuovere una fonte da un requisito;
+\item Rimuovere un componente da un requisito.
+\end{itemize}
+Per le procedure di esecuzione delle precedenti funzionalità, si faccia riferimento alla sezione \ref{procedurereqmonkeys}.
+
+%\paragraph{\underline{Definizione dei test di sistema}:}
+
+\subsubsection{Progettazione architetturale}
+\label{progarchitetturale}
+Lo scopo di quest'attività è di fornire un architettura software di alto livello, il cui grado di dettaglio comprende la definizione delle classi, che implementi i requisiti definiti durante l'Analisi dei requisiti. I compiti di quest'attività constano nell'individuazione delle componenti fondamentali e dei design pattern\g{} che serviranno a comporre lo scheletro dell'architettura. Inoltre, è necessario individuare le componenti esterne che eventualmente andranno ad interagire con il software (classi di librerie esterne, database) e di conseguenza andranno definite le relative interfacce, responsabili di comunicare con tali entità. Infine dovrà essere prodotta una documentazione ed un tracciamento delle varie componenti.
+
+\paragraph{\underline{Identificazione dei componenti}:} quest'azione consiste nell'identificazione dei componenti che il sistema software dovrà avere. Sulla base dei requisiti identificati durante l'Analisi dei requisiti, i \textit{Progettisti} sono tenuti a studiare le migliori strategie implementative, al fine di soddisfarli. Inoltre, devono individuare quali design pattern\g{} saranno più adatti al contesto, al fine di rendere il prodotto il più efficiente ed estensibile possibile. Ogni componente ed ogni design pattern\g{} deve essere adeguatamente documentato.
+
+\paragraph{\underline{Identificazione delle interfacce}:} quest'azione consiste nell'identificazione delle interfacce necessarie alla comunicazione con i componenti delle entità esterne. I \textit{Progettisti} sono tenuti a studiare i possibili componenti esterni, necessari all'implementazione di determinate funzionalità e conseguentemente devono individuare un architettura di alto livello che implementi le interfacce necessarie alla comunicazione con tali componenti. Tra le interfacce trattate in quest'azione, sono inoltre comprese le interfacce interne. Queste ultime sono responsabili della comunicazione tra le macro componenti del sistema ed anch'esse necessitano di un'architettura ad alto livello.
+
+\paragraph{\underline{Documentazione dei componenti}:} nel momento in cui un nuovo componente è individuato, è necessario procedere alla stesura della sua documentazione. Ogni package dovrà essere quindi corredato dalle seguenti informazioni:
+\begin{itemize}
+\item \textbf{Identificativo:} ogni package va tracciato con un nome esaustivo. Il nome dovrà essere composto da una singola parola, la cui prima lettera sarà maiuscola. Nel momento in cui vengono individuati dei sotto-package, essi avranno il nome composto come segue:
+\begin{center}
+\textbf{Package::Sotto-package1::Sotto-package2::\dots{}}
+\end{center}
+\item \textbf{Diagramma:} ogni package deve essere corredato da un diagramma di package, disegnato con il linguaggio UML\g{} aderente allo standard 2.0;
+\item \textbf{Descrizione:} ogni package deve avere una descrizione esaustiva che ne esplichi gli scopi ed icontenuti;
+\item \textbf{Sotto-package:} ogni package deve essere corredato dalla lista dei sotto-package che eventualmente contine;
+\item \textbf{Classi contenute:} ogni package deve esprimere la lista delle classi eventualmente contenute al suo interno.
+\end{itemize}
+A sua volta, le classi individuate devono essere corredate dalle seguenti informazioni:
+\begin{itemize}
+\item \textbf{Identificativo:} ogni classe va tracciata con un nome esaustivo. Il nome dovrà essere il più esaustivo e comprensibile possibile, in maniera da identificare velocemente la sua funzionalità;
+\item \textbf{Descrizione:} ogni classe deve essere corredata da una descrizione che ne esplichi gli scopi e le funzionalità che vuole implementare;
+\item \textbf{Sotto-classi:} ogni classe deve indicare nella propria documentazione le classi che derivano da essa.
+\end{itemize}
+
+\paragraph{\underline{Tracciamento dei componenti}:} quest'azione consiste nel memorizzare i vari componenti individuati. Inoltre, è necessario tracciarli con i requisiti che intendono soddisfare e con i test di integrazione che andranno a verificarne la corretta interazione. Per questo, i \textit{Progettisti} sono tenuti ad utilizzare l'applicativo \textbf{ReqMonkeys} per le varie operazioni di tracciamento, tra le quali:
+\begin{itemize}
+\item Inserimento di un nuovo componente;
+\item Aggiungere la dipendenza di un componente ad un requisito;
+\item Eliminare la dipendenza di un componente da un requisito;
+\end{itemize}
+Per le procedure di esecuzione delle precedenti funzionalità, si faccia riferimento alla sezione \ref{procedurereqmonkeys}.
+
+%\paragraph{\underline{Definizione test d'integrazione}:}
+
+%\paragraph{\underline{Tracciamento test d'integrazione}:}
+
+\subsubsection{Progettazione architetturale di dettaglio}
+\label{progettazionedettaglio}
+Lo scopo di quest'attività è di fornire un architettura software dettagliata, in maniera da soddisfare i requisiti identificati. Tale architettura deve essere sufficientemente dettagliata per permettere la codifica e la stesura dei relativi test d'unità. I compiti di quest'attività constano nell'individuazione dei metodi che le classi definite durante la progettazione ad alto livello devono implementare, nella documentazione di tali funzionalità e nella stesura dei relativi test d'unità.
+
+\paragraph{\underline{Raffinamento delle componenti}:} quest'azione consiste nel raffinamento delle classi individuate durante la progettazione architetturale, con lo scopo di definire esaustivamente le funzionalità che ognuna deve offrire. In particolare, i \textit{Progettisti} sono tenuti ad individuare i metodi che le classi devono implementare.
+
+\paragraph{\underline{Documentazione delle classi}:} nel momento in cui una classe viene definita nella sua interezza, deve essere documentata. Per questo, ogni classe dovrà essere corredata dalle seguenti informazioni:
+\begin{itemize}
+\item\textbf{Diagramma:} un diagramma UML\g{} che rappresenta la classe;
+\item\textbf{Descrizione:} una breve descrizione del funzionamento della classe in questione;
+\item\textbf{Utilizzo:} il contesto di utilizzo della classe all'interno del software;
+\item\textbf{Attributi:} verranno indicati i vari attributi della classe, corredati da una breve descrizione;
+\item\textbf{Metodi:} verranno indicati i metodi della classe, corredati dalla propria segnatura e da una breve descrizione.
+\end{itemize}
+
+\paragraph{\underline{Definizione test d'unità}:} i \textit{Progettisti} dovranno provvedere alla creazione di test d'unità per verificare il corretto funzionamento delle varie componenti del sistema.
+
+%\paragraph{\underline{Tracciamento test d'unità}:}
+
+\subsubsection{Codifica e testing delle componenti}
+\label{codifica}
+Lo scopo di quest'attività è di costruire delle unità software, in accordo con la specifica prodotta dalla progettazione architetturale di dettaglio. Tali unità dovranno soddisfare i requisiti della specifica e dovranno essere compilate e testate. Dovrà essere inoltre fornita una documentazione dei risultati dei test d'unità effettuati.
+
+\paragraph{\underline{Costruzione software}:} quest'azione consiste nella codifica e nella documentazione delle unità software e delle unità del database. I \textit{Programmatori} sono tenuti a costruire le unità software seguendo le specifiche della definizione di prodotto.
+
+\paragraph{\underline{Convenzioni di codifica}:} di seguito sono riportate le convenzioni che i \emph{Programmatori} dovranno seguire durante la fase di Codifica.\\
+Per rendere il codice più leggibile e facilmente comprensibile, i \emph{Programmatori} dovranno seguire le Qt\g{} Coding Convention e le Qt\g{} Styling Code. (Vedi sezione \ref{rnormativi})\\
+È consentita la possibilità di effettuare dei cambiamenti alle convenzioni stabilite, in seguito ad una decisione del \projectManager{}. 
+
+\subparagraph{Nomenclatura:}
+\label{nomenclatura}
+per l'assegnazione di nomi a classi, variabili, metodi e costanti andranno seguite le seguenti regole:
+\begin{itemize}
+\item\textbf{Classi:} va utilizzata la notazione mixed case, con la prima lettera maiuscola;
+\item\textbf{Metodi:} va utilizzata la notazione mixed case, con la prima lettera minuscola;
+\item\textbf{Variabili:} va utilizzata la notazione mixed case, con la prima lettera minuscola;
+\item\textbf{Costanti:} va scritto il nome \textit{interamente} in maiuscolo, separando le varie parole con il carattere \lq\lq{}\_\rq\rq{} (underscore).
+\end{itemize}
+
+\subparagraph{Intestazione di un file:}
+\label{intestazione}
+ad ogni file di codice dovrà corrispondere una singola classe propria.
+\\Una classe dovrà essere suddivisa in un file \textit{header} (.h) e in un file di \textit{implementazione} (.cpp).
+Ogni file \textit{header} dovrà necessariamente avere un'intestazione, la quale dovrà avere la seguente forma:
+\begin{verbatim}
+/*!
+*\file Nome del file
+*\author Cognome Nome (e-mail)
+*\date Data di creazione del file
+*\brief Descrizione breve della classe
+*Descrizione dettagliata della classe
+*/
+/*
+*Changes:
+*+----------+--------+--------------+------------------------+----------------+
+*|  Version +  Date  +  Programmer  +         Changes        +   Description  |
+*+----------+--------+--------------+------------------------+----------------+
+*|                                                                            |
+*|   x.y.z  | AAMMGG | Nome Cognome | ClassName::MethodName  | Description    |
+*|                                                                            |
+*+----------+--------+--------------+------------------------+----------------+
+*/
+\end{verbatim}
+dove:
+\begin{itemize}
+\item\textbf{File:} deve essere il nome del file, comprendente di estensione (.h o .cpp);
+\item\textbf{Author:} deve essere il creatore del file e non necessariamente il programmatore che sta modificando il file attualmente;
+\item\textbf{Date:} deve essere la data di creazione del file, espressa come indicato in sezione \ref{fricorrenti};
+\item\textbf{Brief:} è una descrizione breve della classe (massimo due righe);
+\item\textbf{Changes:} rappresenta la tabella di avanzamento del file, comprensiva di modifiche, aggiunte ed eliminazioni di metodi della classe.
+\\Nello specifico la tabella deve avere le seguenti righe:
+\begin{itemize}
+\item\textbf{Version:} la versione del file successivamente alla modifica;
+\item\textbf{Date:} la data in cui è stato modificato il file;
+\item\textbf{Programmer:} il programmatore che ha fatto la modifica, che può non essere necessariamente il creatore del file;
+\item\textbf{Changes:} rappresenta il metodo che ha subito cambiamenti;
+\item\textbf{Description:} una breve descrizione del cambiamento effettuato.
+\end{itemize}
+\end{itemize}
+
+\subparagraph{Commenti nei metodi:}
+\label{commenti}
+sempre nel file \textit{header} prima di ogni metodo, si dovrà inserire un commento che dovrà rispettare la seguente forma:
+\begin{verbatim}
+/*!brief Breve descrizione del metodo
+*Descrizione dettagliata del metodo.
+*\param Descrizione del primo parametro
+*\param Descrizione dell'n-esimo parametro
+*\return il tipo del valore di ritorno
+*/
+/*
+*Pre-Condition: {La pre-condizione}
+*Post-Condizione: {La post-condizione}
+*/
+\end{verbatim}
+dove:
+\begin{itemize}
+\item\textbf{Brief:} deve essere una breve descrizione del funzionamento del metodo (massimo due righe);
+\item\textbf{Pre-Condition:} deve essere la pre condizione che vale prima della chiamata del metodo;
+\item\textbf{Post-Condition:} deve essere la post condizione che varrà dopo la chiamata del metodo;
+\item\textbf{Return:} deve essere il tipo di ritorno;
+\end{itemize}
+
+\subparagraph{Commenti nei file di implementazione:}
+\label{implementazione}
+nei vari file di implementazione è gradita la presenza di commenti in modo da facilitare la comprensione del codice. I commenti devono essere scritti nel modo più chiaro e descrittivo possibile. Ogni variabile di particolare importanza, o il quale utilizzo è particolarmente complesso, dovrà essere accompagnata da una breve descrizione del suo scopo. In particolare è gradita la presenza di \textit{invarianti}, \textit{pre e post condizioni} sui cicli, nel caso in cui essi abbiano almeno due livelli di annidamento.
+
+\paragraph{\underline{Esecuzione dei test d'unità}:} quest'azione consiste nell'esecuzione dei test d'unità, in maniera tale da assicurare che soddisfino i requisiti definiti. I risultati devono essere documentati.
+
+%\subsubsection{Integrazione software}
+
+%\subsubsection{Integrazione di sistema}
+
+%\subsubsection{Installazione software}

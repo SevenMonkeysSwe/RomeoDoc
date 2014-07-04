@@ -1,0 +1,354 @@
+\subsection{Tracciamento requisiti-componenti}
+\label{requisiti-componenti}
+
+
+\newdimen\larghezza
+\setlength{\larghezza}{7cm}
+\newdimen\dimTipo
+\setlength{\dimTipo}{2cm}
+\newdimen\dimFonti
+\setlength{\dimFonti}{3cm}
+	
+\begin{center}
+\begin{longtable}{|c|c|c|}
+\hline
+
+\textbf{Requisito} & \textbf{Descrizione} & \textbf{Componente} \\
+
+
+\hline
+R0F1   & \parbox[t]{\larghezza}{L'utente può creare un Subject}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ View \\} \\
+\hline
+R0F1.1   & \parbox[t]{\larghezza}{L'utente deve poter dare un nome univoco al Subject}  & \parbox[t]{\dimFonti}{ DAO \\ Window \\} \\
+\hline
+R0F1.2   & \parbox[t]{\larghezza}{L'utente deve poter caricare un immagine 2D, 3D o video per ogni Subject}  & \parbox[t]{\dimFonti}{ Core \\ Window \\} \\
+\hline
+R0F1.2.1   & \parbox[t]{\larghezza}{L'utente deve poter caricare come immagine di ogni Subject file di formato diverso}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.2.1.1   & \parbox[t]{\larghezza}{Il sistema deve accettare in input file di formato PNG\glossario{}}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.2.1.2   & \parbox[t]{\larghezza}{Il sistema deve accettare in input file di formato JPG\glossario{}}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.2.1.3   & \parbox[t]{\larghezza}{Il sistema deve accettare in input file di formato BMP\glossario{}}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.2.1.4   & \parbox[t]{\larghezza}{Il sistema deve accettare in input file di formato AVI\glossario{}}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.2.1.5   & \parbox[t]{\larghezza}{Il sistema deve accettare in input file di formato NIfTI\glossario{}}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.2.1.6   & \parbox[t]{\larghezza}{Il sistema deve accettare in input file di formato Analyze7.5\glossario{}}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.3   & \parbox[t]{\larghezza}{L'utente deve poter caricare un'immagine maschera per ogni Subject}  & \parbox[t]{\dimFonti}{ Core \\ Window \\} \\
+\hline
+R0F1.3.1   & \parbox[t]{\larghezza}{L'utente può caricare un file di formato PNG\glossario{} come maschera di un immagine 2D o 2D time dipendent}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.3.2   & \parbox[t]{\larghezza}{L'utente può caricare un file di formato JPG come maschera di un immagine 2D o 2D time dipendent}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.3.3   & \parbox[t]{\larghezza}{L'utente può caricare un file di formato BMP come maschera di un immagine 2D o 2D time dipendent}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.3.4   & \parbox[t]{\larghezza}{L'utente può caricare un file di formato NIfTI\glossario{} come maschera di un immagine 3D o 3D time dipendent}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.3.5   & \parbox[t]{\larghezza}{L'utente può caricare un file di formato Analyze\glossario{} come maschera di un immagine 3D o 3D time dipendent}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F1.4   & \parbox[t]{\larghezza}{Il software deve bloccare e notificare un tentativo di caricamento di file con formato non consentito}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F10   & \parbox[t]{\larghezza}{Il software deve analizzare le immagini ricevute in input}  & \parbox[t]{\dimFonti}{ Core \\ Dialog \\} \\
+\hline
+R0F10.1   & \parbox[t]{\larghezza}{Il software deve terminare l'analisi relativa ad un Subject prima di iniziarne una relativa ad un altro}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F10.1.1   & \parbox[t]{\larghezza}{Il software, per ogni Subject, deve prima calcolare tutte le feature ed  eventualmente poi applicare l'algoritmo di clustering}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R0F10.2   & \parbox[t]{\larghezza}{Il software deve poter interrompere l'analisi per permettere all'utente di visionare i risultati delle immagini appena processate}  & \parbox[t]{\dimFonti}{ Core \\ Dialog \\ ExporterModel \\} \\
+\hline
+R0F10.2.1   & \parbox[t]{\larghezza}{Il software deve mostrare il risultato appena pronto}  & \parbox[t]{\dimFonti}{ Core \\ ExporterModel \\} \\
+\hline
+R0F10.3   & \parbox[t]{\larghezza}{Il software deve permettere all'utente di interrompere l'analisi in corso}  & \parbox[t]{\dimFonti}{ Core \\ Dialog \\} \\
+\hline
+R0F10.4   & \parbox[t]{\larghezza}{Il software deve dare la possibilità all'utente di visualizzare i risultati al termine dell'analisi}  & \parbox[t]{\dimFonti}{ Window \\} \\
+\hline
+R0F10.5   & \parbox[t]{\larghezza}{Il software deve fornire una barra di avanzamento che rispecchi il progresso dell'analisi in corso}  & \parbox[t]{\dimFonti}{ Window \\} \\
+\hline
+R0F11   & \parbox[t]{\larghezza}{L'utente deve poter salvare i Protocol creati}  & \parbox[t]{\dimFonti}{ DAO \\} \\
+\hline
+R0F12   & \parbox[t]{\larghezza}{L'utente deve poter esportare i risultati delle analisi effettuate}  & \parbox[t]{\dimFonti}{ ExporterModel \\} \\
+\hline
+R0F12.1   & \parbox[t]{\larghezza}{L'utente deve poter esportare anche i risultati di ogni singola feature}  & \parbox[t]{\dimFonti}{ ExporterModel \\} \\
+\hline
+R0F12.2   & \parbox[t]{\larghezza}{L'utente deve poter esportare i risultati con lo stesso formato dei file di input}  & \parbox[t]{\dimFonti}{ ExporterModel \\} \\
+\hline
+R0F12.3   & \parbox[t]{\larghezza}{Il software deve salvare i risultati dell'analisi ogni qualvolta termini l'analisi di un singolo Subject}  & \parbox[t]{\dimFonti}{ Core \\ ExporterModel \\} \\
+\hline
+R0F12.4   & \parbox[t]{\larghezza}{L'utente deve poter indicare dove salvare i risultati delle analisi di ogni gruppo di Subject}  & \parbox[t]{\dimFonti}{ Dialog \\ ExporterModel \\} \\
+\hline
+R0F13   & \parbox[t]{\larghezza}{L'utente deve poter visualizzare i risultati delle analisi effettuate}  & \parbox[t]{\dimFonti}{ DAO \\ Window \\} \\
+\hline
+R0F13.1   & \parbox[t]{\larghezza}{Il software deve permettere la visualizzazione di immagini 2D}  & \parbox[t]{\dimFonti}{ ExporterModel \\ Window \\} \\
+\hline
+R0F13.2   & \parbox[t]{\larghezza}{Il software deve permettere la visualizzazione di immagini 3D}  & \parbox[t]{\dimFonti}{ ExporterModel \\ Window \\} \\
+\hline
+R0F14   & \parbox[t]{\larghezza}{Il software deve fornire una guida}  & \parbox[t]{\dimFonti}{ Help \\} \\
+\hline
+R0F14.1   & \parbox[t]{\larghezza}{La guida all'interno del software deve essere in formato testuale}  & \parbox[t]{\dimFonti}{ Help \\} \\
+\hline
+R0F26   & \parbox[t]{\larghezza}{L'utente deve poter modificare i gruppi di Subject}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F26.1   & \parbox[t]{\larghezza}{L'utente deve poter aggiungere Subject ad un gruppo già esistente}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F26.2   & \parbox[t]{\larghezza}{L'utente deve poter rimuovere dei Subject da un gruppo già esistente}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F27   & \parbox[t]{\larghezza}{L'utente deve poter eliminare i Dataset}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F27.1   & \parbox[t]{\larghezza}{L'utente deve poter eliminare un singolo Dataset }  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F27.2   & \parbox[t]{\larghezza}{L'utente deve poter eliminare più di un Dataset alla volta}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F3   & \parbox[t]{\larghezza}{L'utente può creare gruppi di Subject}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F3.1   & \parbox[t]{\larghezza}{L'utente deve dare al gruppi di Subject un nome univoco}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F4   & \parbox[t]{\larghezza}{L'utente può eliminare gruppi di Subject}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F4.1   & \parbox[t]{\larghezza}{L'utente deve poter scegliere di esportare i risultati prima dell'eliminazione del gruppo di Subject}  & \parbox[t]{\dimFonti}{ ExporterModel \\} \\
+\hline
+R0F4.2   & \parbox[t]{\larghezza}{L'utente deve poter eliminare un solo gruppo di Subject}  & \parbox[t]{\dimFonti}{ DAO \\ Window \\} \\
+\hline
+R0F4.3   & \parbox[t]{\larghezza}{L'utente deve poter eliminare più gruppi di Subject alla volta}  & \parbox[t]{\dimFonti}{ DAO \\ Window \\} \\
+\hline
+R0F5   & \parbox[t]{\larghezza}{Il software deve permettere la creazione di Protocol}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F5.1   & \parbox[t]{\larghezza}{L'utente deve poter dare un nome univoco al Protocol}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F5.2   & \parbox[t]{\larghezza}{I Protocol possono contenere una o più feature extractors}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\} \\
+\hline
+R0F5.2.1   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Mean}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.1.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Mean}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.1.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Mean per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.1.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Mean per immagini 3D è 3x3x3}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.10   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario{} Time to Peak}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.10.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame d'inizio per Time to Peak}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.10.1.1   & \parbox[t]{\larghezza}{Il valore di default del frame d'inizio per Time to Peak è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.10.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame di fine per Time to Peak}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.10.2.1   & \parbox[t]{\larghezza}{Il valore di default del frame di fine per Time to Peak è l'ultimo frame del video inserito}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.11   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario{} Maximum}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.11.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame d'inizio per Maximum}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.11.1.1   & \parbox[t]{\larghezza}{Il valore di default del frame d'inizio per Maximum è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.11.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame di fine per Maximum}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.11.2.1   & \parbox[t]{\larghezza}{Il valore di default del frame di fine per Maximum è l'ultimo frame del video inserito}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.12   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario {} Minimum}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.12.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame d'inizio per Minimum}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.12.1.1   & \parbox[t]{\larghezza}{Il valore di default del frame d'inizio per Minimum è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.12.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame di fine per Minimum}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.12.2.1   & \parbox[t]{\larghezza}{Il valore di default del frame di fine per Minimum è l'ultimo frame del video inserito}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.13   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario{} Slope}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.13.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame d'inizio per Slope}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.13.1.1   & \parbox[t]{\larghezza}{Il valore di default del frame d'inizio per Slope è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.13.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame di fine per Slope}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.13.2.1   & \parbox[t]{\larghezza}{Il valore di default del frame di fine per Slope è l'ultimo frame del video inserito}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.14   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario{} Mean}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.14.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame d'inizio per Mean}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.14.1.1   & \parbox[t]{\larghezza}{Il valore di default del frame d'inizio per Mean è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.14.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame di fine per Mean}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.14.2.1   & \parbox[t]{\larghezza}{Il valore di default del frame di fine per Mean è l'ultimo frame del video inserito}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.15   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario{} Value}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.15.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame d'inizio per Value}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.15.1.1   & \parbox[t]{\larghezza}{Il valore di default del frame d'inizio per Value è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.15.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il frame di fine per Value}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.15.2.1   & \parbox[t]{\larghezza}{Il valore di default del frame di fine per Value è l'ultimo frame del video inserito}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.2   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature\glossario{} Standard deviation}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.2.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Standard deviation}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.2.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Standard deviation per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.2.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Standard deviation per immagini 3D è 3x3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.3   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Skewness}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.3.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Skewness}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.3.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Skewness per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.3.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Skewness per immagini 3D è 3x3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.4   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Kurtosis}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.4.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Kurtosis}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.4.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Kurtosis per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.4.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Kurtosis per immagini 3D è 3x3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.5   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Contrast}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.5.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Contrast}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.5.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Contrast per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.5.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Contrast per immagini 3D è 3x3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.5.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire la distanza della GLCM per Contrast}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.5.2.1   & \parbox[t]{\larghezza}{Il valore di default per la distanza della GLCM per Contrast è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.6   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Homogeneity}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.6.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Homogeneity}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.6.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Homogeneity per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.6.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Homogeneity per immagini 3D è 3x3x3}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.6.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire la distanza della GLCM per Homogeneity}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.6.2.1   & \parbox[t]{\larghezza}{Il valore di default per la distanza della GLCM per Homogeneity è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.7   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Entropy}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.7.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Entropy}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.7.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Entropy per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.7.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Entropy per immagini 3D è 3x3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.7.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire la distanza della GLCM per Entropy}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.7.2.1   & \parbox[t]{\larghezza}{Il valore di default per la distanza della GLCM per Entropy è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.8   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Energy}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.8.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Energy}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.8.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Energy per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.8.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Energy per immagini 3D è 3x3x3}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.8.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire la distanza della GLCM per Energy}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.8.2.1   & \parbox[t]{\larghezza}{Il valore di default per la distanza della GLCM per Energy è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.9   & \parbox[t]{\larghezza}{Il software deve saper calcolare la feature Correlation}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.9.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire la window size per Correlation}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.9.1.1   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Correlation per immagini 2D è 3x3 }  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.9.1.2   & \parbox[t]{\larghezza}{Il valore di default di window size della feature Correlation per immagini 3D è 3x3x3}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.9.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire la distanza della GLCM per Correlation}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.2.9.2.1   & \parbox[t]{\larghezza}{Il valore di default per la distanza della GLCM per Correlation è 1}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R0F5.3   & \parbox[t]{\larghezza}{Un Protocol può contenere due istanze di una stessa feature extractor ma con parametri diversi}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\} \\
+\hline
+R0F5.4   & \parbox[t]{\larghezza}{Ogni Protocol deve contenere al massimo un algoritmo di clustering}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\} \\
+\hline
+R0F5.4.1   & \parbox[t]{\larghezza}{Il software deve saper applicare l'algoritmo di clustering K-means}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il numero di cluster per K-means}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.1.1   & \parbox[t]{\larghezza}{Il valore di default per il numero di clusters di K-means è 10}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il numero di repliche per K-means}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.2.1   & \parbox[t]{\larghezza}{Il valore di default per il numero di repliche di K-means\glossario{} è 5}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.3   & \parbox[t]{\larghezza}{L'utente deve poter inserire il massimo numero di iterazioni per K-means}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.3.1   & \parbox[t]{\larghezza}{Il valore di default per il massimo numero di iterazioni di K-means\glossario{} è 200}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.4   & \parbox[t]{\larghezza}{L'utente deve poter inserire il tipo di distanza per K-means}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.1.4.1   & \parbox[t]{\larghezza}{Il valore di default per il tipo di distanza di K-means\glossario{} è euclidea}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2   & \parbox[t]{\larghezza}{Il software deve saper applicare l'algoritmo di clustering Fuzzy C}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il numero di cluster per Fuzzy C}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.1.1   & \parbox[t]{\larghezza}{Il valore di default per il numero di clusters di Fuzzy C\glossario{} è 10}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il massimo numero di iterazioni per Fuzzy C}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.2.1   & \parbox[t]{\larghezza}{Il valore di default per il massimo numero di iterazioni di Fuzzy C è 200}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.3   & \parbox[t]{\larghezza}{L'utente deve poter inserire il Fuzzy index}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.3.1   & \parbox[t]{\larghezza}{Il valore di default per il fuzzy index di Fuzzy C è 2.0}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.4   & \parbox[t]{\larghezza}{L'utente deve poter inserire la soglia di probabilità per Fuzzy C\glossario{}}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.2.4.1   & \parbox[t]{\larghezza}{Il valore di default per la soglia di probabilità di Fuzzy C\glossario{} è 1e-3}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.3   & \parbox[t]{\larghezza}{Il software deve saper applicare l'algoritmo di clustering Hierarchical}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.3.1   & \parbox[t]{\larghezza}{L'utente deve poter inserire il criterio di collegamento per Hierarchical}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.3.1.1   & \parbox[t]{\larghezza}{Il valore di default per il criterio di collegamento di Hierarchical\glossario{} è single linkage}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.3.2   & \parbox[t]{\larghezza}{L'utente deve poter inserire il tipo di distanza per Hierarchical}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F5.4.3.2.1   & \parbox[t]{\larghezza}{Il valore di default per il tipo di distanza di Hierarchical è euclidea}  & \parbox[t]{\dimFonti}{ Algorithms \\} \\
+\hline
+R0F6   & \parbox[t]{\larghezza}{L'utente può eliminare un Protocol}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F6.1   & \parbox[t]{\larghezza}{L'utente può eliminare più di un Protocol alla volta}  & \parbox[t]{\dimFonti}{ Window \\} \\
+\hline
+R0F8   & \parbox[t]{\larghezza}{L'utente può creare un Dataset}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\ Window \\} \\
+\hline
+R0F8.1   & \parbox[t]{\larghezza}{L'utente deve poter dare un nome univoco al Dataset}  & \parbox[t]{\dimFonti}{ DAO \\ Window \\} \\
+\hline
+R0F8.2   & \parbox[t]{\larghezza}{L'utente può inserire uno o più Protocol nel Dataset}  & \parbox[t]{\dimFonti}{ Core \\ DAO \\} \\
+\hline
+R0F8.3   & \parbox[t]{\larghezza}{L'utente può inserire un gruppo di Subject nel Dataset }  & \parbox[t]{\dimFonti}{ Core \\ DAO \\} \\
+\hline
+R0F9   & \parbox[t]{\larghezza}{Il software deve avere una GUI}  & \parbox[t]{\dimFonti}{ View \\} \\
+\hline
+R0V7   & \parbox[t]{\larghezza}{L'architettura del software deve permettere,in futuro,l'aggiunta di nuove feature a livello di codice}  & \parbox[t]{\dimFonti}{ Features \\} \\
+\hline
+R2F14.1.1   & \parbox[t]{\larghezza}{La guida deve essere dotata di un piccolo motore di ricerca che permetta all'utente di cercare alcuni termini all'interno della guida stessa}  & \parbox[t]{\dimFonti}{ Help \\} \\
+\hline
+R2F14.1.2   & \parbox[t]{\larghezza}{La guida deve contenere le informazioni suddivise per argomenti per facilitarne la consultazione}  & \parbox[t]{\dimFonti}{ Help \\} \\
+\hline
+R2F14.2   & \parbox[t]{\larghezza}{Il software deve fornire una video-guida }  & \parbox[t]{\dimFonti}{ Help \\} \\
+\hline
+R2F14.2.1   & \parbox[t]{\larghezza}{La video-guida deve mostrare in maniera veloce ma completa,come utilizzare il software }  & \parbox[t]{\dimFonti}{ Help \\} \\
+\hline
+R2F3.2   & \parbox[t]{\larghezza}{Per ogni gruppo di Subject,l'utente può inserire più Subject aventi immagini di formato diverso ma dello stesso tipo(2D,2D-t,3D,3D-t)}  & \parbox[t]{\dimFonti}{ Core \\} \\
+\hline
+R2F5.5   & \parbox[t]{\larghezza}{L'utente deve poter inserire una descrizione opzionale del Protocol creato }  & \parbox[t]{\dimFonti}{ Window \\} \\
+\hline
+\caption{Tracciamento requisiti-componenti}
+\end{longtable}
+\end{center}

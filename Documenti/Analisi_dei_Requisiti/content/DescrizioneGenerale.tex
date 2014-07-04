@@ -1,0 +1,38 @@
+\section{Descrizione generale}
+\label{descgen}
+\subsection{Contesto d'uso del prodotto}
+Il prodotto ha l'obiettivo di fornire, anche all'utente poco esperto nell'uso di mezzi informatici, uno strumento semplice ed immediato per l'applicazione di feature extractors\glossario{} e di algoritmi di clustering\glossario{} ad immagini biomediche. Tali immagini potranno essere di vari formati, la cui analisi permetterà l'individuazione di varie patologie e del loro stato di avanzamento. Il software sarà eseguibile nei principali sistemi operativi: Windows\glossario{}, Linux\glossario{} e Mac OS\glossario{} X.
+
+\subsection{Funzioni del prodotto}
+\project{} dovrà fornire una GUI\glossario{} che permetterà all'utente di creare e memorizzare una serie di entità, di seguito definite: 
+\begin{itemize}
+\item\textbf{Subject:} è l'unità base del sistema software. Sarà composto da un'immagine (di tipo 2D, 2D-t, 3D o 3D-t), da un'eventuale maschera\glossario{} che ne delimita l'area di interesse e dal proprio nome che dovrà essere univoco;
+\item\textbf{Gruppo di Subject\glossario{}:} un insieme formato da uno o più Subject\glossario{} dello stesso tipo; 
+\item\textbf{Protocol:} sarà costituito da un insieme di feature extractors\glossario{} e da al più un algoritmo di clustering\glossario{};
+\item\textbf{Dataset:} assocerà un gruppo di Subject\glossario{} con alcuni Protocol\glossario{}.
+\end{itemize} 
+In seguito alla loro creazione, alcune entità potranno subire variazioni. 
+I gruppi di Subject\glossario{} potranno essere eliminati o modificati dall'utente, aggiungendo o rimuovendo singoli Subject\glossario{} dal gruppo. Sarà possibile inoltre eliminare i Protocol\glossario{} e i Dataset\glossario{}.
+L'analisi di un Dataset\glossario{} consisterà nell'elaborare i propri Subject\glossario{} sequenzialmente, applicando ogni Protocol\glossario{} associato al Dataset\glossario{}. In particolare, per ogni analisi di ogni immagine, verranno estratte tutte le features, che verranno unite in un unica struttura di dati. Infine, verrà applicata a quest'ultima, l'eventuale algoritmo di clustering\glossario{}. 
+Durante l'analisi, l'utente potrà visualizzare i risultati delle feature extractors\glossario{} non appena saranno calcolate; quest'opzione è a discrezione dell'utente e dovrà essere messo in grado di esprimerla prima dell'inizio dell'analisi. Durante la visualizzazione di questi risultati l'utente potrà decidere di comportarsi nei seguenti modi:
+-continuare a visualizzare i risultati delle feature extractors\glossario{} una dopo l'altra;
+-continuare l'analisi senza visualizzare i restanti risultati intermedi;
+-interrompere totalmente l'analisi.
+Il risultato finale sarà un immagine dello stesso tipo di quello di partenza, tranne nel caso di immagini 2D-t e 3D-t che perderanno l'attributo temporale. Tali risultati dovranno poter essere consultati ed esportati.
+
+\subsection{Caratteristiche dell'utente}
+Gli utenti a cui è indirizzato \project{} saranno essenzialmente di due tipi:
+\begin{itemize}
+\item utenti con discreta esperienza nell'utilizzo di mezzi informatici, come ricercatori ed ingegneri;
+\item utenti con minore esperienza nell'utilizzo di mezzi informatici, come i dottori.
+\end{itemize}
+Tuttavia, la tipologia di utente da prendere come riferimento è la seconda, in modo da sviluppare uno strumento che sia di immediata comprensione e di facile utilizzo.
+
+\subsection{Vincoli generali}
+\project{} dovrà poter essere eseguito sui seguenti sistemi operativi:
+\begin{itemize}
+\item Windows\glossario{} 7, senza Service Pack, o superiore, sia 32 che 64 bit;
+\item Ubuntu 12.04 o superiore, sia 32 che 64 bit;
+\item Mac OSX 10.9 o superiore.
+\end{itemize}
+

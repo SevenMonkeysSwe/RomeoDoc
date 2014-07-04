@@ -1,0 +1,49 @@
+\input{../Template/doc_standard/packages}
+\input{../Template/doc_standard/commands}
+\input{../Template/doc_standard/styles}
+\begin{document}
+			% COMMAND TO REDEFINE
+			\renewcommand{\documentName}{Definizione di Prodotto}
+			\renewcommand{\currentVersion}{v2.0.0}
+			\renewcommand{\redactionDate}{2014-02-15}
+			\renewcommand{\editors}{
+			\begin{itemize}
+			\item Magnabosco Nicola
+			\item Bissacco Nicolò
+			\item Adami Alberto
+			\item Martignago Jimmy
+			\end{itemize}			
+			}		 
+			\renewcommand{\verifiers}{
+			\begin{itemize}			
+			\item Feltre Beatrice
+			\item Luisetto Luca
+			\end{itemize}
+			}
+			\renewcommand{\approved}{
+			\begin{itemize}
+			\item Scapin Davide
+			\end{itemize}
+			}
+			\renewcommand{\usage}{Interno}
+			\renewcommand{\distributionList}{\begin{itemize}
+			\item \authorName
+			\item \commitName
+			\item \commitNameC
+			\end{itemize}}
+			\renewcommand{\sommario}{Architettura di dettaglio dell'applicazione \project{}}
+			
+				
+			% TITLE PAGE
+			\input{../Template/doc_standard/firstpage}	\pagebreak		
+			\input{doc_to_modify/history} \pagebreak			
+			\pagestyle{romanPages}
+			\setcounter{page}{1}
+			% INDEX OF PAGES
+			\tableofcontents \pagebreak
+			\listoffigures \pagebreak
+			\setcounter{page}{1}
+			\pagestyle{documentPages}
+			% INCLUDE ALL THE SECTIONS SPECIFIED INTO "content_files.tex"
+			\input{doc_to_modify/content_files}
+\end{document}

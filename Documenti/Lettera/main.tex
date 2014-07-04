@@ -1,0 +1,116 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[italian]{babel}
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{eurosym}
+\setlength{\extrarowheight}{0.1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% personal data
+\name{\includegraphics[scale=0.25]{./img/monkeypdf}}{}
+%\title{}{}                               % optional, remove / comment the line if not wanted
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{seven.monkeys.swe@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\extrainfo{Il Responsabile di Progetto}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Alla cortese attenzione del Committente:}{\textit{Prof. Tullio Vardanega \\ Prof. Riccardo Cardin\\ Università degli Studi di Padova \\ Dipartimento di Matematica Pura ed Applicata \\ Via Trieste 63 \\ 35121, Padova}}
+\date{\emph{29 Marzo 2014}}
+\opening{Egregio Professore Vardanega,}
+\closing{Cordiali Saluti, \\ Il Responsabile di progetto	}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+Con la presente, il gruppo Seven Monkeys intende comunicarLe ufficialmente la partecipazione alla \textbf{Revisione di Qualifica}, per la realizzazione del prodotto da Lei commissionato, denominato \textit{Romeo}.
+
+Il gruppo è formato dai seguenti componenti: 
+\begin{center}
+\begin{tabularx}{0.8\linewidth}{|X |X |l|}
+\hline
+\hspace*{0.2cm} \textbf{Nome} & \hspace*{0.2cm} \textbf{Matricola} & \hspace*{0.2cm} \textbf{Email} \\ \hline
+
+\hspace*{0.2cm} Adami Alberto & \hspace*{0.2cm}1031350 & \hspace*{0.2cm}\href{mailto:alberto.adami.7@gmail.com}{alberto.adami.7@gmail.com} \\ \hline
+
+\hspace*{0.2cm} Bissacco Nicolò & \hspace*{0.2cm}572194 & \hspace*{0.2cm}\href{mailto:nickbissa@gmail.com}{nickbissa@gmail.com} \\ \hline
+
+ \hspace*{0.2cm} Feltre Beatrice &\hspace*{0.2cm}1001644 & \hspace*{0.2cm}\href{mailto:beatrice.feltre@gmail.com}{beatrice.feltre@gmail.com} \\ \hline
+ 
+\hspace*{0.2cm} Luisetto Luca &\hspace*{0.2cm}1006878  & \hspace*{0.2cm}\href{mailto:lucaluisetto91@gmail.com}{lucaluisetto91@gmail.com} \\ \hline
+
+\hspace*{0.2cm} Magnabosco Nicola & \hspace*{0.2cm}1008149 & \hspace*{0.2cm}\href{mailto:nick.magnabosco@gmail.com}{nick.magnabosco@gmail.com} \\ \hline
+
+\hspace*{0.2cm} Martignago Jimmy & \hspace*{0.2cm}1002303 & \hspace*{0.2cm}\href{mailto:jimmy.martignago@gmail.com}{jimmy.martignago@gmail.com} \\ \hline
+
+\hspace*{0.2cm} Scapin Davide & \hspace*{0.2cm}615296 & \hspace*{0.2cm}\href{mailto:davideskap@gmail.com}{davideskap@gmail.com} \\
+\hline
+\end{tabularx}
+\end{center}
+
+Si allegano alla presente lettera, i seguenti documenti:
+\begin{itemize}
+	\item \textit{Analisi dei Requisiti v3.0.0} ({\verb!Esterni/Analisi_dei_Requisiti-v3.0.0.pdf!});
+	\item \textit{Piano di Progetto v3.0.0} ({\verb!Esterni/Piano_di_Progetto-v3.0.0.pdf!});
+	\item \textit{Piano di Qualifica v3.0.0} ({\verb!Esterni/Piano_di_Qualifica-v3.0.0.pdf!});
+	\item \textit{Glossario v3.0.0} ({\verb!Esterni/Glossario-v3.0.0.pdf!});
+	\item \textit{Norme di Progetto v3.0.0} ({\verb!Interni/Norme_di_Progetto-v3.0.0.pdf!});
+	\item \textit{Verbale di incontro interno 2014-03-07} ({\verb!Interni/Verbale7_Interno_2014-03-07.pdf!});
+	\item \textit{Specifica Tecnica v2.0.0}({\verb!Esterni/Specifica_Tecnica-v2.0.0.pdf!});
+	\item \textit{Definizione di Prodotto v1.0.0}({\verb!Esterni/Definizione_di_Prodotto-v1.0.0.pdf!});
+	\item \textit{User Manual v1.0.0}({\verb!Esterni/User_Manual-v1.0.0.pdf!});
+	
+\end{itemize}
+
+I documenti allegati descrivono approfonditamente i dettagli di qualifica del prodotto, di pianificazione, i requisiti individuati, la progettazione architetturale e di dettaglio.
+
+Il costo stimato per la realizzazione del progetto non ha subito variazioni ed è rimasto di \textbf{\EUR{ 13.465}}.
+\begin{flushright}
+\textit{Il responsabile,} 
+
+\textit{Scapin Davide}
+\end{flushright}
+\end{document}
+
+
+%% end of file `template.tex'.
